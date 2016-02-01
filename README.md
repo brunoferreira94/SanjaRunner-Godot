@@ -1,2 +1,2 @@
-# Jogo-LEDI
-Repositório para organizar as atividades da criação do jogo sobre a história de São José dos Campos
+# Jogo-LEDI (Infinite Runner)
+Este é um projeto desenvolvido dentro do programa Escola Interativa da Prefeitura Municipal de São José dos Campos. Projetado e desenvolvido pelos estagiários de TI e orientadores pedagógicos do Laboratório de Educação Digital e Interativa (LEDI), o jogo tem como objetivo ensinar de forma atrativa sobre a história de São José dos Campos, trazendo recursos dos jogos atuais para informar sobre os principais pontos históricos do município.
