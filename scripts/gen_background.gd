@@ -14,11 +14,11 @@ func _ready():
 	
 func _process(delta):
 	
-	tile.set_cell(0,600,1)
+	tile.set_cell(500,600,0)
 	randomize()
 	var randnum = randi() % sections.size()
 	
-	player_pos = get_parent().get_node("personagem").get_pos().x
+	player_pos = get_parent().get_node("Camera2D").get_pos().x
 	
 	if player_pos > 107 + step:
 		var new_section = sections[randnum].instance()

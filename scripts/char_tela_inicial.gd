@@ -1,15 +1,10 @@
 extends RigidBody2D
 
-var input_states = preload("res://scripts/input_states.gd")
+var input_states = preload("res://input_states.gd")
 
-var player_Speed = 700
-var accel = 5
-var air_accel = 2
-var jump_force = 350
+var jump_force = 550
 var extra_gravity = 400
 var raycast_down = null
-var current_Speed = Vector2(0,0)
-var jumping = 0
 
 var PLAYERSTATE_PREV = ""
 var PLAYERSTATE = ""
@@ -29,19 +24,19 @@ func is_on_ground():
 		return true
 	else:
 		return false
-
+		
 func _ready():
 	raycast_down = get_node("RayCast2D")
 	raycast_down.add_exception(self)
-
+	
 	set_fixed_process(true)
 	set_applied_force(Vector2(0,extra_gravity))
-	anim_personagem = get_node("AnimationPlayer")
+	
+	anim_personagem = get_node("rotate/AnimationPlayer")
 	
 func _fixed_process(delta):
 	PLAYERSTATE_PREV = PLAYERSTATE
 	PLAYERSTATE = PLAYERSTATE_NEXT
-	
 	
 	if PLAYERSTATE == "ground":
 		ground_state(delta)
@@ -51,29 +46,17 @@ func _fixed_process(delta):
 	if anim != anim_new:
 		anim_new = anim
 		anim_personagem.play(anim)
-		
-	move(player_Speed,accel,delta)
-
-func move(speed, accel, delta):
-	anim = "andando"
-	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
-	set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 func ground_state(delta):
+	anim = "andando"
 		
 	if is_on_ground():
-		jumping = 0
 		if pulo.check() == 1:
 			set_axis_velocity(Vector2(0, -jump_force))
-			jumping = 1
 	else:
 		PLAYERSTATE_NEXT = "air"
 
 func air_state(delta):
-	if pulo.check() == 1 and (jumping == 1 or jumping == 0):
-		set_axis_velocity(Vector2(0, -jump_force))
-		jumping = 2
-		
 	if get_linear_velocity().y > 0:
 		anim = "pulando"
 	else:
