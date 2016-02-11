@@ -1,18 +1,20 @@
-
-extends ParallaxBackground
+extends Node2D
 
 var sections = [preload("res://scenes/background/background1.scn"),preload("res://scenes/background/background2.scn"),preload("res://scenes/background/background3.scn"),preload("res://scenes/background/background4.scn"),preload("res://scenes/background/background5.scn"),preload("res://scenes/background/background6.scn")]
 var game_offset
 var player_pos
 var step
-
+var tile
 func _ready():
 	game_offset = 1024
 	step = 0
 	player_pos = get_parent().get_node("personagem").get_pos().x
 	set_process(true)
+	tile = get_parent().get_node("background/TileMap")
 	
 func _process(delta):
+	
+	tile.set_cell(0,600,1)
 	randomize()
 	var randnum = randi() % sections.size()
 	
