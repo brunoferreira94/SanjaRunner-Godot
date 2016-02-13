@@ -9,6 +9,10 @@ var player_Speed = 700
 var accel = 5
 var air_accel = 2
 var jump_force = 350
+<<<<<<< HEAD
+=======
+var extra_gravity = 400
+>>>>>>> de34d8acdb55221ee466d3d176699eebf89e9319
 var raycast_down = null
 var current_Speed = Vector2(0,0)
 var jumping = 0

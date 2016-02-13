@@ -20,6 +20,8 @@ func _process(delta):
 	
 	player_pos = get_parent().get_node("RigidBody2D").get_pos().x
 	
+	player_pos = get_parent().get_node("Camera2D").get_pos().x
+	
 	if player_pos > 107 + step:
 		var new_section = sections[randnum].instance()
 		new_section.set_pos(Vector2(game_offset,0))
