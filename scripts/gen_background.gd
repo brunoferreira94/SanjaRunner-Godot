@@ -18,8 +18,11 @@ func _process(delta):
 	randomize()
 	var randnum = randi() % sections.size()
 	
+<<<<<<< HEAD
 	player_pos = get_parent().get_node("RigidBody2D").get_pos().x
 	
+=======
+>>>>>>> de34d8acdb55221ee466d3d176699eebf89e9319
 	player_pos = get_parent().get_node("Camera2D").get_pos().x
 	
 	if player_pos > 107 + step:
