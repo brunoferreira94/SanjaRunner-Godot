@@ -12,4 +12,4 @@ func _fixed_process(delta):
 	
 func move(speed, accel, delta):
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
-	set_linear_velocity(Vector2(current_Speed.x, 0))
+	set_linear_velocity(Vector2(current_Speed.x + delta, 0))
