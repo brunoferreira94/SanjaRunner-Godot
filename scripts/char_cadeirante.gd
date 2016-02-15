@@ -10,8 +10,6 @@ var accel = 5
 var air_accel = 2
 export var jump_force = 420
 
-var extra_gravity = 400
-
 var raycast_down = null
 var current_Speed = Vector2(0,0)
 var jumping = 0
@@ -71,13 +69,15 @@ func _fixed_process(delta):
 	morreu()
 		
 func morreu():
+	var timer = get_node("Timer")
 	var pos_fantasma = get_parent().get_node("personagem_fantasma").get_pos()
 	var altura_tela = get_viewport_rect().size.height
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
 	var pause = get_parent().get_node("HUD/pause")
-	if get_pos().x < pos_fantasma.x -altura_tela or get_pos().y > pos_fantasma.y +altura_tela*2:
+	if (get_pos().x < pos_fantasma.x -altura_tela or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
 		pause.hide()
 		voce_perdeu.show()
+		print("Tempo de jogo: ", 60 - timer.get_time_left())
 
 func move(speed, accel, delta):
 	anim = "andando"
