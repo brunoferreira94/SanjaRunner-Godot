@@ -5,10 +5,10 @@ extends RigidBody2D
 var input_states = preload("res://scripts/input_states.gd")
 
 #Variáveis para controlar o personagem no chão e no ar
-var player_Speed = 700
+export var player_Speed = 700
 var accel = 5
 var air_accel = 2
-var jump_force = 420
+export var jump_force = 420
 
 var extra_gravity = 400
 

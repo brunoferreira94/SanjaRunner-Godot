@@ -27,3 +27,4 @@ func _process(delta):
 			
 		else:
 			get_tree().set_pause(true)
+			pause.set_button_icon()
