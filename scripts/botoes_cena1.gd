@@ -24,5 +24,9 @@ func _process(delta):
 	if pause.is_hovered() && clique_esquerdo.check() == 1:
 		if get_tree().is_paused():
 			get_tree().set_pause(false)
+			#inicia a musica quando despausar
+			get_parent().get_node("Musica").set_paused(false)
 		else:
 			get_tree().set_pause(true)
+			#para a musica quando pausar
+			get_parent().get_node("Musica").set_paused(true)

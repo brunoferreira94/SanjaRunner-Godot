@@ -84,6 +84,8 @@ func morreu():
 		voce_perdeu.show()
 		somPersonagem.play("lose")
 		print("Tempo de jogo: ", 60 - timer.get_time_left())
+		#para a musica quando personagem perder
+		get_parent().get_node("Musica").stop()
 
 func move(speed, accel, delta):
 	anim = "andando"
