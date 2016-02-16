@@ -65,7 +65,7 @@ func _fixed_process(delta):
 	if PLAYERSTATE == "air":
 		air_state(delta)
 	
-	#
+	#verifica animação do personagem e atualiza para a nova animação
 	if anim != anim_new:
 		anim_new = anim
 		anim_personagem.play(anim)
@@ -73,12 +73,15 @@ func _fixed_process(delta):
 	move(player_Speed,accel,delta)
 	morreu()
 		
+#função que analisa a posição do personagem para dar GAME OVER
 func morreu():
 	var timer = get_node("Timer")
 	var pos_fantasma = get_parent().get_node("personagem_fantasma").get_pos()
 	var altura_tela = get_viewport_rect().size.height
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
 	var pause = get_parent().get_node("HUD/pause")
+	
+	#se o personagem sair dos limite lateral esquerdo ou inferior, ele perde
 	if (get_pos().x < pos_fantasma.x - 150 or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
 		pause.hide()
 		voce_perdeu.show()
@@ -87,11 +90,14 @@ func morreu():
 		#para a musica quando personagem perder
 		get_parent().get_node("Musica").stop()
 
+#função responsavel pelo movimento do personagem
 func move(speed, accel, delta):
 	anim = "andando"
+	#lerp calcula a interpolação linear entre current_speed.x e speed
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
 	set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
+#funcao que verifica a posição de ground do personagem e permite o salto
 func ground_state(delta):
 		
 	if is_on_ground():
@@ -103,6 +109,7 @@ func ground_state(delta):
 	else:
 		PLAYERSTATE_NEXT = "air"
 
+#funçao que verifica a posião de air do personagem e permite o double jump
 func air_state(delta):
 	if pulo.check() == 1 and (jumping == 1 or jumping == 0):
 		set_axis_velocity(Vector2(0, -jump_force))
