@@ -13,6 +13,8 @@ func _ready():
 
 func _fixed_process(delta):
 	move(player_Speed,accel,delta)
+	#Setando a posição para ele não cair
+	#set_pos(Vector2(get_pos().x,0))
 	
 func move(speed, accel, delta):
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
