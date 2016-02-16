@@ -22,6 +22,9 @@ var PLAYERSTATE_NEXT = "ground"
 #Variável que controla a animação atual do personagem
 var anim_personagem = null
 
+#Variável para os efeitos sonoros do personagem
+var somPersonagem = null
+
 #Variável que recebe o comando de entrada (teclado, mouse touch)
 var pulo = input_states.new("cima")
 
@@ -46,6 +49,8 @@ func _ready():
 	
 	#Variável recebendo o nó de animação do personagem
 	anim_personagem = get_node("AnimationPlayer")
+	
+	somPersonagem = get_node("SonsPersonagem")
 	
 func _fixed_process(delta):
 	
@@ -77,6 +82,7 @@ func morreu():
 	if (get_pos().x < pos_fantasma.x -altura_tela or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
 		pause.hide()
 		voce_perdeu.show()
+		somPersonagem.play("lose")
 		print("Tempo de jogo: ", 60 - timer.get_time_left())
 
 func move(speed, accel, delta):
@@ -90,6 +96,7 @@ func ground_state(delta):
 		jumping = 0
 		if pulo.check() == 1:
 			set_axis_velocity(Vector2(0, -jump_force))
+			somPersonagem.play("8-bit-jump")
 			jumping = 1
 	else:
 		PLAYERSTATE_NEXT = "air"
@@ -97,6 +104,7 @@ func ground_state(delta):
 func air_state(delta):
 	if pulo.check() == 1 and (jumping == 1 or jumping == 0):
 		set_axis_velocity(Vector2(0, -jump_force))
+		somPersonagem.play("8-bit-jump")
 		jumping = 2
 		
 	if get_linear_velocity().y > 0:

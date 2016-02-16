@@ -24,6 +24,5 @@ func _process(delta):
 	if pause.is_hovered() && clique_esquerdo.check() == 1:
 		if get_tree().is_paused():
 			get_tree().set_pause(false)
-			
 		else:
 			get_tree().set_pause(true)
