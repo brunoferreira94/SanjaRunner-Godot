@@ -1,0 +1,145 @@
+::res://::1455604251
+::res://Game Art 2D::1455604251
+::res://Game Art 2D/png::1455604251
+::res://Game Art 2D/png/BG::1455604251
+BG.png::ImageTexture::1455604251::
+::res://Game Art 2D/png/Object::1455604251
+Bush (1).png::ImageTexture::1455604251::
+Bush (2).png::ImageTexture::1455604251::
+Bush (3).png::ImageTexture::1455604251::
+Bush (4).png::ImageTexture::1455604251::
+Crate.png::ImageTexture::1455604251::
+Mushroom_1.png::ImageTexture::1455604251::
+Mushroom_2.png::ImageTexture::1455604251::
+Sign_1.png::ImageTexture::1455604251::
+Sign_2.png::ImageTexture::1455604251::
+Stone.png::ImageTexture::1455604251::
+Tree_1.png::ImageTexture::1455604251::
+Tree_2.png::ImageTexture::1455604251::
+Tree_3.png::ImageTexture::1455604251::
+::res://Game Art 2D/png/Tiles::1455604251
+1.png::ImageTexture::1455604251::
+10.png::ImageTexture::1455604251::
+11.png::ImageTexture::1455604251::
+12.png::ImageTexture::1455604251::
+13.png::ImageTexture::1455604251::
+14.png::ImageTexture::1455604251::
+15.png::ImageTexture::1455604251::
+16.png::ImageTexture::1455604251::
+17.png::ImageTexture::1455604251::
+18.png::ImageTexture::1455604251::
+2.png::ImageTexture::1455604251::
+3.png::ImageTexture::1455604251::
+4.png::ImageTexture::1455604251::
+5.png::ImageTexture::1455604251::
+6.png::ImageTexture::1455604251::
+7.png::ImageTexture::1455604251::
+8.png::ImageTexture::1455604251::
+9.png::ImageTexture::1455604251::
+::res://img::1455604251
+Menina.Branca.Pulando.png::ImageTexture::1455604251::
+Menina.Branca1.png::ImageTexture::1455604251::
+Menina.Branca2.png::ImageTexture::1455604251::
+Menina.Branca3.png::ImageTexture::1455604251::
+Menino.Negro.Pulando.png::ImageTexture::1455604251::
+Menino.Negro1.png::ImageTexture::1455604251::
+Menino.Negro2.png::ImageTexture::1455604251::
+Menino.Negro3.png::ImageTexture::1455604251::
+banhadocbanco.png::ImageTexture::1455604251::
+botaoPause.png::ImageTexture::1455604251::
+botaoPlay.png::ImageTexture::1455604251::
+botaoReplay.png::ImageTexture::1455604251::
+cenario1.png::ImageTexture::1455604251::
+cenario2.png::ImageTexture::1455604251::
+cenario2_exp.png::ImageTexture::1455604251::
+cenario3.png::ImageTexture::1455604251::
+cenario4.png::ImageTexture::1455604251::
+cenario5.png::ImageTexture::1455604251::
+cenario6.png::ImageTexture::1455604251::
+cenario7.png::ImageTexture::1455604251::
+continue.png::ImageTexture::1455604251::
+creditos.png::ImageTexture::1455604251::
+fechar.png::ImageTexture::1455604251::
+logo.png::ImageTexture::1455604251::
+nuvem.png::ImageTexture::1455604251::
+nuvem01.png::ImageTexture::1455604251::
+nuvem02.png::ImageTexture::1455604251::
+papelzinho.png::ImageTexture::1455604251::
+perdeu.png::ImageTexture::1455604251::
+placar.png::ImageTexture::1455604251::
+plataforma.png::ImageTexture::1455604251::
+pontuacao.png::ImageTexture::1455604251::
+predios.png::ImageTexture::1455604251::
+predios01.png::ImageTexture::1455604251::
+predios02.png::ImageTexture::1455604251::
+sprite parado 2.png::ImageTexture::1455604251::
+sprite parado 3.png::ImageTexture::1455604251::
+sprite parado.png::ImageTexture::1455604251::
+sprite pulando.png::ImageTexture::1455604251::
+::res://img/Cadeirante::1455604251
+imagem00.png::ImageTexture::1455604251::
+imagem01.png::ImageTexture::1455604251::
+imagem02.png::ImageTexture::1455604251::
+imagem03.png::ImageTexture::1455604251::
+imagem04.png::ImageTexture::1455604251::
+imagem05.png::ImageTexture::1455604251::
+pulando00.png::ImageTexture::1455604251::
+pulando01.png::ImageTexture::1455604251::
+::res://scenes::1455604251
+Cena0_abertura.scn::::1455604251::
+main_scene.gd::GDScript::1455604251::
+main_scene.scn::::1455604251::
+menu_voce_perdeu.scn::::1455604251::
+paper.gd::GDScript::1455604251::
+paper.xml::PackedScene::1455604251::
+::res://scenes/background::1455604251
+background1.scn::::1455604251::
+background2.scn::::1455604251::
+background3.scn::::1455604251::
+background4.scn::::1455604251::
+background5.scn::::1455604251::
+background6.scn::::1455604251::
+background_init.scn::::1455604251::
+tile_scene.scn::::1455604251::
+::res://scenes/personagens::1455604251
+personagem_cadeirante.scn::::1455604251::
+personagem_menina_branca.scn::::1455604251::
+personagem_menino_branco.scn::::1455604251::
+personagem_menino_negro.scn::::1455604251::
+::res://scripts::1455604251
+botoes_cena0.gd::GDScript::1455604251::
+botoes_cena1.gd::GDScript::1455604251::
+char_cadeirante.gd::GDScript::1455604251::
+ghostChar.gd::GDScript::1455604251::
+global.gd::GDScript::1455604251::
+input_states.gd::GDScript::1455604251::
+::res://sons::1455604251
+8-bit-coin.wav::Sample::1455604251::
+8-bit-jump.wav::Sample::1455604251::
+lose.wav::Sample::1455604251::
+::res://soundtrack::1455604251
+SanjaRunner Soundtrack.ogg::AudioStreamOGGVorbis::1455604251::
+::res://sprites::1455604251
+Botao.tex::::1455604251::
+banco.tex::::1455604251::
+banhado_tile.tex::::1455604251::
+banhadocbanco.tex::::1455604251::
+cenario1.tex::::1455604251::
+cenario2.tex::::1455604251::
+cenario3.tex::::1455604251::
+cenario4.tex::::1455604251::
+cenario5.tex::::1455604251::
+cenario6.tex::::1455604251::
+cenario7.tex::::1455604251::
+papelzinho.tex::::1455604251::
+sprite parado 2.tex::::1455604251::
+sprite parado 3.tex::::1455604251::
+sprite parado.tex::::1455604251::
+sprite pulando.tex::::1455604251::
+::res://tileset::1455604251
+plataformas_calcada.xml::PackedScene::1455604251::
+plataformas_calcada_tile.xml::TileSet::1455604251::
+tileScene.xml::PackedScene::1455604251::
+tile_banhado.xml::TileSet::1455604251::
+tile_chao.xml::PackedScene::1455604251::
+tile_plataforma.xml::TileSet::1455604251::
