@@ -79,7 +79,7 @@ func morreu():
 	var altura_tela = get_viewport_rect().size.height
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
 	var pause = get_parent().get_node("HUD/pause")
-	if (get_pos().x < pos_fantasma.x -altura_tela or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
+	if (get_pos().x < pos_fantasma.x - 150 or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
 		pause.hide()
 		voce_perdeu.show()
 		somPersonagem.play("lose")
