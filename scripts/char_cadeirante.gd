@@ -50,7 +50,7 @@ func _ready():
 	#Variável recebendo o nó de animação do personagem
 	anim_personagem = get_node("AnimationPlayer")
 	
-	somPersonagem = get_node("SonsPersonagem")
+	somPersonagem = get_node("somPersonagem")
 	
 func _fixed_process(delta):
 	
@@ -75,7 +75,7 @@ func _fixed_process(delta):
 		
 #função que analisa a posição do personagem para dar GAME OVER
 func morreu():
-	var timer = get_node("Timer")
+	var timer = get_parent().get_node("Timer")
 	var pos_fantasma = get_parent().get_node("personagem_fantasma").get_pos()
 	var altura_tela = get_viewport_rect().size.height
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
