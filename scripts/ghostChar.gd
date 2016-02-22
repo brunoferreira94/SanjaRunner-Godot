@@ -17,5 +17,11 @@ func _fixed_process(delta):
 	#set_pos(Vector2(get_pos().x,0))
 	
 func move(speed, accel, delta):
+	var real_pers_pos = get_parent().get_node("personagem").get_pos().x
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
-	set_linear_velocity(Vector2(current_Speed.x + delta, 0))
+	if real_pers_pos > 40000 and real_pers_pos < 41000:
+		set_linear_velocity(Vector2(current_Speed.x-400 + delta, 0))
+	elif real_pers_pos > 41000:
+		set_linear_velocity(Vector2(0, 0))
+	else:
+		set_linear_velocity(Vector2(current_Speed.x + delta, 0))

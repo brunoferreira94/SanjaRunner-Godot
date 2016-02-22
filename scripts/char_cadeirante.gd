@@ -75,7 +75,7 @@ func _fixed_process(delta):
 		
 #função que analisa a posição do personagem para dar GAME OVER
 func morreu():
-	var timer = get_parent().get_node("Timer")
+	var timer = get_node("Timer")
 	var pos_fantasma = get_parent().get_node("personagem_fantasma").get_pos()
 	var altura_tela = get_viewport_rect().size.height
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
@@ -86,7 +86,6 @@ func morreu():
 		pause.hide()
 		voce_perdeu.show()
 		somPersonagem.play("lose")
-		print("Tempo de jogo: ", 60 - timer.get_time_left())
 		#para a musica quando personagem perder
 		get_parent().get_node("Musica").stop()
 
@@ -95,7 +94,13 @@ func move(speed, accel, delta):
 	anim = "andando"
 	#lerp calcula a interpolação linear entre current_speed.x e speed
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
-	set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
+	if get_pos().x > 40000 and get_pos().x < 41000:
+		set_linear_velocity(Vector2(current_Speed.x-400, get_linear_velocity().y))
+	elif get_pos().x > 41000:
+		set_linear_velocity(Vector2(0, get_linear_velocity().y))
+		anim = "pulando"
+	else:
+		set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 #funcao que verifica a posição de ground do personagem e permite o salto
 func ground_state(delta):
