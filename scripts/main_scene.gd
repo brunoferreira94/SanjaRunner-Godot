@@ -9,17 +9,14 @@ var script = load("res://scripts/char_cadeirante.gd")
 
 func _ready():
 	set_process(true)
-	numPlayer = get_node("/root/globals").getPlayerSelected()
+	if get_node("/root/globals").getPlayerSelected() != null:
+		numPlayer = get_node("/root/globals").getPlayerSelected()
+	else:
+		numPlayer = randi() % 3
 	spawnPlayer()
-	get_node("HUD/321").show()
-	get_node("HUD/321/AnimationPlayer").play("inicio")
 	
 func _process(delta):
-	if !get_node("HUD/321/AnimationPlayer").is_playing():
-		get_node("HUD/321").hide()
-		get_tree().set_pause(false)
-	else:
-		get_tree().set_pause(true)
+	pass
 	
 func spawnPlayer():
 	
