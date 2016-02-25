@@ -8,8 +8,8 @@ func _ready():
 	if get_owner()!= null:
 		get_owner().papers_total += value
 		
-	
 	get_node("Area2D")
+	
 
 func _collect_paper( body ):
 	print(get_owner().papers_collected)
