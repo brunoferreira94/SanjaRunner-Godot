@@ -4,9 +4,8 @@ extends Node2D
 export var value = 1
 
 func _ready():
-	print(get_owner().get_name())
 	if get_owner()!= null:
-		get_owner().papers_total += value
+		get_owner().papers_total += 1
 		
 	get_node("Area2D")
 	

@@ -54,7 +54,7 @@ func _ready():
 	
 func _fixed_process(delta):
 	
-	#Váriaveil anterior recebendo atual e a atual 
+	#Váriavel anterior recebendo atual e a atual
 	#recebendo a próxima para controlar o estado (chão ou ar)
 	PLAYERSTATE_PREV = PLAYERSTATE
 	PLAYERSTATE = PLAYERSTATE_NEXT
