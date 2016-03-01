@@ -13,6 +13,7 @@ export var jump_force = 420
 var raycast_down = null
 var current_Speed = Vector2(0,0)
 var jumping = 0
+export var pos_parada = 11000
 
 #Variáveis de estado para saber se o personagem está no chão ou no ar
 var PLAYERSTATE_PREV = ""
@@ -72,7 +73,7 @@ func _fixed_process(delta):
 		
 	move(player_Speed,accel,delta)
 	morreu()
-		
+	
 #função que analisa a posição do personagem para dar GAME OVER
 func morreu():
 	var timer = get_parent().get_node("Timer")
@@ -89,13 +90,21 @@ func morreu():
 		print("Tempo de jogo: ", 60 - timer.get_time_left())
 		#para a musica quando personagem perder
 		get_parent().get_node("Musica").stop()
+		#retorna verdadeiro para indicar que o personagem morreu
+		return true
 
 #função responsavel pelo movimento do personagem
 func move(speed, accel, delta):
 	anim = "andando"
 	#lerp calcula a interpolação linear entre current_speed.x e speed
 	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
-	set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
+	if get_pos().x > pos_parada and get_pos().x < pos_parada+1000:
+		set_linear_velocity(Vector2(current_Speed.x-400, get_linear_velocity().y))
+	elif get_pos().x > pos_parada+1000:
+		set_linear_velocity(Vector2(0, get_linear_velocity().y))
+		anim = "pulando"
+	else:
+		set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 #funcao que verifica a posição de ground do personagem e permite o salto
 func ground_state(delta):

@@ -15,23 +15,10 @@ func _ready():
 	
 	texto = get_node("TextEdit")
 	set_process(true)
-
-func save(var i):
-	var vetorSave = numPapel
-	return vetorSave[i]
-
-func save_game():
-	var savegame = File.new()
-	savegame.open("res://savegame.save", File.WRITE)
-	for i in range(numPapel.size()):
-		savegame.store_line(str(save(i)))
-		print(str(save(i)))
-	savegame.close()
 	
 func _process(delta):
 	
 	var cont = get_node("continue")
-	
 	
 	if cont.is_hovered() && clique_esquerdo.check() == 1:
 		if get_tree().is_paused():
@@ -40,3 +27,19 @@ func _process(delta):
 			get_parent().get_node("pause").show()
 		else:
 			get_tree().set_pause(true)
+			
+func save():
+	var vetorSave = numPapel
+	return vetorSave
+
+func save_game(id):
+	var savegame = File.new()
+	savegame.open("res://savegame.save", File.WRITE)
+	var linha = savegame.get_line()
+	if linha == str(id):
+		
+		return null
+	savegame.store_line("ID:"+id)
+	savegame.store_line(str(save()))
+	print("ID:"+id+"\n"+str(save()))
+	savegame.close()
