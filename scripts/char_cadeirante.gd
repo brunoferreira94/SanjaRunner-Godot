@@ -102,13 +102,19 @@ func move(speed, accel, delta):
 		set_linear_velocity(Vector2(current_Speed.x-400, get_linear_velocity().y))
 	elif get_pos().x > pos_parada+1000:
 		set_linear_velocity(Vector2(0, get_linear_velocity().y))
-		anim = "pulando"
+		if is_on_ground():
+			set_axis_velocity(Vector2(0, -jump_force))
+			somPersonagem.play("8-bit-jump")
+			jumping = 1
+		else:
+			PLAYERSTATE_NEXT = "air"
+			
 	else:
 		set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 #funcao que verifica a posição de ground do personagem e permite o salto
+
 func ground_state(delta):
-		
 	if is_on_ground():
 		jumping = 0
 		if pulo.check() == 1:
