@@ -2,19 +2,21 @@ extends CanvasLayer
 
 var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
+var reiniciar
+var pause
 
 func _ready():
 	set_process(true)
 	
-func _process(delta):
 	#Criando as variáveis que receberão os botões da cena
 	#Como aproveitei o código do meu projeto antigo, 
 	#comentei as ações que precisam ser implementadas
+	reiniciar = get_node("voce_perdeu/reiniciar")
 	
-	var reiniciar = get_node("voce_perdeu/reiniciar")
 	#var voltar = get_node("voltar_botao")
-	var pause = get_node("pause")
+	pause = get_node("pause")
 	
+func _process(delta):
 	#Condições para que as ações dos botões aconteçam
 	if reiniciar.is_hovered() && clique_esquerdo.check() == 1:
 		get_tree().change_scene("res://scenes/main_scene.scn")
