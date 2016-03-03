@@ -8,7 +8,7 @@ var input_states = preload("res://scripts/InputStates.gd")
 export var player_Speed = 700
 var accel = 5
 var air_accel = 2
-export var jump_force = 420
+export var jump_force = 700
 
 var raycast_down = null
 var current_Speed = Vector2(0,0)
@@ -19,9 +19,9 @@ export var pos_parada = 11000
 var PLAYERSTATE_PREV = ""
 var PLAYERSTATE = ""
 var PLAYERSTATE_NEXT = "ground"
-var altura_tela = get_viewport_rect().size.height
-var largura_tela = get_viewport_rect().size.width
-
+var altura_tela =0
+var largura_tela = 0
+var soltou_tecla = false
 
 #Variável que controla a animação atual do personagem
 var anim_personagem = null
@@ -35,7 +35,7 @@ var pulo = input_states.new("cima")
 #Variáveis para que a mesma animação não se repita e atrapalhe a animação atual
 var anim = ""
 var anim_new = ""
-
+var ground_state = false
 
 
 #função que vê se o Raycast está colidindo ou não com o chão
@@ -55,23 +55,19 @@ func _ready():
 	altura_tela = get_viewport_rect().size.height
 	largura_tela = get_viewport_rect().size.width
 	#Variável recebendo o nó de animação do personagem
-	anim_personagem = get_node("AnimationPlayer")
-	
+	anim_personagem = get_node("AnimationPlayer")	
 	somPersonagem = get_node("somPersonagem")
+	self.set_gravity_scale(30)
 	
 func _fixed_process(delta):
 	
 	
 	#Váriavel anterior recebendo atual e a atual
 	#recebendo a próxima para controlar o estado (chão ou ar)
-	PLAYERSTATE_PREV = PLAYERSTATE
-	PLAYERSTATE = PLAYERSTATE_NEXT
+	
 	
 	#condições para que o estado do personagem receba o estado ar ou chão
-	if PLAYERSTATE == "ground":
-		ground_state(delta)
-	if PLAYERSTATE == "air":
-		air_state(delta)
+	check_pulo(delta)
 	
 	#verifica animação do personagem e atualiza para a nova animação
 	if anim != anim_new:
@@ -114,31 +110,28 @@ func move(speed, accel, delta):
 		set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 #funcao que verifica a posição de ground do personagem e permite o salto
-func ground_state(delta):
-		
+func check_pulo(delta):		
 	if is_on_ground():
-		jumping = 0
-		if pulo.check() == 1:
+		if ground_state == true:
+			jumping = 0		
+		if pulo.check() == 1 and jumping == 0:
 			set_axis_velocity(Vector2(0, -jump_force))
 			somPersonagem.play("8-bit-jump")
 			jumping = 1
 	else:
-		PLAYERSTATE_NEXT = "air"
-
-#funçao que verifica a posião de air do personagem e permite o double jump
-func air_state(delta):
-	if pulo.check() == 1 and (jumping == 1 or jumping == 0):
-		set_axis_velocity(Vector2(0, -jump_force))
-		somPersonagem.play("8-bit-jump")
-		jumping = 2
+		ground_state = false
+		if pulo.check() == 1 and jumping < 2:
+			set_axis_velocity(Vector2(0, -jump_force))
+			somPersonagem.play("8-bit-jump")
+			jumping += 1
 		
-	if get_linear_velocity().y > 0:
-		anim = "pulando"
-	else:
-		anim = "pulando"
-
-	if is_on_ground():
-		PLAYERSTATE_NEXT = "ground"
+		if get_linear_velocity().y < 0:
+			anim = "pulando"
+		else:
+			anim = "andando"
+			ground_state = true
+	
+	
 		
 func get_player_speed():
 	return player_Speed
