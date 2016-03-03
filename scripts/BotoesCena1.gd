@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-var input_states = preload("res://scripts/input_states.gd")
-var clique_esquerdo = input_states.new("clique_esquerdo")
+var inputStates = preload("res://scripts/InputStates.gd")
+var cliqueEsquerdo = inputStates.new("cliqueEsquerdo")
 var reiniciar
 var pause
 
@@ -18,12 +18,12 @@ func _ready():
 	
 func _process(delta):
 	#Condições para que as ações dos botões aconteçam
-	if reiniciar.is_hovered() && clique_esquerdo.check() == 1:
+	if reiniciar.is_hovered() && cliqueEsquerdo.check() == 1:
 		get_tree().change_scene("res://scenes/main_scene.scn")
-#	if voltar.is_hovered() && clique_esquerdo.check() == 1:
+#	if voltar.is_hovered() && cliqueEsquerdo.check() == 1:
 #		get_tree().change_scene("res://scenes/Cena0_abertura.scn")
 		
-	if pause.is_hovered() && clique_esquerdo.check() == 1:
+	if pause.is_hovered() && cliqueEsquerdo.check() == 1:
 		if get_tree().is_paused():
 			get_tree().set_pause(false)
 			#inicia a musica quando despausar

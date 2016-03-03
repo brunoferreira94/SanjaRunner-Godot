@@ -1,9 +1,9 @@
 extends Node2D
 
-var input_states = preload("res://scripts/input_states.gd")
+var input_states = preload("res://scripts/InputStates.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
 
-var mainscene = preload("res://scenes/main_scene.scn")
+var mainscene = preload("res://scenes/MainScene.scn")
 var numPlayer
 
 func _ready():

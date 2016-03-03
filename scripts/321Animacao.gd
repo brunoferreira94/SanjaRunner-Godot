@@ -11,3 +11,4 @@ func _process(delta):
 		get_parent().get_parent().get_node("HUD/pause").show()
 		hide()
 		get_tree().set_pause(false)
+		set_process(false)
