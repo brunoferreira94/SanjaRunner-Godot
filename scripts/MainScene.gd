@@ -4,7 +4,7 @@ extends Node2D
 var PapersTotal = 0
 var papersCollected = 0
 var numPlayer
-var player = [preload("res://scenes/personagens/personagemMeninoNegro.scn"), preload("res://scenes/personagens/personagemCadeirante.scn"), preload("res://scenes/personagens/personagemMeninaBranca.scn")]
+var player = [preload("res://scenes/personagens/PersonagemMeninoNegro.scn"), preload("res://scenes/personagens/PersonagemCadeirante.scn"), preload("res://scenes/personagens/PersonagemMeninaBranca.scn")]
 var script = load("res://scripts/Personagem.gd")
 var spawnPlayer = 0
 var altura_tela = 0
