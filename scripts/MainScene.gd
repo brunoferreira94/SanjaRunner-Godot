@@ -19,12 +19,15 @@ func _ready():
 	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
 	altura_tela = get_viewport_rect().size.height
 	largura_tela = get_viewport_rect().size.width
-	
+	get_node("HUD/321/AnimationPlayer").play("inicio")
+	get_tree().set_pause(true)
 	set_fixed_process(true)
 	
 	
-func _fixed_process(delta):
+func _fixed_process(delta):	
+
 	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
+	
 	
 	
 func spawn_player():
