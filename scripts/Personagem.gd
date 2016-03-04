@@ -16,11 +16,10 @@ var jumping = 0
 export var posParada = 11000
 
 #Variáveis de estado para saber se o personagem está no chão ou no ar
-var PLAYERSTATE_PREV = ""
-var PLAYERSTATE = ""
-var PLAYERSTATE_NEXT = "ground"
+
 var alturaTela =0
 var larguraTela = 0
+var soltouBotao = false
 
 
 #Variável que controla a animação atual do personagem
@@ -34,8 +33,8 @@ var pulo = input_states.new("cima")
 
 #Variáveis para que a mesma animação não se repita e atrapalhe a animação atual
 var anim = ""
-var anim_new = ""
-var ground_state = false
+var animNew = ""
+var groundState = false
 
 
 #função que vê se o Raycast está colidindo ou não com o chão
@@ -70,8 +69,8 @@ func _fixed_process(delta):
 	check_pulo(delta)
 	
 	#verifica animação do personagem e atualiza para a nova animação
-	if anim != anim_new:
-		anim_new = anim
+	if anim != animNew:
+		animNew = anim
 		animPersonagem.play(anim)
 		
 	move(player_Speed,accel,delta)
@@ -112,14 +111,14 @@ func move(speed, accel, delta):
 #funcao que verifica a posição de ground do personagem e permite o salto
 func check_pulo(delta):		
 	if is_on_ground():
-		if ground_state == true:
+		if groundState == true:
 			jumping = 0		
 		if pulo.check() == 1 and jumping == 0:
 			set_axis_velocity(Vector2(0, -jumpForce))
 			somPersonagem.play("8-bit-jump")
 			jumping = 1
 	else:
-		ground_state = false
+		groundState = false
 		if pulo.check() == 1 and jumping < 2:
 			set_axis_velocity(Vector2(0, -jumpForce))
 			somPersonagem.play("8-bit-jump")
@@ -129,10 +128,9 @@ func check_pulo(delta):
 			anim = "pulando"
 		else:
 			anim = "andando"
-			ground_state = true
+			groundState = true
 	
-	
-		
+
 func get_player_speed():
 	return player_Speed
 	
