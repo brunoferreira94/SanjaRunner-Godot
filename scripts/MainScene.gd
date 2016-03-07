@@ -34,6 +34,7 @@ func spawn_player():
 	spawnPlayer = player[numPlayer].instance()
 	spawnPlayer.set_pos(Vector2(108,461))
 	spawnPlayer.set_script(script)
+	
 	add_child(spawnPlayer)
 
 	

@@ -5,7 +5,7 @@ extends RigidBody2D
 var input_states = preload("res://scripts/InputStates.gd")
 
 #Variáveis para controlar o personagem no chão e no ar
-export var player_Speed = 150
+export var player_Speed = 550
 var accel = 5
 var airAccel = 2
 export var jumpForce = 700
@@ -20,7 +20,7 @@ export var posParada = 11000
 var alturaTela =0
 var larguraTela = 0
 var soltouBotao = false
-var passouApice = false
+var passouApice = true
 
 #Variável que controla a animação atual do personagem
 var animPersonagem = null
@@ -36,6 +36,8 @@ var anim = ""
 var animNew = ""
 var groundState = false
 
+var maxAlturaPulo = 10
+var alturaPuloCont = 0
 
 #função que vê se o Raycast está colidindo ou não com o chão
 
@@ -62,7 +64,8 @@ func _fixed_process(delta):
 	
 	
 	#condições para que o estado do personagem receba o estado ar ou chão
-	check_pulo(delta)
+	
+	check_pulo()
 	
 	#verifica animação do personagem e atualiza para a nova animação
 	if anim != animNew:
@@ -93,7 +96,7 @@ func morreu():
 
 #função responsavel pelo movimento do personagem
 func move(speed, accel, delta):
-	anim = "andando"
+	
 	#lerp calcula a interpolação linear entre currentSpeed.x e speed
 	currentSpeed.x = lerp(currentSpeed.x, speed, accel * delta)
 	if get_pos().x > posParada and get_pos().x < posParada+1000:
@@ -101,7 +104,7 @@ func move(speed, accel, delta):
 		set_linear_velocity(Vector2(currentSpeed.x-400, get_linear_velocity().y))
 	elif get_pos().x > posParada+1000:
 		set_linear_velocity(Vector2(0, get_linear_velocity().y))
-		anim = "pulando"
+		
 	else:
 		set_linear_velocity(Vector2(currentSpeed.x, get_linear_velocity().y))
 		
@@ -112,30 +115,35 @@ func is_on_ground():
 		return false
 		
 #funcao que verifica a posição de ground do personagem e permite o salto
-func check_pulo(delta):	
-	print(passouApice)	
-	if is_on_ground():
-		if passouApice == true:
-			groundState = true
-			passouApice = false
-			
-		if pulo.check() == 1:
-			groundState = false
-			set_axis_velocity(Vector2(0, -jumpForce))
-			somPersonagem.play("8-bit-jump")
-			jumpCont = 1
-	else:
-		if pulo.check() == 1 and jumpCont < 2:
-			set_axis_velocity(Vector2(0, -jumpForce))
-			somPersonagem.play("8-bit-jump")
-			jumpCont += 1
-
-		if get_linear_velocity().y < 0:
+func check_pulo():
+	if pulo.check() == 1:
+		jumpCont += 1
+		alturaPuloCont = 0
+		if jumpCont <= 2:
 			anim = "pulando"
-		else:
-			anim = "andando"
-			passouApice = true
+			somPersonagem.play("8-bit-jump")
+			set_axis_velocity(Vector2(0, -jumpForce))
+			passouApice = false
+		
+	if pulo.check() == 2:
+		if jumpCont <= 2:
+			if alturaPuloCont <= maxAlturaPulo:
+				alturaPuloCont += 1
+				set_axis_velocity(Vector2(0, -jumpForce))
 	
+	if get_linear_velocity().y > 0:
+		anim = "andando"
+		passouApice = true
+		if pulo.check() == 2: #Caso o usuário continue pressionando o pulo enquanto o personagem está caindo ele irá cair mais suavemente
+			set_axis_velocity(Vector2(0, get_linear_velocity().y - 25)) 
+	
+	if passouApice:
+		if is_on_ground():
+			groundState = true
+			jumpCont = 0
+
+
+
 
 func get_player_speed():
 	return player_Speed

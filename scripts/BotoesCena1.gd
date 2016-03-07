@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	#Condições para que as ações dos botões aconteçam
 	if reiniciar.is_hovered() && cliqueEsquerdo.check() == 1:
-		get_tree().change_scene("res://scenes/MainScene.scn")
+		get_tree().reload_current_scene()
 #	if voltar.is_hovered() && cliqueEsquerdo.check() == 1:
 #		get_tree().change_scene("res://scenes/Cena0_abertura.scn")
 		
