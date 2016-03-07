@@ -6,14 +6,18 @@ var input_states = preload("res://scripts/InputStates.gd")
 
 #Variáveis para controlar o personagem no chão e no ar
 export var player_Speed = 550
+export var jumpForce = 700
+export var posParada = 11000
+export var gravityScale = 30
+export var fallingSmooth = 10 #GravityScale quando o jogador esta pressionando o pulo enquanto está caindo
 var accel = 5
 var airAccel = 2
-export var jumpForce = 700
+
 
 var raycastDown = null
 var currentSpeed = Vector2(0,0)
 var jumpCont = 0
-export var posParada = 11000
+
 
 #Variáveis de estado para saber se o personagem está no chão ou no ar
 
@@ -117,12 +121,11 @@ func is_on_ground():
 #funcao que verifica a posição de ground do personagem e permite o salto
 func check_pulo():
 	if pulo.check() == 1:
-		jumpCont += 1
-		alturaPuloCont = 0
-		get_node("Particles2D").set_emitting(false)
+		jumpCont += 1	
 		get_node("Particles2D").set_use_local_space(false)
-		
+		get_node("Particles2D").set_emitting(false)
 		if jumpCont <= 2:
+			alturaPuloCont = 0
 			anim = "pulando"
 			somPersonagem.play("8-bit-jump")
 			set_axis_velocity(Vector2(0, -jumpForce))
@@ -138,16 +141,17 @@ func check_pulo():
 		anim = "andando"
 		passouApice = true
 		if pulo.check() == 2: #Caso o usuário continue pressionando o pulo enquanto o personagem está caindo ele irá cair mais suavemente
-			set_gravity_scale(5)
+			set_gravity_scale(fallingSmooth)
 		else:
-			set_gravity_scale(30)
+			set_gravity_scale(gravityScale)
 			
 	if passouApice:
 		if is_on_ground():
-			get_node("Particles2D").set_emitting(true)
 			get_node("Particles2D").set_use_local_space(true)
+			get_node("Particles2D").set_emitting(true)
 			groundState = true
 			jumpCont = 0
+			set_gravity_scale(gravityScale)
 
 
 
