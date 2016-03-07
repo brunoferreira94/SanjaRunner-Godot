@@ -5,14 +5,14 @@ extends RigidBody2D
 var input_states = preload("res://scripts/InputStates.gd")
 
 #Variáveis para controlar o personagem no chão e no ar
-export var player_Speed = 700
+export var player_Speed = 150
 var accel = 5
 var airAccel = 2
 export var jumpForce = 700
 
 var raycastDown = null
 var currentSpeed = Vector2(0,0)
-var jumping = 0
+var jumpCont = 0
 export var posParada = 11000
 
 #Variáveis de estado para saber se o personagem está no chão ou no ar
@@ -20,7 +20,7 @@ export var posParada = 11000
 var alturaTela =0
 var larguraTela = 0
 var soltouBotao = false
-
+var passouApice = false
 
 #Variável que controla a animação atual do personagem
 var animPersonagem = null
@@ -38,11 +38,7 @@ var groundState = false
 
 
 #função que vê se o Raycast está colidindo ou não com o chão
-func is_on_ground():
-	if raycastDown.is_colliding():
-		return true
-	else:
-		return false
+
 
 func _ready():
 	set_fixed_process(true)
@@ -101,34 +97,44 @@ func move(speed, accel, delta):
 	#lerp calcula a interpolação linear entre currentSpeed.x e speed
 	currentSpeed.x = lerp(currentSpeed.x, speed, accel * delta)
 	if get_pos().x > posParada and get_pos().x < posParada+1000:
+		currentSpeed.x = lerp(currentSpeed.x, speed, 0.2 * delta)
 		set_linear_velocity(Vector2(currentSpeed.x-400, get_linear_velocity().y))
 	elif get_pos().x > posParada+1000:
 		set_linear_velocity(Vector2(0, get_linear_velocity().y))
 		anim = "pulando"
 	else:
 		set_linear_velocity(Vector2(currentSpeed.x, get_linear_velocity().y))
-
-#funcao que verifica a posição de ground do personagem e permite o salto
-func check_pulo(delta):		
-	if is_on_ground():
-		if groundState == true:
-			jumping = 0		
-		if pulo.check() == 1 and jumping == 0:
-			set_axis_velocity(Vector2(0, -jumpForce))
-			somPersonagem.play("8-bit-jump")
-			jumping = 1
-	else:
-		groundState = false
-		if pulo.check() == 1 and jumping < 2:
-			set_axis_velocity(Vector2(0, -jumpForce))
-			somPersonagem.play("8-bit-jump")
-			jumping += 1
 		
+func is_on_ground():
+	if raycastDown.is_colliding():
+		return true
+	else:
+		return false
+		
+#funcao que verifica a posição de ground do personagem e permite o salto
+func check_pulo(delta):	
+	print(passouApice)	
+	if is_on_ground():
+		if passouApice == true:
+			groundState = true
+			passouApice = false
+			
+		if pulo.check() == 1:
+			groundState = false
+			set_axis_velocity(Vector2(0, -jumpForce))
+			somPersonagem.play("8-bit-jump")
+			jumpCont = 1
+	else:
+		if pulo.check() == 1 and jumpCont < 2:
+			set_axis_velocity(Vector2(0, -jumpForce))
+			somPersonagem.play("8-bit-jump")
+			jumpCont += 1
+
 		if get_linear_velocity().y < 0:
 			anim = "pulando"
 		else:
 			anim = "andando"
-			groundState = true
+			passouApice = true
 	
 
 func get_player_speed():
