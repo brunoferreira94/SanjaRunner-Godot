@@ -138,8 +138,10 @@ func check_pulo():
 		anim = "andando"
 		passouApice = true
 		if pulo.check() == 2: #Caso o usuário continue pressionando o pulo enquanto o personagem está caindo ele irá cair mais suavemente
-			set_axis_velocity(Vector2(0, get_linear_velocity().y - 25)) 
-	
+			set_gravity_scale(5)
+		else:
+			set_gravity_scale(30)
+			
 	if passouApice:
 		if is_on_ground():
 			get_node("Particles2D").set_emitting(true)
