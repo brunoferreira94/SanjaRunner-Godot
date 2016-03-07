@@ -6,7 +6,7 @@ var papersCollected = 0
 var numPlayer
 var player = [preload("res://scenes/personagens/PersonagemMeninoNegro.scn"), preload("res://scenes/personagens/PersonagemCadeirante.scn"), preload("res://scenes/personagens/PersonagemMeninaBranca.scn")]
 var script = load("res://scripts/Personagem.gd")
-var spawnPlayer = 0
+var spawnedPlayer = 0
 var altura_tela = 0
 var largura_tela = 0
 
@@ -31,11 +31,10 @@ func _fixed_process(delta):
 	
 	
 func spawn_player():
-	spawnPlayer = player[numPlayer].instance()
-	spawnPlayer.set_pos(Vector2(108,461))
-	spawnPlayer.set_script(script)
-	
-	add_child(spawnPlayer)
+	spawnedPlayer = player[numPlayer].instance()
+	spawnedPlayer.set_pos(Vector2(108,461))
+	spawnedPlayer.set_script(script)	
+	add_child(spawnedPlayer)
 
 	
 	

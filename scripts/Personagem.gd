@@ -119,6 +119,9 @@ func check_pulo():
 	if pulo.check() == 1:
 		jumpCont += 1
 		alturaPuloCont = 0
+		get_node("Particles2D").set_emitting(false)
+		get_node("Particles2D").set_use_local_space(false)
+		
 		if jumpCont <= 2:
 			anim = "pulando"
 			somPersonagem.play("8-bit-jump")
@@ -139,6 +142,8 @@ func check_pulo():
 	
 	if passouApice:
 		if is_on_ground():
+			get_node("Particles2D").set_emitting(true)
+			get_node("Particles2D").set_use_local_space(true)
 			groundState = true
 			jumpCont = 0
 
