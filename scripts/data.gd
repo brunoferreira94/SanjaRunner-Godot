@@ -1,37 +1,73 @@
 
 extends Node2D
 
-var numPapel = [[],[0, 0, 0, 0, 0],["texto1", "texto2", "texto3", "texto4", "texto5"]]
+var numPapel = [[0, 0, 0, 0, 0],["texto1", "texto2", "texto3", "texto4", "texto5"]]
 
+#Pega o texto de um arquivo e atribui ao numPapel
+func set_texto_papel(id):
+	var conteudo = File.new()
+	var linha
+	if !conteudo.file_exists("res://savegame.save"):
+		print(-1)
+		return -1
+	else:
+		conteudo.open("res://conteudo.txt", File.READ)
+		while(!conteudo.eof_reached()):
+			if conteudo.get_line() == str(id):
+				for j in range(5):
+					linha = conteudo.get_line()
+					numPapel[1][j] = linha
+					print(numPapel[1][j],"\n")
+
+func get_numPapel(i, j):
+	return numPapel[i][j]
+	
+#Retorna o vetor numPapel
 func save():
 	var vetorSave = numPapel
 	return vetorSave
 
+#Grava as alterações feitas no vetor numPapel num arquivo
 func save_game(id):
 	var savegame = File.new()
-	savegame.open("res://savegame.save", File.READ)
-	var linha = savegame.get_line()
-	numPapel[0].append("inserido")
-	numPapel[0].append("inserido1")
-	if linha == str(id):
-		print("Id é igual ao da cena:",linha)
-	savegame.close()
-	savegame.open("res://savegame.save", File.WRITE)
-	savegame.store_line(str(id))
-	savegame.store_line(str(save()))
-	savegame.close()
+	var pos
+	savegame.open("res://savegame.save", File.READ_WRITE)
+	
+	if savegame.file_exists("res://savegame.save"):
+		while(!savegame.eof_reached()):
+			if savegame.get_line() == str(id):
+				savegame.store_line(str(save()))
+				savegame.close()
+				break
+			elif savegame.eof_reached():
+				savegame.store_line(str(id))
+				savegame.store_line(str(save()))
+				savegame.close()
+				break
+	else:
+		savegame.store_line(str(id))
+		savegame.store_line(str(save()))
+		savegame.close()
 
-func load_game():
+#Lê as informações num arquivo e atribui a matriz numPapel
+func load_game(id):
 	var savegame = File.new()
 	var linha
 	if !savegame.file_exists("res://savegame.save"):
 		print(-1)
 		return -1
-
-	savegame.open("res://savegame.save", File.READ)
-	while (!savegame.eof_reached()):
-		linha = savegame.get_line()
-		print(linha)
+	else:
+		savegame.open("res://savegame.save", File.READ)
+		while(!savegame.eof_reached()):
+			if savegame.get_line() == str(id):
+				var cont = 0
+				linha = savegame.get_line()
+				for i in range(2):
+					for j in range(5):
+						numPapel[i][j] = linha.split(", ")[cont]
+						print(numPapel[i][j],"\n")
+						cont+=1
+		savegame.close()
 
 func _ready():
 	pass

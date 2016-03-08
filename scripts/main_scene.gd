@@ -14,8 +14,9 @@ func _ready():
 	else:
 		numPlayer = randi() % 3
 	spawnPlayer()
-	get_node("data").save_game(1)
-	get_node("data").load_game()
+	#get_node("data").save_game(1)
+	#get_node("data").load_game(1)
+	get_node("data").set_texto_papel(1)
 func _process(delta):
 	pass
 	
