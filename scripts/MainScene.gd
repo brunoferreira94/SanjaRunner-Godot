@@ -24,8 +24,7 @@ func _ready():
 	set_fixed_process(true)
 	
 	
-func _fixed_process(delta):	
-
+func _fixed_process(delta):
 	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
 	
 	
