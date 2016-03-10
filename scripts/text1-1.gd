@@ -3,14 +3,11 @@ extends Node2D
 
 var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
-var texto
 
 func setInfoPapel(var id):
-	texto.set_text(get_parent().get_parent().get_node("data").get_numPapel(1,id-1))
+	get_node("TextEdit").set_text(get_parent().get_parent().get_node("data").get_numPapel(1,id-1))
 	
 func _ready():
-	
-	texto = get_node("TextEdit")
 	set_process(true)
 	
 func _process(delta):

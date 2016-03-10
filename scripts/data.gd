@@ -19,6 +19,11 @@ func set_texto_papel(id):
 					numPapel[1][j] = linha
 					print(numPapel[1][j],"\n")
 
+
+func set_papel_coletado(umOuZero, id):
+	numPapel[0][id] = umOuZero
+	
+#retorna a informação da posição do vetor definida
 func get_numPapel(i, j):
 	return numPapel[i][j]
 	
@@ -54,7 +59,7 @@ func load_game(id):
 	var savegame = File.new()
 	var linha
 	if !savegame.file_exists("res://savegame.save"):
-		print(-1)
+		print("Arquivo de save não existente.")
 		return -1
 	else:
 		savegame.open("res://savegame.save", File.READ)
@@ -65,6 +70,8 @@ func load_game(id):
 				for i in range(2):
 					for j in range(5):
 						numPapel[i][j] = linha.split(", ")[cont]
+						if numPapel[i][j] == 1:
+							get_owner().papelColetado += 1
 						print(numPapel[i][j],"\n")
 						cont+=1
 		savegame.close()

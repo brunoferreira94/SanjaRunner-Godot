@@ -1,21 +1,17 @@
 
 extends Node2D
 
-export var value = 1
+var id = 1
 
 func _ready():
-	if get_owner()!= null:
-		get_owner().papers_total += 1
-		
-	get_node("Area2D")
+	pass
 	
-
-func _collect_paper( body ):
-	print(get_owner().papers_collected)
-	if get_owner() != null:
-		get_owner().papers_collected += value
-		get_parent().get_parent().get_node("HUD/texto_papel").setInfoPapel(value)
-	print(get_owner().papers_collected)
+func set_id(id):
+	self.id = id
+	
+func collect_paper( body ):
+	get_owner().papelColetado += 1
+	get_parent().get_parent().get_node("data").set_papel_coletado(1,id-1)
 	get_tree().set_pause(true)
 	get_parent().get_parent().get_node("HUD/texto_papel").show()
 	get_parent().get_parent().get_node("HUD/pause").hide()
