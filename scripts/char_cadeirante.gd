@@ -116,6 +116,8 @@ func move(speed, accel, delta):
 
 func ground_state(delta):
 	if is_on_ground():
+		get_node("Particles2D").set_emitting(true)
+		get_node("Particles2D").set_use_local_space(true)
 		jumping = 0
 		if pulo.check() == 1:
 			set_axis_velocity(Vector2(0, -jump_force))
@@ -126,6 +128,8 @@ func ground_state(delta):
 
 #funçao que verifica a posião de air do personagem e permite o double jump
 func air_state(delta):
+	get_node("Particles2D").set_emitting(false)
+	get_node("Particles2D").set_use_local_space(false)
 	if pulo.check() == 1 and (jumping == 1 or jumping == 0):
 		set_axis_velocity(Vector2(0, -jump_force))
 		somPersonagem.play("8-bit-jump")
