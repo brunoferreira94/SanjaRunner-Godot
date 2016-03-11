@@ -6,6 +6,7 @@ var papersCollected = 0
 var numPlayer
 var player = [preload("res://scenes/personagens/PersonagemMeninoNegro.scn"), preload("res://scenes/personagens/PersonagemCadeirante.scn"), preload("res://scenes/personagens/PersonagemMeninaBranca.scn")]
 var script = load("res://scripts/Personagem.gd")
+var poeiraPulo = preload("res://scenes/PoeiraPulo.scn").instance()
 var spawnedPlayer = 0
 var altura_tela = 0
 var largura_tela = 0
@@ -25,7 +26,7 @@ func _ready():
 	
 	
 func _fixed_process(delta):
-	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
+	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2)-100,altura_tela/1.8))
 	
 	
 	
@@ -35,5 +36,8 @@ func spawn_player():
 	spawnedPlayer.set_script(script)	
 	add_child(spawnedPlayer)
 
+func spawn_dust(delta):
+	poeiraPulo.set_emitting(true)
+	add_child(poeiraPulo)
 	
 	

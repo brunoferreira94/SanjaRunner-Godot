@@ -8,8 +8,7 @@ var input_states = preload("res://scripts/InputStates.gd")
 export var player_Speed = 550
 export var jumpForce = 700
 export var posParada = 11000
-export var gravityScale = 30
-export var fallingSmooth = 10 #GravityScale quando o jogador esta pressionando o pulo enquanto está caindo
+export var gravityScale = 22
 var accel = 5
 var airAccel = 2
 
@@ -140,23 +139,19 @@ func check_pulo():
 	if get_linear_velocity().y > 0:
 		passouApice = true
 		anim = "andando"
-		if pulo.check() == 2: #Caso o usuário continue pressionando o pulo enquanto o personagem está caindo ele irá cair mais suavemente
-			set_gravity_scale(fallingSmooth)
-		else:
-			set_gravity_scale(gravityScale)
+		
 			
 			
 	if passouApice:
 		if is_on_ground():
-			get_node("Particles2D").set_use_local_space(true)
-			get_node("Particles2D").set_emitting(true)
+			#get_parent().get_node("Particles2D").set_emitting(true)
 			groundState = true
 			jumpCont = 0
 			set_gravity_scale(gravityScale)
 			passouApice = false
-		else:
-			get_node("Particles2D").set_use_local_space(false)
-			get_node("Particles2D").set_emitting(false)
+			
+		#else:
+			#get_parent().get_node("Particles2D").set_emitting(false)
 
 
 
@@ -166,3 +161,4 @@ func get_player_speed():
 	
 func get_player_accel():
 	return accel
+	
