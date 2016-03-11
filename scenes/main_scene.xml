@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="24" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://scenes/background/banhadoParallaxBackground.scn" type="PackedScene" index="14"></ext_resource>
+	<ext_resource path="res://scripts/main_scene.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://scenes/text1-1.xml" type="PackedScene" index="5"></ext_resource>
+	<ext_resource path="res://scenes/paper.xml" type="PackedScene" index="13"></ext_resource>
+	<ext_resource path="res://scripts/text1-1.gd" type="Script" index="6"></ext_resource>
+	<ext_resource path="res://img/2.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://scripts/ghostChar.gd" type="Script" index="1"></ext_resource>
+	<ext_resource path="res://scripts/botoes_cena1.gd" type="Script" index="2"></ext_resource>
+	<ext_resource path="res://img/botaoPause.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/1.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://scripts/321Animacao.gd" type="Script" index="10"></ext_resource>
+	<ext_resource path="res://soundtrack/Intro SanjaRunner.ogg" type="AudioStream" index="12"></ext_resource>
+	<ext_resource path="res://flag.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://img/3.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://tileset/plataformas_calcada_tile.xml" type="TileSet" index="11"></ext_resource>
+	<ext_resource path="res://scripts/data.gd" type="Script" index="16"></ext_resource>
+	<ext_resource path="res://scenes/menu_voce_perdeu.xml" type="PackedScene" index="4"></ext_resource>
+	<resource type="StyleBoxEmpty" path="local://2">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://3">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://4">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://5">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="SpriteFrames" path="local://6">
+		<array name="frames" len="3" shared="false">
+			<resource  external="7">  </resource>
+			<resource  external="8">  </resource>
+			<resource  external="9">  </resource>
+		</array>
+
+	</resource>
+	<resource type="Animation" path="local://7">
+		<string name="resource/name"> "inicio" </string>
+		<real name="length"> 6 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:transform/pos" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="0"> 				 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="0"> 				 </real_array>
+			<string> "values" </string>
+			<array  len="0" shared="false">
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/rot" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="0"> 				 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="0"> 				 </real_array>
+			<string> "values" </string>
+			<array  len="0" shared="false">
+			</array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="7"> 				0, 1, 2, 3, 4, 5, 6 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="7"> 				1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="7" shared="false">
+				<vector2> 0.3, 0.3 </vector2>
+				<vector2> 1, 1 </vector2>
+				<vector2> 0.3, 0.3 </vector2>
+				<vector2> 1, 1 </vector2>
+				<vector2> 0.3, 0.3 </vector2>
+				<vector2> 1, 1 </vector2>
+				<vector2> 0.1, 0.1 </vector2>
+			</array>
+		</dictionary>
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> ".:frame" </node_path>
+		<int name="tracks/3/interp"> 1 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="7"> 				0, 1, 2, 3, 4, 5, 6 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="7"> 				1, 1, 1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="7" shared="false">
+				<int> 2 </int>
+				<int> 2 </int>
+				<int> 1 </int>
+				<int> 1 </int>
+				<int> 0 </int>
+				<int> 0 </int>
+				<int> 0 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="2" shared="false">
+				<node_path> "HUD/voce_perdeu" </node_path>
+				<node_path> "HUD/texto_papel" </node_path>
+			</array>
+			<string> "names" </string>
+			<string_array  len="126">
+				<string> "Game" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Node2D" </string>
+				<string> "personagem_fantasma" </string>
+				<string> "input/pickable" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
+				<string> "mode" </string>
+				<string> "mass" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
+				<string> "gravity_scale" </string>
+				<string> "custom_integrator" </string>
+				<string> "continuous_cd" </string>
+				<string> "contacts_reported" </string>
+				<string> "contact_monitor" </string>
+				<string> "sleeping" </string>
+				<string> "can_sleep" </string>
+				<string> "velocity/linear" </string>
+				<string> "velocity/angular" </string>
+				<string> "damp_override/linear" </string>
+				<string> "damp_override/angular" </string>
+				<string> "pos_parada" </string>
+				<string> "RigidBody2D" </string>
+				<string> "Camera2D" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "anchor_mode" </string>
+				<string> "rotating" </string>
+				<string> "current" </string>
+				<string> "zoom" </string>
+				<string> "limit/left" </string>
+				<string> "limit/top" </string>
+				<string> "limit/right" </string>
+				<string> "limit/bottom" </string>
+				<string> "drag_margin/h_enabled" </string>
+				<string> "drag_margin/v_enabled" </string>
+				<string> "smoothing/enable" </string>
+				<string> "smoothing/speed" </string>
+				<string> "drag_margin/left" </string>
+				<string> "drag_margin/top" </string>
+				<string> "drag_margin/right" </string>
+				<string> "drag_margin/bottom" </string>
+				<string> "HUD" </string>
+				<string> "process/pause_mode" </string>
+				<string> "layer" </string>
+				<string> "offset" </string>
+				<string> "rotation" </string>
+				<string> "scale" </string>
+				<string> "CanvasLayer" </string>
+				<string> "pause" </string>
+				<string> "anchor/left" </string>
+				<string> "anchor/right" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "custom_styles/hover" </string>
+				<string> "custom_styles/pressed" </string>
+				<string> "toggle_mode" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "Button" </string>
+				<string> "voce_perdeu" </string>
+				<string> "visibility/visible" </string>
+				<string> "reiniciar" </string>
+				<string> "Sprite" </string>
+				<string> "texto_papel" </string>
+				<string> "continue" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "TextEdit" </string>
+				<string> "321" </string>
+				<string> "frames" </string>
+				<string> "frame" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/inicio" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
+				<string> "TileMap" </string>
+				<string> "tile_set" </string>
+				<string> "cell/size" </string>
+				<string> "cell/quadrant_size" </string>
+				<string> "cell/custom_transform" </string>
+				<string> "cell/half_offset" </string>
+				<string> "cell/tile_origin" </string>
+				<string> "cell/y_sort" </string>
+				<string> "collision/use_kinematic" </string>
+				<string> "collision/friction" </string>
+				<string> "collision/bounce" </string>
+				<string> "occluder/light_mask" </string>
+				<string> "tile_data" </string>
+				<string> "Musica" </string>
+				<string> "stream/stream" </string>
+				<string> "stream/play" </string>
+				<string> "stream/loop" </string>
+				<string> "stream/volume_db" </string>
+				<string> "stream/autoplay" </string>
+				<string> "stream/paused" </string>
+				<string> "stream/loop_restart_time" </string>
+				<string> "stream/buffering_ms" </string>
+				<string> "StreamPlayer" </string>
+				<string> "papers" </string>
+				<string> "Persist" </string>
+				<string> "paper1-1" </string>
+				<string> "paper1-2" </string>
+				<string> "Timer" </string>
+				<string> "process_mode" </string>
+				<string> "wait_time" </string>
+				<string> "one_shot" </string>
+				<string> "autostart" </string>
+				<string> "ParallaxBackground" </string>
+				<string> "moedas" </string>
+				<string> "TileMap1" </string>
+				<string> "TileMap2" </string>
+				<string> "texture" </string>
+				<string> "data" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 22 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="479"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 24, 4, -1, 21, 5, 2, 6, 3, 7, 3, 8, 4, 9, 5, 10, 5, 11, 6, 12, 6, 13, 2, 14, 4, 15, 4, 16, 2, 17, 2, 18, 7, 19, 8, 20, 6, 21, 9, 22, 9, 1, 10, 2, 11, 23, 12, 0, 1, 0, 25, 25, -1, 18, 26, 13, 27, 14, 28, 3, 29, 2, 30, 7, 31, 15, 32, 16, 33, 16, 34, 17, 35, 17, 36, 7, 37, 7, 38, 2, 39, 18, 40, 19, 41, 19, 42, 19, 43, 19, 0, 0, 0, 50, 44, -1, 7, 45, 20, 46, 3, 47, 8, 48, 6, 49, 15, 1, 21, 2, 22, 0, 3, 0, 67, 51, -1, 15, 52, 3, 53, 3, 54, 23, 55, 24, 56, 25, 57, 26, 58, 2, 59, 7, 60, 20, 61, 20, 62, 27, 63, 28, 64, 2, 65, 29, 66, 7, 0, 3, 0, 2147483647, 68, 30, 1, 69, 2, 0, 5, -1, 2147483647, 70, -1, 2, 62, 31, 63, 32, 0, 3, 0, 2147483647, 72, 33, 4, 69, 2, 26, 34, 27, 35, 1, 36, 0, 3, 0, 79, 76, -1, 7, 45, 20, 26, 37, 27, 38, 77, 39, 78, 3, 1, 40, 2, 41, 0, 8, 0, 74, 74, -1, 8, 80, 3, 81, 6, 82, 42, 83, 43, 84, 7, 85, 44, 86, 45, 87, 46, 0, 0, 0, 88, 88, -1, 18, 26, 47, 27, 48, 8, 4, 89, 49, 90, 50, 91, 51, 92, 52, 93, 20, 94, 4, 95, 2, 96, 2, 97, 5, 98, 6, 6, 3, 7, 3, 99, 3, 100, 53, 2, 54, 0, 0, 0, 110, 101, -1, 8, 102, 55, 103, 2, 104, 7, 105, 56, 106, 7, 107, 7, 108, 6, 109, 57, 0, 0, 0, 3, 111, -1, 1, 26, 58, 1, 112, 12, 0, 2147483647, 113, 59, 2, 26, 60, 27, 61, 0, 12, 0, 2147483647, 114, 59, 2, 26, 62, 27, 61, 0, 0, 0, 115, 115, -1, 5, 45, 20, 116, 3, 117, 63, 118, 2, 119, 7, 0, 0, 0, 2147483647, 120, 64, 0, 0, 0, 0, 3, 121, -1, 1, 26, 65, 0, 0, 0, 88, 122, -1, 18, 26, 66, 27, 48, 8, 4, 89, 49, 90, 50, 91, 51, 92, 52, 93, 20, 94, 4, 95, 2, 96, 2, 97, 5, 98, 6, 6, 3, 7, 3, 99, 3, 100, 53, 2, 67, 0, 0, 0, 88, 123, -1, 18, 26, 68, 27, 48, 8, 4, 89, 49, 90, 50, 91, 51, 92, 52, 93, 20, 94, 4, 95, 2, 96, 2, 97, 5, 98, 6, 6, 3, 7, 3, 99, 3, 100, 53, 2, 69, 0, 0, 0, 71, 71, -1, 3, 26, 70, 27, 71, 124, 72, 0, 0, 0, 3, 125, -1, 1, 1, 73, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="74" shared="false">
+				<resource  external="0">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<bool> False </bool>
+				<int> 1 </int>
+				<int> 0 </int>
+				<real> 1 </real>
+				<real> 0 </real>
+				<bool> True </bool>
+				<vector2> 0, 0 </vector2>
+				<real> -1 </real>
+				<resource  external="1">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<int> 11000 </int>
+				<vector2> 512, 385.998 </vector2>
+				<vector2> 16.0449, 9.9931 </vector2>
+				<vector2> 1, 1 </vector2>
+				<int> -10000000 </int>
+				<int> 10000000 </int>
+				<real> 5 </real>
+				<real> 0.2 </real>
+				<int> 2 </int>
+				<resource  external="2">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 134 </real>
+				<real> 10 </real>
+				<real> 14 </real>
+				<real> 124 </real>
+				<resource  resource_type="StyleBox" path="local://2">  </resource>
+				<resource  resource_type="StyleBox" path="local://3">  </resource>
+				<resource  external="3">  </resource>
+				<resource  external="4">  </resource>
+				<resource  resource_type="StyleBox" path="local://4">  </resource>
+				<resource  resource_type="StyleBox" path="local://5">  </resource>
+				<resource  external="5">  </resource>
+				<vector2> -166.688, -48.4353 </vector2>
+				<vector2> 1.3, 1.3 </vector2>
+				<resource  external="6">  </resource>
+				<vector2> 495.388, 355.349 </vector2>
+				<vector2> 0.1, 0.1 </vector2>
+				<resource  resource_type="SpriteFrames" path="local://6">  </resource>
+				<resource  external="10">  </resource>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://7">  </resource>
+				<real> 2.5 </real>
+				<array  len="0" shared="false">
+				</array>
+				<string> "" </string>
+				<vector2> 0, 16 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<resource  external="11">  </resource>
+				<vector2> 70, 70 </vector2>
+				<int> 16 </int>
+				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
+				<int_array  len="266"> 					327790, 0, 327791, 1, 327792, 1, 327793, 1, 327794, 1, 327795, 1, 327796, 1, 327797, 1, 327798, 1, 327799, 1, 327800, 1, 327801, 1, 327802, 1, 327803, 1, 327804, 1, 327805, 1, 327806, 2, 524338, 0, 524339, 1, 524340, 1, 524341, 1, 524342, 1, 524343, 1, 524344, 1, 524345, 1, 524346, 1, 524347, 1, 524348, 1, 524349, 1, 524350, 1, 524351, 2, 524377, 0, 524378, 1, 524379, 1, 524380, 1, 524381, 1, 524382, 1, 524383, 1, 524384, 1, 524385, 1, 524386, 1, 524387, 2, 524450, 0, 524451, 1, 524452, 1, 524453, 1, 524454, 1, 524455, 1, 524456, 1, 524457, 1, 524458, 1, 524459, 1, 524460, 1, 524461, 1, 524462, 1, 524463, 1, 524464, 1, 524465, 1, 524466, 2, 524481, 0, 524482, 1, 524483, 1, 524484, 1, 524485, 1, 524486, 1, 524487, 1, 524488, 1, 524489, 1, 524490, 1, 524491, 1, 524492, 1, 524493, 1, 524494, 1, 524495, 1, 524496, 1, 524497, 1, 524498, 1, 524499, 1, 524500, 1, 524501, 1, 524502, 1, 524503, 1, 524504, 1, 524505, 1, 524506, 1, 524507, 2, 655389, 0, 655390, 1, 655391, 1, 655392, 1, 655393, 1, 655394, 1, 655395, 1, 655396, 1, 655397, 1, 655398, 1, 655399, 1, 655400, 2, 720900, 0, 720901, 1, 720902, 1, 720903, 1, 720904, 1, 720905, 1, 720906, 1, 720907, 1, 720908, 1, 720909, 2, 720968, 0, 720969, 1, 720970, 1, 720971, 1, 720972, 1, 720973, 1, 720974, 1, 720975, 1, 720976, 1, 720977, 1, 720978, 2, 721038, 0, 721039, 1, 721040, 1, 721041, 1, 721042, 1, 721043, 1, 721044, 1, 721045, 1, 721046, 1, 721047, 1, 721048, 1, 721049, 1, 721050, 1, 721051, 2 </int_array>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  external="12">  </resource>
+				<real> 12 </real>
+				<int> 500 </int>
+				<vector2> 1068.37, 77.9692 </vector2>
+				<resource  external="13">  </resource>
+				<vector2> 1767.17, 375.847 </vector2>
+				<vector2> 0.5, 0.5 </vector2>
+				<vector2> 620.911, 437.364 </vector2>
+				<real> 60 </real>
+				<resource  external="14">  </resource>
+				<vector2> -10.3246, 15.4868 </vector2>
+				<vector2> 13133.7, 0 </vector2>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 26131.8, 0 </vector2>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 12095.8, 352.215 </vector2>
+				<vector2> 0.441223, 0.461776 </vector2>
+				<resource  external="15">  </resource>
+				<resource  external="16">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

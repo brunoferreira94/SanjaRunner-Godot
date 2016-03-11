@@ -3,7 +3,7 @@ extends Node2D
 
 var id = 1
 var numPlayer
-var player = [preload("res://scenes/personagens/personagem_menino_negro.scn"), preload("res://scenes/personagens/personagem_cadeirante.scn"), preload("res://scenes/personagens/personagem_menina_branca.scn")]
+var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), preload("res://scenes/personagens/personagem_cadeirante.xml"), preload("res://scenes/personagens/personagem_menina_branca.xml")]
 var script = load("res://scripts/char_cadeirante.gd")
 var papel = preload("res://scenes/paper.xml")
 var papelColetado = 0

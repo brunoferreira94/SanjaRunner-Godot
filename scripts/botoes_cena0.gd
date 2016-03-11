@@ -15,4 +15,4 @@ func _process(delta):
 	if fechar1.is_pressed():
 		get_tree().quit()
 	if jogar1.is_pressed():
-		get_tree().change_scene("res://scenes/selectPlayer.scn")
+		get_tree().change_scene("res://scenes/selectPlayer.xml")

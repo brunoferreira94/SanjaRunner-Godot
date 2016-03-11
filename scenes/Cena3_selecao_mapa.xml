@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://img/Mapa/OESTE.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/Mapa/NORTE.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/Mapa/CENTRO.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://img/Mapa/SUDESTE.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Mapa/LESTE.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/Mapa/SUL.png" type="Texture" index="4"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="16">
+				<string> "Node2D" </string>
+				<string> "__meta__" </string>
+				<string> "Centro" </string>
+				<string> "transform/pos" </string>
+				<string> "normal" </string>
+				<string> "pressed" </string>
+				<string> "bitmask" </string>
+				<string> "passby_press" </string>
+				<string> "action" </string>
+				<string> "visibility_mode" </string>
+				<string> "TouchScreenButton" </string>
+				<string> "Oeste" </string>
+				<string> "Leste" </string>
+				<string> "Norte" </string>
+				<string> "Sul" </string>
+				<string> "Sudeste" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 7 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="135"> 				-1, -1, 0, 0, -1, 1, 1, 0, 0, 0, 0, 10, 2, -1, 7, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 11, -1, 7, 3, 7, 4, 8, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 12, -1, 7, 3, 9, 4, 10, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 13, -1, 7, 3, 11, 4, 12, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 14, -1, 7, 3, 13, 4, 14, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 15, -1, 7, 3, 15, 4, 16, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="17" shared="false">
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<vector2> 70.9098, 288.672 </vector2>
+				<resource  external="0">  </resource>
+				<resource name=""></resource>				<bool> False </bool>
+				<string> "" </string>
+				<int> 0 </int>
+				<vector2> -15.1626, 259.964 </vector2>
+				<resource  external="1">  </resource>
+				<vector2> 111.971, 206.65 </vector2>
+				<resource  external="2">  </resource>
+				<vector2> -11.0615, 171.791 </vector2>
+				<resource  external="3">  </resource>
+				<vector2> 63.4152, 325.416 </vector2>
+				<resource  external="4">  </resource>
+				<vector2> 124.031, 310.384 </vector2>
+				<resource  external="5">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
