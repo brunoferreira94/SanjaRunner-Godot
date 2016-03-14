@@ -10,7 +10,7 @@ export var jumpForce = 700
 export var posParada = 11000
 export var gravityScale = 22
 var accel = 5
-var airAccel = 2
+
 
 
 var raycastDown = null
@@ -37,7 +37,7 @@ var pulo = input_states.new("cima")
 #Variáveis para que a mesma animação não se repita e atrapalhe a animação atual
 var anim = ""
 var animNew = ""
-var groundState = false
+
 
 var maxAlturaPulo = 10
 var alturaPuloCont = 0
@@ -91,10 +91,10 @@ func morreu():
 		pause.hide()
 		voce_perdeu.show()
 		somPersonagem.play("lose")
-		print("Tempo de jogo: ", 60 - timer.get_time_left())
+		
 		#para a musica quando personagem perder
 		get_parent().get_node("Musica").stop()
-		#retorna verdadeiro para indicar que o personagem morreu
+		#retorna verdadeiro para indicar que o personagem morreu		
 		return true
 
 #função responsavel pelo movimento do personagem
@@ -120,9 +120,10 @@ func is_on_ground():
 #funcao que verifica a posição de ground do personagem e permite o salto
 func check_pulo():
 	if pulo.check() == 1:
-		jumpCont += 1	
-		get_node("Particles2D").set_use_local_space(false)
+		jumpCont += 1
 		get_node("Particles2D").set_emitting(false)
+		
+		
 		if jumpCont <= 2:
 			alturaPuloCont = 0
 			anim = "pulando"
@@ -136,25 +137,20 @@ func check_pulo():
 				alturaPuloCont += 1
 				set_axis_velocity(Vector2(0, -jumpForce))
 	
-	if get_linear_velocity().y > 0:
+	if get_linear_velocity().y > 1:
 		passouApice = true
 		anim = "andando"
-		
 			
 			
 	if passouApice:
 		if is_on_ground():
-			#get_parent().get_node("Particles2D").set_emitting(true)
-			groundState = true
 			jumpCont = 0
 			set_gravity_scale(gravityScale)
 			passouApice = false
+			get_node("Particles2D").set_emitting(true)
+			get_node("Particles2D").show()
 			
-		#else:
-			#get_parent().get_node("Particles2D").set_emitting(false)
-
-
-
+			
 
 func get_player_speed():
 	return player_Speed

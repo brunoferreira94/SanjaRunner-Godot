@@ -4,20 +4,26 @@ extends Node2D
 var PapersTotal = 0
 var papersCollected = 0
 var numPlayer
-var player = [preload("res://scenes/personagens/PersonagemMeninoNegro.scn"), preload("res://scenes/personagens/PersonagemCadeirante.scn"), preload("res://scenes/personagens/PersonagemMeninaBranca.scn")]
+
 var script = load("res://scripts/Personagem.gd")
 var poeiraPulo = preload("res://scenes/PoeiraPulo.scn").instance()
+var poeira = preload("res://scenes/Poeira.scn").instance()
 var spawnedPlayer = 0
 var altura_tela = 0
 var largura_tela = 0
+var player = [preload("res://scenes/personagens/PersonagemMeninoNegro.scn"),preload("res://scenes/personagens/PersonagemCadeirante.scn"),preload("res://scenes/personagens/PersonagemMeninaBranca.scn")]
+var timer = 0
+var pX = 0
 
 func _ready():	
+	
 	if get_node("/root/globals").getPlayerSelected() != null:
 		numPlayer = get_node("/root/globals").getPlayerSelected()
 	else:
 		numPlayer = randi() % 3
 	spawn_player()
-	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
+	
+	get_node("Camera2D").set_pos(Vector2(get_node("Personagem").get_pos().x+(largura_tela/2),altura_tela/1.8))
 	altura_tela = get_viewport_rect().size.height
 	largura_tela = get_viewport_rect().size.width
 	get_node("HUD/321/AnimationPlayer").play("inicio")
@@ -26,9 +32,10 @@ func _ready():
 	
 	
 func _fixed_process(delta):
-	get_node("Camera2D").set_pos(Vector2(get_node("personagem").get_pos().x+(largura_tela/2)-100,altura_tela/1.8))
-	
-	
+	timer += delta
+	get_node("Camera2D").set_pos(Vector2(get_node("Personagem").get_pos().x+(largura_tela/2)-100,altura_tela/1.8))
+	pX = get_node("Personagem").get_pos().x
+
 	
 func spawn_player():
 	spawnedPlayer = player[numPlayer].instance()
@@ -36,8 +43,5 @@ func spawn_player():
 	spawnedPlayer.set_script(script)	
 	add_child(spawnedPlayer)
 
-func spawn_dust(delta):
-	poeiraPulo.set_emitting(true)
-	add_child(poeiraPulo)
-	
+
 	
