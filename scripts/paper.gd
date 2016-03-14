@@ -9,7 +9,7 @@ func _ready():
 func set_id(id):
 	self.id = id
 	
-func collect_paper( body ):
+func _collect_paper( body ):
 	get_owner().papelColetado += 1
 	get_parent().get_parent().get_node("data").set_papel_coletado(1,id-1)
 	get_tree().set_pause(true)
