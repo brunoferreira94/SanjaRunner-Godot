@@ -19,6 +19,9 @@ func set_texto_papel(id):
 					numPapel[1][j] = linha
 					print(numPapel[1][j],"\n")
 
+#atribui o texto para o papel coletado
+func set_texto_papel_coletado(id):
+	get_parent().get_node("HUD/texto_papel/TextEdit").set_text(numPapel[1][id])
 
 func set_papel_coletado(umOuZero, id):
 	numPapel[0][id] = umOuZero
