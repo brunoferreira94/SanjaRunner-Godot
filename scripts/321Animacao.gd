@@ -10,5 +10,6 @@ func _ready():
 func _process(delta):
 	if !get_node("AnimationPlayer").is_playing() && is_visible():
 		get_parent().get_parent().get_node("HUD/pause").show()
+		get_parent().get_parent().get_node("Musica").play()
 		hide()
 		get_tree().set_pause(false)

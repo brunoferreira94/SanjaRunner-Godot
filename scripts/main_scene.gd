@@ -7,6 +7,8 @@ var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), p
 var script = load("res://scripts/char_cadeirante.gd")
 var papel = preload("res://scenes/paper.xml")
 var papelColetado = 0
+var gears_total = 0
+var gears_collected = 0
 
 func _ready():
 	set_process(true)

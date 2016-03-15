@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="10" version="2.0" version_name="Godot Engine v2.0.rc1.custom_build">
+	<ext_resource path="res://scenes/personagens/personagem_menino_negro.scn" type="PackedScene" index="1">
+	</ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_cadeirante.scn" type="PackedScene" index="2">
+	</ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="3">
+	</ext_resource>
+	<ext_resource path="res://sprites/textBox.tex" type="Texture" index="4">
+	</ext_resource>
+	<ext_resource path="res://sprites/selectpersonagem.tex" type="Texture" index="5">
+	</ext_resource>
+	<ext_resource path="res://scripts/selectPlayer.gd" type="Script" index="0">
+	</ext_resource>
+	<resource type="StyleBoxEmpty" path="local://2">
+
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://3">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<resource type="StyleBoxEmpty" path="local://1">
+		<real name="content_margin/left"> -1 </real>
+		<real name="content_margin/right"> -1 </real>
+		<real name="content_margin/top"> -1 </real>
+		<real name="content_margin/bottom"> -1 </real>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="1" shared="false">
+				<node_path> "DKbutton/personagem" </node_path>
+			</array>
+			<string> "names" </string>
+			<string_array  len="36">
+				<string> "selectplayer" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Node2D" </string>
+				<string> "DKbutton" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "custom_styles/hover" </string>
+				<string> "toggle_mode" </string>
+				<string> "flat" </string>
+				<string> "Button" </string>
+				<string> "personagem" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "mode" </string>
+				<string> "RayCast2D" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "RayCollision" </string>
+				<string> "somPersonagem" </string>
+				<string> "Particles2D" </string>
+				<string> "Zebutton" </string>
+				<string> "rect/scale" </string>
+				<string> "Mariabutton" </string>
+				<string> "box" </string>
+				<string> "textBox" </string>
+				<string> "texture" </string>
+				<string> "Sprite" </string>
+				<string> "selectperson" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 10 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="178"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 16, 4, -1, 11, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 8, 13, 9, 14, 6, 15, 7, 0, 1, 0, 2147483647, 17, 10, 3, 18, 11, 19, 12, 20, 13, 0, 0, 0, 16, 28, -1, 12, 5, 14, 6, 15, 7, 16, 8, 17, 29, 18, 9, 6, 10, 7, 11, 8, 12, 8, 13, 19, 14, 6, 15, 7, 0, 3, 0, 2147483647, 17, 20, 3, 18, 21, 19, 22, 20, 13, 0, 0, 0, 16, 30, -1, 11, 5, 23, 6, 24, 7, 25, 8, 26, 9, 6, 10, 7, 11, 8, 12, 8, 13, 27, 14, 6, 15, 7, 0, 5, 0, 2147483647, 17, 28, 3, 18, 29, 19, 30, 20, 13, 0, 0, 0, 3, 31, -1, 3, 18, 31, 19, 32, 2, 33, 0, 7, 0, 34, 32, -1, 3, 18, 34, 19, 35, 33, 36, 0, 7, 0, 34, 35, -1, 3, 18, 37, 19, 38, 33, 39, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="40" shared="false">
+				<resource  external="0">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<real> 159 </real>
+				<real> 144 </real>
+				<real> 329 </real>
+				<real> 387 </real>
+				<bool> False </bool>
+				<bool> True </bool>
+				<int> 2 </int>
+				<resource  resource_type="StyleBox" path="local://2">  </resource>
+				<resource  external="1">  </resource>
+				<vector2> 80.28, 124.721 </vector2>
+				<vector2> 2.5, 2.5 </vector2>
+				<int> 1 </int>
+				<real> 725 </real>
+				<real> 207 </real>
+				<real> 905 </real>
+				<real> 445 </real>
+				<vector2> 0.6, 0.6 </vector2>
+				<resource  resource_type="StyleBox" path="local://3">  </resource>
+				<resource  external="2">  </resource>
+				<vector2> 80.9451, 83.3971 </vector2>
+				<vector2> 4.3, 4.3 </vector2>
+				<real> 448 </real>
+				<real> 163 </real>
+				<real> 611 </real>
+				<real> 396 </real>
+				<resource  resource_type="StyleBox" path="local://1">  </resource>
+				<resource  external="3">  </resource>
+				<vector2> 74.9784, 113.604 </vector2>
+				<vector2> 2.5, 2.5 </vector2>
+				<vector2> 61.9734, 14.1051 </vector2>
+				<vector2> 0.9, 0.9 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 508.979, 623.012 </vector2>
+				<vector2> 2, 1.5 </vector2>
+				<resource  external="4">  </resource>
+				<vector2> 509.436, 621.348 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<resource  external="5">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
