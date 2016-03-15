@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="9" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://img/Engrenagem/04.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/Engrenagem/02.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/Engrenagem/01.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://img/Engrenagem/06.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Engrenagem/05.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://img/Engrenagem/03.png" type="Texture" index="2"></ext_resource>
+	<resource type="SpriteFrames" path="local://8">
+		<array name="frames" len="6" shared="false">
+			<resource  external="0">  </resource>
+			<resource  external="1">  </resource>
+			<resource  external="2">  </resource>
+			<resource  external="3">  </resource>
+			<resource  external="4">  </resource>
+			<resource  external="5">  </resource>
+		</array>
+
+	</resource>
+	<resource type="Animation" path="local://9">
+		<string name="resource/name"> "girando" </string>
+		<real name="length"> 1.2 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.2 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="6"> 				0, 0.2, 0.4, 0.6, 0.8, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="6"> 				1, 1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="6" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+				<int> 2 </int>
+				<int> 3 </int>
+				<int> 4 </int>
+				<int> 5 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="26">
+				<string> "Engrenagens" </string>
+				<string> "__meta__" </string>
+				<string> "Node2D" </string>
+				<string> "AnimatedSprite9" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
+				<string> "frames" </string>
+				<string> "frame" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/girando" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
+				<string> "AnimatedSprite1" </string>
+				<string> "AnimatedSprite2" </string>
+				<string> "AnimatedSprite3" </string>
+				<string> "AnimatedSprite4" </string>
+				<string> "AnimatedSprite5" </string>
+				<string> "AnimatedSprite6" </string>
+				<string> "AnimatedSprite7" </string>
+				<string> "AnimatedSprite8" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 21 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="389"> 				-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 8, 3, -1, 4, 4, 1, 5, 2, 6, 3, 7, 4, 0, 1, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 8, -1, 4, 4, 13, 5, 2, 6, 3, 7, 4, 0, 3, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 18, -1, 4, 4, 14, 5, 2, 6, 3, 7, 4, 0, 5, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 19, -1, 4, 4, 15, 5, 2, 6, 3, 7, 4, 0, 7, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 20, -1, 4, 4, 16, 5, 2, 6, 3, 7, 4, 0, 9, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 21, -1, 4, 4, 17, 5, 2, 6, 3, 7, 4, 0, 11, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 22, -1, 4, 4, 18, 5, 2, 6, 3, 7, 4, 0, 13, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 23, -1, 4, 4, 19, 5, 2, 6, 3, 7, 4, 0, 15, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 24, -1, 4, 4, 20, 5, 2, 6, 3, 7, 4, 0, 17, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0, 0, 0, 8, 25, -1, 4, 4, 21, 5, 2, 6, 3, 7, 4, 0, 19, 0, 9, 9, -1, 8, 10, 5, 11, 6, 12, 7, 13, 8, 14, 9, 15, 10, 16, 11, 17, 12, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="22" shared="false">
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<vector2> 1631.1, 505.814 </vector2>
+				<vector2> 0.0488437, 0.0436118 </vector2>
+				<resource  resource_type="SpriteFrames" path="local://8">  </resource>
+				<int> 3 </int>
+				<int> 1 </int>
+				<real> 0 </real>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://9">  </resource>
+				<bool> True </bool>
+				<real> 1 </real>
+				<array  len="0" shared="false">
+				</array>
+				<string> "girando" </string>
+				<vector2> 752.053, 583.54 </vector2>
+				<vector2> 850.88, 555.06 </vector2>
+				<vector2> 951.919, 535.424 </vector2>
+				<vector2> 1037.05, 550.229 </vector2>
+				<vector2> 1135.13, 553.93 </vector2>
+				<vector2> 1235.06, 548.378 </vector2>
+				<vector2> 1314.64, 498.411 </vector2>
+				<vector2> 1414.57, 485.457 </vector2>
+				<vector2> 1533.01, 487.308 </vector2>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

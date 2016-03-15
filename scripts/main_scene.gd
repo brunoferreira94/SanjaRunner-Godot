@@ -13,6 +13,7 @@ func _ready():
 	if get_node("/root/globals").getPlayerSelected() != null:
 		numPlayer = get_node("/root/globals").getPlayerSelected()
 	else:
+		randomize()
 		numPlayer = randi() % 3
 	spawnPlayer(108,461)
 	#spawnPapel(108, 437, 1)
