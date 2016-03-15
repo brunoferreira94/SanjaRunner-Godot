@@ -21,10 +21,10 @@ func set_texto_papel(id):
 
 #atribui o texto para o papel coletado
 func set_texto_papel_coletado(id):
-	get_parent().get_node("HUD/texto_papel/TextEdit").set_text(numPapel[1][id])
+	get_parent().get_node("HUD/texto_papel/TextEdit").add_text(numPapel[1][id-1])
 
 func set_papel_coletado(umOuZero, id):
-	numPapel[0][id] = umOuZero
+	numPapel[0][id-1] = umOuZero
 	
 #retorna a informação da posição do vetor definida
 func get_numPapel(i, j):

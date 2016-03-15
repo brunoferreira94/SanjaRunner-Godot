@@ -7,6 +7,7 @@ var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), p
 var script = load("res://scripts/char_cadeirante.gd")
 var papel = preload("res://scenes/paper.xml")
 var papelColetado = 0
+var engrenagemColetada = 0
 
 func _ready():
 	set_process(true)
@@ -16,6 +17,7 @@ func _ready():
 		randomize()
 		numPlayer = randi() % 3
 	spawnPlayer(108,461)
+	spawnPapel(200,500, 1)
 	#spawnPapel(108, 437, 1)
 	#get_node("data").save_game(id)
 	#get_node("data").load_game(id)
@@ -31,12 +33,14 @@ func spawnPlayer(posx, posy):
 	spawnPlayer.set_script(script)
 	add_child(spawnPlayer)
 
+#Chama o objeto papel para a cena na posição dada e atribui um id, se já não foi coletado
 func spawnPapel(posx, posy, id):
 	if get_node("data").get_numPapel(0,id-1) == 0:
 		var spawnPapel
 		spawnPapel = papel.instance()
 		spawnPapel.set_pos(Vector2(posx,posy))
 		spawnPapel.set_id(id)
+		spawnPapel.get_node("Sprite").set_scale(Vector2(0.5,0.5))
 		get_node("papers").add_child(spawnPapel)
 	else:
 		return str("\nPapel ", id, " já foi coletado.")
