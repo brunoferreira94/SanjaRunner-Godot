@@ -6,8 +6,6 @@ var numPlayer
 var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), preload("res://scenes/personagens/personagem_cadeirante.xml"), preload("res://scenes/personagens/personagem_menina_branca.xml")]
 var script = load("res://scripts/char_cadeirante.gd")
 var papel = preload("res://scenes/paper.xml")
-var papelColetado = 0
-var engrenagemColetada = 0
 
 func _ready():
 	set_process(true)

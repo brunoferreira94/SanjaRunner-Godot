@@ -41,6 +41,7 @@ func save_game(id):
 	var pos
 	savegame.open("res://savegame.save", File.READ_WRITE)
 	
+	savegame.store_line(get_owner().papelColetado, ";", get_owner().engrenagemColetada)
 	if savegame.file_exists("res://savegame.save"):
 		while(!savegame.eof_reached()):
 			if savegame.get_line() == str(id):
