@@ -16,7 +16,7 @@ func _ready():
 		numPlayer = randi() % 3
 	spawnPlayer(108,461)
 	spawnPapel(200,500, 1)
-	#spawnPapel(108, 437, 1)
+	#spawnPapel(500, 500, 2)
 	#get_node("data").save_game(id)
 	#get_node("data").load_game(id)
 	get_node("data").set_texto_papel(id)
