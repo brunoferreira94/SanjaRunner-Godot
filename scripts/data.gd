@@ -2,6 +2,8 @@
 extends Node2D
 
 var numPapel = [[0, 0, 0, 0, 0],["texto1", "texto2", "texto3", "texto4", "texto5"]]
+var papelColetado = 0
+var engrenagemColetada = 0
 
 #Pega o texto de um arquivo e atribui ao numPapel
 func set_texto_papel(id):
@@ -43,6 +45,7 @@ func save_game(id):
 	
 	savegame.store_line(get_owner().papelColetado, ";", get_owner().engrenagemColetada)
 	if savegame.file_exists("res://savegame.save"):
+		savegame.store_line(str(papelColetado, ";", engrenagemColetada))
 		while(!savegame.eof_reached()):
 			if savegame.get_line() == str(id):
 				savegame.store_line(str(save()))
@@ -79,6 +82,18 @@ func load_game(id):
 						print(numPapel[i][j],"\n")
 						cont+=1
 		savegame.close()
+
+func load_pontuacao():
+	var savegame = File.new()
+	var linha = [2]
+	if !savegame.file_exists("res://savegame.save"):
+		print("Arquivo de save não existente.")
+		return -1
+	else:
+		savegame.open("res://savegame.save", File.READ)
+		linha = savegame.get_line().split(";")
+		papelColetado = linha[0]
+		engrenagemColetada = linha[1]
 
 func _ready():
 	pass
