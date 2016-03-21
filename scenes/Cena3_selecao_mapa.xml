@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.stable.official">
-	<ext_resource path="res://img/Mapa/OESTE.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://img/Mapa/NORTE.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://img/Mapa/CENTRO.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://img/Mapa/SUDESTE.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://img/Mapa/LESTE.png" type="Texture" index="2"></ext_resource>
+<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://img/Mapa/OESTE.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/Mapa/CENTRO.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/Mapa/NORTE.png" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://img/Mapa/SUL.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://img/Mapa/SUDESTE.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Mapa/LESTE.png" type="Texture" index="0"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -19,7 +19,7 @@
 			<string_array  len="16">
 				<string> "Node2D" </string>
 				<string> "__meta__" </string>
-				<string> "Centro" </string>
+				<string> "Leste" </string>
 				<string> "transform/pos" </string>
 				<string> "normal" </string>
 				<string> "pressed" </string>
@@ -28,9 +28,9 @@
 				<string> "action" </string>
 				<string> "visibility_mode" </string>
 				<string> "TouchScreenButton" </string>
-				<string> "Oeste" </string>
-				<string> "Leste" </string>
 				<string> "Norte" </string>
+				<string> "Centro" </string>
+				<string> "Oeste" </string>
 				<string> "Sul" </string>
 				<string> "Sudeste" </string>
 			</string_array>
@@ -47,20 +47,20 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<vector2> 70.9098, 288.672 </vector2>
+				<vector2> 497.414, 194.708 </vector2>
 				<resource  external="0">  </resource>
 				<resource name=""></resource>				<bool> False </bool>
 				<string> "" </string>
 				<int> 0 </int>
-				<vector2> -15.1626, 259.964 </vector2>
+				<vector2> 304.381, 174.849 </vector2>
 				<resource  external="1">  </resource>
-				<vector2> 111.971, 206.65 </vector2>
+				<vector2> 399.353, 327.73 </vector2>
 				<resource  external="2">  </resource>
-				<vector2> -11.0615, 171.791 </vector2>
+				<vector2> 343.28, 318.022 </vector2>
 				<resource  external="3">  </resource>
-				<vector2> 63.4152, 325.416 </vector2>
+				<vector2> 398.858, 387.474 </vector2>
 				<resource  external="4">  </resource>
-				<vector2> 124.031, 310.384 </vector2>
+				<vector2> 497.474, 367.442 </vector2>
 				<resource  external="5">  </resource>
 			</array>
 			<string> "version" </string>

@@ -2,6 +2,8 @@
 extends Node2D
 
 var numPapel = [[0, 0, 0, 0, 0],["texto1", "texto2", "texto3", "texto4", "texto5"]]
+var papelColetado = 0
+var engrenagemColetada = 0
 
 #Pega o texto de um arquivo e atribui ao numPapel
 func set_texto_papel(id):
@@ -19,9 +21,12 @@ func set_texto_papel(id):
 					numPapel[1][j] = linha
 					print(numPapel[1][j],"\n")
 
+#atribui o texto para o papel coletado
+func set_texto_papel_coletado(id):
+	get_parent().get_node("HUD/texto_papel/TextEdit").add_text(numPapel[1][id-1])
 
 func set_papel_coletado(umOuZero, id):
-	numPapel[0][id] = umOuZero
+	numPapel[0][id-1] = umOuZero
 	
 #retorna a informação da posição do vetor definida
 func get_numPapel(i, j):
@@ -38,7 +43,9 @@ func save_game(id):
 	var pos
 	savegame.open("res://savegame.save", File.READ_WRITE)
 	
+	savegame.store_line(get_owner().papelColetado, ";", get_owner().engrenagemColetada)
 	if savegame.file_exists("res://savegame.save"):
+		savegame.store_line(str(papelColetado, ";", engrenagemColetada))
 		while(!savegame.eof_reached()):
 			if savegame.get_line() == str(id):
 				savegame.store_line(str(save()))
@@ -75,6 +82,18 @@ func load_game(id):
 						print(numPapel[i][j],"\n")
 						cont+=1
 		savegame.close()
+
+func load_pontuacao():
+	var savegame = File.new()
+	var linha = [2]
+	if !savegame.file_exists("res://savegame.save"):
+		print("Arquivo de save não existente.")
+		return -1
+	else:
+		savegame.open("res://savegame.save", File.READ)
+		linha = savegame.get_line().split(";")
+		papelColetado = int(linha[0])
+		engrenagemColetada = int(linha[1])
 
 func _ready():
 	pass

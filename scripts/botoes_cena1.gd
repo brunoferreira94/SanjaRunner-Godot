@@ -4,6 +4,7 @@ var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
 var reiniciar
 var pause
+var continuar
 
 func _ready():
 	set_process(true)
@@ -15,6 +16,7 @@ func _ready():
 	
 	#var voltar = get_node("voltar_botao")
 	pause = get_node("pause")
+	continuar = get_node("texto_papel/continue")
 	
 func _process(delta):
 	#Condições para que as ações dos botões aconteçam
@@ -23,6 +25,11 @@ func _process(delta):
 #	if voltar.is_hovered() && clique_esquerdo.check() == 1:
 #		get_tree().change_scene("res://scenes/Cena0_abertura.xml")
 		
+	if continuar.is_hovered() && clique_esquerdo.check() == 1:
+		if get_tree().is_paused():
+			get_tree().set_pause(false)
+			get_node("texto_papel").hide()
+	
 	if pause.is_hovered() && clique_esquerdo.check() == 1:
 		if get_tree().is_paused():
 			get_tree().set_pause(false)

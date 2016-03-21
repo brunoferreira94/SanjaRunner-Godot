@@ -4,15 +4,17 @@ extends Node2D
 var id = 1
 
 func _ready():
-	pass
+	set_owner(get_parent().get_parent().get_node("data").get_owner())
 	
 func set_id(id):
 	self.id = id
 	
 func _collect_paper( body ):
-	get_owner().papelColetado += 1
-	get_parent().get_parent().get_node("data").set_papel_coletado(1,id-1)
+	if get_owner() != null:
+		get_node("/root/data").papelColetado += 1
+		print("Quantidade de papéis: ", get_node("/root/data").papelColetado)
 	get_tree().set_pause(true)
+	get_parent().get_parent().get_node("data").set_texto_papel_coletado(id)
 	get_parent().get_parent().get_node("HUD/texto_papel").show()
 	get_parent().get_parent().get_node("HUD/pause").hide()
 	queue_free()
