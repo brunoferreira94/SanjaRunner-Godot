@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="24" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+<resource_file type="PackedScene" subresource_count="25" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
 	<ext_resource path="res://scripts/main_scene.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://scripts/data.gd" type="Script" index="15"></ext_resource>
-	<ext_resource path="res://soundtrack/Intro SanjaRunner.ogg" type="AudioStream" index="12"></ext_resource>
+	<ext_resource path="res://scripts/data.gd" type="Script" index="17"></ext_resource>
+	<ext_resource path="res://scenes/gear_scene.xml" type="PackedScene" index="15"></ext_resource>
+	<ext_resource path="res://soundtrack/Intro SanjaRunner.ogg" type="AudioStream" index="13"></ext_resource>
 	<ext_resource path="res://scripts/ghostChar.gd" type="Script" index="1"></ext_resource>
-	<ext_resource path="res://tileset/plataformas_calcada_tile.xml" type="TileSet" index="11"></ext_resource>
+	<ext_resource path="res://tileset/plataformas_calcada_tile.xml" type="TileSet" index="12"></ext_resource>
 	<ext_resource path="res://img/3.png" type="Texture" index="7"></ext_resource>
 	<ext_resource path="res://scripts/321Animacao.gd" type="Script" index="8"></ext_resource>
 	<ext_resource path="res://img/1.png" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://img/botaoPause.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://scripts/botoes_cena1.gd" type="Script" index="2"></ext_resource>
 	<ext_resource path="res://img/2.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://img/camara.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://img/camara.png" type="Texture" index="16"></ext_resource>
 	<ext_resource path="res://PressStart.fnt" type="Font" index="9"></ext_resource>
-	<ext_resource path="res://scenes/background/banhadoParallaxBackground.scn" type="PackedScene" index="13"></ext_resource>
-	<ext_resource path="res://scenes/gear_scene.xml" type="PackedScene" index="16"></ext_resource>
 	<ext_resource path="res://scenes/text1-1.xml" type="PackedScene" index="10"></ext_resource>
+	<ext_resource path="res://img/Mapa/botaozin.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://scenes/background/banhadoParallaxBackground.scn" type="PackedScene" index="14"></ext_resource>
 	<ext_resource path="res://scenes/menu_voce_perdeu.xml" type="PackedScene" index="4"></ext_resource>
 	<resource type="StyleBoxEmpty" path="local://2">
 		<real name="content_margin/left"> -1 </real>
@@ -142,7 +143,7 @@
 				<node_path> "HUD/texto_papel" </node_path>
 			</array>
 			<string> "names" </string>
-			<string_array  len="177">
+			<string_array  len="183">
 				<string> "Game" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
@@ -240,6 +241,13 @@
 				<string> "texto_papel" </string>
 				<string> "continue" </string>
 				<string> "TextEdit" </string>
+				<string> "TouchScreenButton" </string>
+				<string> "normal" </string>
+				<string> "pressed" </string>
+				<string> "bitmask" </string>
+				<string> "passby_press" </string>
+				<string> "action" </string>
+				<string> "visibility_mode" </string>
 				<string> "TileMap" </string>
 				<string> "tile_set" </string>
 				<string> "cell/size" </string>
@@ -269,12 +277,7 @@
 				<string> "one_shot" </string>
 				<string> "autostart" </string>
 				<string> "ParallaxBackground" </string>
-				<string> "moedas" </string>
-				<string> "TileMap1" </string>
-				<string> "TileMap2" </string>
-				<string> "texture" </string>
-				<string> "data" </string>
-				<string> "Moedas Colecionaveis" </string>
+				<string> "engrenagem" </string>
 				<string> "gear" </string>
 				<string> "gear1" </string>
 				<string> "gear2" </string>
@@ -319,6 +322,10 @@
 				<string> "gear41" </string>
 				<string> "gear42" </string>
 				<string> "gear43" </string>
+				<string> "TileMap1" </string>
+				<string> "TileMap2" </string>
+				<string> "texture" </string>
+				<string> "data" </string>
 				<string> "papel" </string>
 			</string_array>
 			<string> "node_count" </string>
@@ -327,13 +334,13 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="886"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 24, 4, -1, 21, 5, 2, 6, 3, 7, 3, 8, 4, 9, 5, 10, 5, 11, 6, 12, 6, 13, 2, 14, 4, 15, 4, 16, 2, 17, 2, 18, 7, 19, 8, 20, 6, 21, 9, 22, 9, 1, 10, 2, 11, 23, 12, 0, 1, 0, 25, 25, -1, 18, 26, 13, 27, 14, 28, 3, 29, 2, 30, 7, 31, 15, 32, 16, 33, 16, 34, 17, 35, 17, 36, 7, 37, 7, 38, 2, 39, 18, 40, 19, 41, 19, 42, 19, 43, 19, 0, 0, 0, 50, 44, -1, 6, 45, 20, 46, 3, 47, 8, 48, 6, 49, 15, 1, 21, 0, 3, 0, 68, 51, -1, 16, 52, 3, 53, 3, 54, 22, 55, 23, 56, 24, 57, 25, 58, 26, 59, 2, 60, 7, 61, 20, 62, 20, 63, 27, 64, 28, 65, 2, 66, 29, 67, 7, 0, 3, 0, 2147483647, 69, 30, 1, 70, 2, 0, 5, -1, 2147483647, 71, -1, 2, 63, 31, 64, 32, 0, 3, 0, 76, 73, -1, 7, 45, 20, 26, 33, 27, 34, 74, 35, 75, 3, 1, 36, 2, 37, 0, 7, 0, 77, 77, -1, 8, 78, 3, 79, 6, 80, 38, 81, 39, 82, 7, 83, 40, 84, 41, 85, 42, 0, 3, 0, 93, 86, -1, 13, 54, 23, 55, 23, 56, 43, 57, 44, 59, 7, 60, 7, 61, 20, 87, 45, 88, 46, 89, 47, 90, 5, 91, 4, 92, 48, 0, 3, 0, 2147483647, 94, 49, 1, 70, 2, 0, 0, 0, 97, 97, -1, 18, 26, 50, 27, 51, 8, 4, 98, 52, 99, 53, 100, 54, 101, 55, 102, 20, 103, 4, 104, 2, 105, 2, 106, 5, 107, 6, 6, 3, 7, 3, 108, 3, 109, 56, 2, 57, 0, 0, 0, 119, 110, -1, 8, 111, 58, 112, 2, 113, 7, 114, 23, 115, 2, 116, 2, 117, 6, 118, 59, 0, 0, 0, 120, 120, -1, 5, 45, 20, 121, 3, 122, 60, 123, 2, 124, 7, 0, 0, 0, 2147483647, 125, 61, 0, 0, 0, 0, 3, 126, -1, 1, 26, 62, 0, 0, 0, 97, 127, -1, 18, 26, 63, 27, 51, 8, 4, 98, 52, 99, 53, 100, 54, 101, 55, 102, 20, 103, 4, 104, 2, 105, 2, 106, 5, 107, 6, 6, 3, 7, 3, 108, 3, 109, 56, 2, 64, 0, 0, 0, 97, 128, -1, 18, 26, 65, 27, 51, 8, 4, 98, 52, 99, 53, 100, 54, 101, 55, 102, 20, 103, 4, 104, 2, 105, 2, 106, 5, 107, 6, 6, 3, 7, 3, 108, 3, 109, 56, 2, 66, 0, 0, 0, 72, 72, -1, 3, 26, 67, 27, 68, 129, 69, 0, 0, 0, 3, 130, -1, 1, 1, 70, 0, 0, 0, 3, 131, -1, 1, 2, 71, 0, 20, 0, 2147483647, 132, 72, 1, 26, 73, 0, 20, 0, 2147483647, 133, 72, 1, 26, 74, 0, 20, 0, 2147483647, 134, 72, 1, 26, 75, 0, 20, 0, 2147483647, 135, 72, 1, 26, 76, 0, 20, 0, 2147483647, 136, 72, 1, 26, 77, 0, 20, 0, 2147483647, 137, 72, 1, 26, 78, 0, 20, 0, 2147483647, 138, 72, 1, 26, 79, 0, 20, 0, 2147483647, 139, 72, 1, 26, 80, 0, 20, 0, 2147483647, 140, 72, 1, 26, 81, 0, 20, 0, 2147483647, 141, 72, 1, 26, 82, 0, 20, 0, 2147483647, 142, 72, 1, 26, 83, 0, 20, 0, 2147483647, 143, 72, 1, 26, 84, 0, 20, 0, 2147483647, 144, 72, 1, 26, 85, 0, 20, 0, 2147483647, 145, 72, 1, 26, 86, 0, 20, 0, 2147483647, 146, 72, 1, 26, 87, 0, 20, 0, 2147483647, 147, 72, 1, 26, 88, 0, 20, 0, 2147483647, 148, 72, 1, 26, 89, 0, 20, 0, 2147483647, 149, 72, 1, 26, 90, 0, 20, 0, 2147483647, 150, 72, 1, 26, 91, 0, 20, 0, 2147483647, 151, 72, 1, 26, 92, 0, 20, 0, 2147483647, 152, 72, 1, 26, 93, 0, 20, 0, 2147483647, 153, 72, 1, 26, 94, 0, 20, 0, 2147483647, 154, 72, 1, 26, 95, 0, 20, 0, 2147483647, 155, 72, 1, 26, 96, 0, 20, 0, 2147483647, 156, 72, 1, 26, 97, 0, 20, 0, 2147483647, 157, 72, 1, 26, 98, 0, 20, 0, 2147483647, 158, 72, 1, 26, 99, 0, 20, 0, 2147483647, 159, 72, 1, 26, 100, 0, 20, 0, 2147483647, 160, 72, 1, 26, 101, 0, 20, 0, 2147483647, 161, 72, 1, 26, 102, 0, 20, 0, 2147483647, 162, 72, 1, 26, 103, 0, 20, 0, 2147483647, 163, 72, 1, 26, 104, 0, 20, 0, 2147483647, 164, 72, 1, 26, 105, 0, 20, 0, 2147483647, 165, 72, 1, 26, 106, 0, 20, 0, 2147483647, 166, 72, 1, 26, 107, 0, 20, 0, 2147483647, 167, 72, 1, 26, 108, 0, 20, 0, 2147483647, 168, 72, 1, 26, 109, 0, 20, 0, 2147483647, 169, 72, 1, 26, 110, 0, 20, 0, 2147483647, 170, 72, 1, 26, 111, 0, 20, 0, 2147483647, 171, 72, 1, 26, 112, 0, 20, 0, 2147483647, 172, 72, 1, 26, 113, 0, 20, 0, 2147483647, 173, 72, 1, 26, 114, 0, 20, 0, 2147483647, 174, 72, 1, 26, 115, 0, 20, 0, 2147483647, 175, 72, 1, 26, 116, 0, 0, 0, 3, 176, -1, 0, 0 </int_array>
+			<int_array  len="902"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 24, 4, -1, 21, 5, 2, 6, 3, 7, 3, 8, 4, 9, 5, 10, 5, 11, 6, 12, 6, 13, 2, 14, 4, 15, 4, 16, 2, 17, 2, 18, 7, 19, 8, 20, 6, 21, 9, 22, 9, 1, 10, 2, 11, 23, 12, 0, 1, 0, 25, 25, -1, 18, 26, 13, 27, 14, 28, 3, 29, 2, 30, 7, 31, 15, 32, 16, 33, 16, 34, 17, 35, 17, 36, 7, 37, 7, 38, 2, 39, 18, 40, 19, 41, 19, 42, 19, 43, 19, 0, 0, 0, 50, 44, -1, 6, 45, 20, 46, 3, 47, 8, 48, 6, 49, 15, 1, 21, 0, 3, 0, 68, 51, -1, 16, 52, 3, 53, 3, 54, 22, 55, 23, 56, 24, 57, 25, 58, 26, 59, 2, 60, 7, 61, 20, 62, 20, 63, 27, 64, 28, 65, 2, 66, 29, 67, 7, 0, 3, 0, 2147483647, 69, 30, 1, 70, 2, 0, 5, -1, 2147483647, 71, -1, 2, 63, 31, 64, 32, 0, 3, 0, 76, 73, -1, 7, 45, 20, 26, 33, 27, 34, 74, 35, 75, 3, 1, 36, 2, 37, 0, 7, 0, 77, 77, -1, 8, 78, 3, 79, 6, 80, 38, 81, 39, 82, 7, 83, 40, 84, 41, 85, 42, 0, 3, 0, 93, 86, -1, 13, 54, 23, 55, 23, 56, 43, 57, 44, 59, 7, 60, 7, 61, 20, 87, 45, 88, 46, 89, 47, 90, 5, 91, 4, 92, 48, 0, 3, 0, 2147483647, 94, 49, 1, 70, 2, 0, 3, 0, 97, 97, -1, 8, 26, 50, 27, 51, 98, 52, 99, 53, 100, 53, 101, 2, 102, 54, 103, 4, 0, 0, 0, 104, 104, -1, 18, 26, 55, 27, 56, 8, 4, 105, 57, 106, 58, 107, 59, 108, 60, 109, 20, 110, 4, 111, 2, 112, 2, 113, 5, 114, 6, 6, 3, 7, 3, 115, 3, 116, 61, 2, 62, 0, 0, 0, 126, 117, -1, 8, 118, 63, 119, 2, 120, 7, 121, 23, 122, 2, 123, 2, 124, 6, 125, 64, 0, 0, 0, 127, 127, -1, 5, 45, 20, 128, 3, 129, 65, 130, 2, 131, 7, 0, 0, 0, 2147483647, 132, 66, 0, 0, 0, 0, 3, 133, -1, 2, 26, 67, 2, 68, 0, 16, 0, 2147483647, 134, 69, 1, 26, 70, 0, 16, 0, 2147483647, 135, 69, 1, 26, 71, 0, 16, 0, 2147483647, 136, 69, 1, 26, 72, 0, 16, 0, 2147483647, 137, 69, 1, 26, 73, 0, 16, 0, 2147483647, 138, 69, 1, 26, 74, 0, 16, 0, 2147483647, 139, 69, 1, 26, 75, 0, 16, 0, 2147483647, 140, 69, 1, 26, 76, 0, 16, 0, 2147483647, 141, 69, 1, 26, 77, 0, 16, 0, 2147483647, 142, 69, 1, 26, 78, 0, 16, 0, 2147483647, 143, 69, 1, 26, 79, 0, 16, 0, 2147483647, 144, 69, 1, 26, 80, 0, 16, 0, 2147483647, 145, 69, 1, 26, 81, 0, 16, 0, 2147483647, 146, 69, 1, 26, 82, 0, 16, 0, 2147483647, 147, 69, 1, 26, 83, 0, 16, 0, 2147483647, 148, 69, 1, 26, 84, 0, 16, 0, 2147483647, 149, 69, 1, 26, 85, 0, 16, 0, 2147483647, 150, 69, 1, 26, 86, 0, 16, 0, 2147483647, 151, 69, 1, 26, 87, 0, 16, 0, 2147483647, 152, 69, 1, 26, 88, 0, 16, 0, 2147483647, 153, 69, 1, 26, 89, 0, 16, 0, 2147483647, 154, 69, 1, 26, 90, 0, 16, 0, 2147483647, 155, 69, 1, 26, 91, 0, 16, 0, 2147483647, 156, 69, 1, 26, 92, 0, 16, 0, 2147483647, 157, 69, 1, 26, 93, 0, 16, 0, 2147483647, 158, 69, 1, 26, 94, 0, 16, 0, 2147483647, 159, 69, 1, 26, 95, 0, 16, 0, 2147483647, 160, 69, 1, 26, 96, 0, 16, 0, 2147483647, 161, 69, 1, 26, 97, 0, 16, 0, 2147483647, 162, 69, 1, 26, 98, 0, 16, 0, 2147483647, 163, 69, 1, 26, 99, 0, 16, 0, 2147483647, 164, 69, 1, 26, 100, 0, 16, 0, 2147483647, 165, 69, 1, 26, 101, 0, 16, 0, 2147483647, 166, 69, 1, 26, 102, 0, 16, 0, 2147483647, 167, 69, 1, 26, 103, 0, 16, 0, 2147483647, 168, 69, 1, 26, 104, 0, 16, 0, 2147483647, 169, 69, 1, 26, 105, 0, 16, 0, 2147483647, 170, 69, 1, 26, 106, 0, 16, 0, 2147483647, 171, 69, 1, 26, 107, 0, 16, 0, 2147483647, 172, 69, 1, 26, 108, 0, 16, 0, 2147483647, 173, 69, 1, 26, 109, 0, 16, 0, 2147483647, 174, 69, 1, 26, 110, 0, 16, 0, 2147483647, 175, 69, 1, 26, 111, 0, 16, 0, 2147483647, 176, 69, 1, 26, 112, 0, 16, 0, 2147483647, 177, 69, 1, 26, 113, 0, 0, 0, 104, 178, -1, 18, 26, 114, 27, 56, 8, 4, 105, 57, 106, 58, 107, 59, 108, 60, 109, 20, 110, 4, 111, 2, 112, 2, 113, 5, 114, 6, 6, 3, 7, 3, 115, 3, 116, 61, 2, 115, 0, 0, 0, 104, 179, -1, 18, 26, 116, 27, 56, 8, 4, 105, 57, 106, 58, 107, 59, 108, 60, 109, 20, 110, 4, 111, 2, 112, 2, 113, 5, 114, 6, 6, 3, 7, 3, 115, 3, 116, 61, 2, 117, 0, 0, 0, 72, 72, -1, 3, 26, 118, 27, 119, 180, 120, 0, 0, 0, 3, 181, -1, 1, 1, 121, 0, 0, 0, 3, 182, -1, 0, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="117" shared="false">
+			<array  len="122" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<bool> False </bool>
 				<int> 1 </int>
@@ -390,9 +397,13 @@
 				<string> "0" </string>
 				<int> -1 </int>
 				<resource  external="10">  </resource>
+				<vector2> 888.688, 636.935 </vector2>
+				<vector2> 0.5, 0.5 </vector2>
+				<resource  external="11">  </resource>
+				<resource name=""></resource>				<string> "cima" </string>
 				<vector2> 0, 16 </vector2>
 				<vector2> 0.8, 0.8 </vector2>
-				<resource  external="11">  </resource>
+				<resource  external="12">  </resource>
 				<vector2> 70, 70 </vector2>
 				<int> 16 </int>
 				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
@@ -401,11 +412,60 @@
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
-				<resource  external="12">  </resource>
+				<resource  external="13">  </resource>
 				<int> 500 </int>
 				<real> 60 </real>
-				<resource  external="13">  </resource>
+				<resource  external="14">  </resource>
 				<vector2> -10.3246, 15.4868 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<resource  external="15">  </resource>
+				<vector2> 825.999, 547.987 </vector2>
+				<vector2> 923.698, 500.273 </vector2>
+				<vector2> 1030.48, 475.281 </vector2>
+				<vector2> 1137.27, 459.376 </vector2>
+				<vector2> 1246.33, 454.832 </vector2>
+				<vector2> 1355.39, 470.736 </vector2>
+				<vector2> 1464.45, 486.641 </vector2>
+				<vector2> 1573.51, 516.178 </vector2>
+				<vector2> 2327.83, 507.089 </vector2>
+				<vector2> 2425.53, 463.92 </vector2>
+				<vector2> 2527.78, 425.295 </vector2>
+				<vector2> 2645.92, 400.302 </vector2>
+				<vector2> 2757.25, 393.486 </vector2>
+				<vector2> 3613.83, 386.67 </vector2>
+				<vector2> 3706.98, 332.14 </vector2>
+				<vector2> 3843.31, 316.419 </vector2>
+				<vector2> 3977.36, 334.596 </vector2>
+				<vector2> 4102.32, 368.677 </vector2>
+				<vector2> 4211.38, 420.935 </vector2>
+				<vector2> 4304.54, 486.825 </vector2>
+				<vector2> 4375.18, 566.452 </vector2>
+				<vector2> 6442.76, 237.001 </vector2>
+				<vector2> 6513.76, 237.001 </vector2>
+				<vector2> 6585.76, 237.001 </vector2>
+				<vector2> 6647.76, 237.001 </vector2>
+				<vector2> 6712.76, 237.001 </vector2>
+				<vector2> 7114.92, 227.913 </vector2>
+				<vector2> 7219.44, 178.471 </vector2>
+				<vector2> 7337.58, 173.743 </vector2>
+				<vector2> 7462.55, 194.464 </vector2>
+				<vector2> 7593.96, 236.729 </vector2>
+				<vector2> 7716.65, 302.619 </vector2>
+				<vector2> 7830.26, 370.781 </vector2>
+				<vector2> 7934.77, 423.039 </vector2>
+				<vector2> 8037.01, 507.105 </vector2>
+				<vector2> 10047.8, 370.781 </vector2>
+				<vector2> 10134.1, 318.523 </vector2>
+				<vector2> 10232, 294.619 </vector2>
+				<vector2> 10329.5, 282.17 </vector2>
+				<vector2> 10429.5, 273.082 </vector2>
+				<vector2> 10534, 277.626 </vector2>
+				<vector2> 10628.3, 288.715 </vector2>
+				<vector2> 10735.1, 318.251 </vector2>
+				<vector2> 10821.5, 375.053 </vector2>
 				<vector2> 13133.7, 0 </vector2>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>
@@ -418,57 +478,8 @@
 				</dictionary>
 				<vector2> 12003.7, 295.219 </vector2>
 				<vector2> 0.663772, 0.694692 </vector2>
-				<resource  external="14">  </resource>
-				<resource  external="15">  </resource>
-				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
-				</dictionary>
 				<resource  external="16">  </resource>
-				<vector2> 815.674, 563.474 </vector2>
-				<vector2> 913.373, 515.76 </vector2>
-				<vector2> 1020.16, 490.768 </vector2>
-				<vector2> 1126.95, 474.863 </vector2>
-				<vector2> 1236.01, 470.319 </vector2>
-				<vector2> 1345.07, 486.223 </vector2>
-				<vector2> 1454.13, 502.128 </vector2>
-				<vector2> 1563.19, 531.665 </vector2>
-				<vector2> 2317.51, 522.576 </vector2>
-				<vector2> 2415.21, 479.407 </vector2>
-				<vector2> 2517.46, 440.782 </vector2>
-				<vector2> 2635.6, 415.789 </vector2>
-				<vector2> 2746.93, 408.973 </vector2>
-				<vector2> 3603.51, 402.157 </vector2>
-				<vector2> 3696.66, 347.627 </vector2>
-				<vector2> 3832.99, 331.906 </vector2>
-				<vector2> 3967.04, 350.083 </vector2>
-				<vector2> 4092, 384.164 </vector2>
-				<vector2> 4201.06, 436.422 </vector2>
-				<vector2> 4294.22, 502.312 </vector2>
-				<vector2> 4364.86, 581.939 </vector2>
-				<vector2> 6432.44, 252.488 </vector2>
-				<vector2> 6503.44, 252.488 </vector2>
-				<vector2> 6575.44, 252.488 </vector2>
-				<vector2> 6637.44, 252.488 </vector2>
-				<vector2> 6702.44, 252.488 </vector2>
-				<vector2> 7104.6, 243.4 </vector2>
-				<vector2> 7209.12, 193.958 </vector2>
-				<vector2> 7327.26, 189.23 </vector2>
-				<vector2> 7452.23, 209.951 </vector2>
-				<vector2> 7583.64, 252.216 </vector2>
-				<vector2> 7706.33, 318.106 </vector2>
-				<vector2> 7819.94, 386.268 </vector2>
-				<vector2> 7924.45, 438.526 </vector2>
-				<vector2> 8026.69, 522.592 </vector2>
-				<vector2> 10037.5, 386.268 </vector2>
-				<vector2> 10123.8, 334.01 </vector2>
-				<vector2> 10221.7, 310.106 </vector2>
-				<vector2> 10319.2, 297.657 </vector2>
-				<vector2> 10419.2, 288.569 </vector2>
-				<vector2> 10523.7, 293.113 </vector2>
-				<vector2> 10618, 304.202 </vector2>
-				<vector2> 10724.8, 333.738 </vector2>
-				<vector2> 10811.2, 390.54 </vector2>
+				<resource  external="17">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>

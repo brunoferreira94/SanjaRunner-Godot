@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
-	<ext_resource path="res://img/Mapa/OESTE.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://img/Mapa/CENTRO.png" type="Texture" index="2"></ext_resource>
-	<ext_resource path="res://img/Mapa/NORTE.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://img/Mapa/SUL.png" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://img/Mapa/SUDESTE.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://img/Mapa/LESTE.png" type="Texture" index="0"></ext_resource>
+<resource_file type="PackedScene" subresource_count="8" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://img/Mapa/OESTE.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://img/Mapa/CENTRO.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://scenes/selecao_mapa.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://img/Mapa/NORTE.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/Mapa/SUL.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Mapa/SUDESTE.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://img/Mapa/LESTE.png" type="Texture" index="1"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -16,11 +17,13 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="16">
+			<string_array  len="18">
 				<string> "Node2D" </string>
+				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Leste" </string>
 				<string> "transform/pos" </string>
+				<string> "transform/scale" </string>
 				<string> "normal" </string>
 				<string> "pressed" </string>
 				<string> "bitmask" </string>
@@ -40,28 +43,30 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="135"> 				-1, -1, 0, 0, -1, 1, 1, 0, 0, 0, 0, 10, 2, -1, 7, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 11, -1, 7, 3, 7, 4, 8, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 12, -1, 7, 3, 9, 4, 10, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 13, -1, 7, 3, 11, 4, 12, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 14, -1, 7, 3, 13, 4, 14, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 10, 15, -1, 7, 3, 15, 4, 16, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 0 </int_array>
+			<int_array  len="149"> 				-1, -1, 0, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 12, 3, -1, 8, 4, 2, 5, 3, 6, 4, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 13, -1, 8, 4, 9, 5, 3, 6, 10, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 14, -1, 8, 4, 11, 5, 3, 6, 12, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 15, -1, 8, 4, 13, 5, 3, 6, 14, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 16, -1, 8, 4, 15, 5, 3, 6, 16, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 17, -1, 8, 4, 17, 5, 3, 6, 18, 7, 5, 8, 5, 9, 6, 10, 7, 11, 8, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="17" shared="false">
+			<array  len="19" shared="false">
+				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
-				<vector2> 497.414, 194.708 </vector2>
-				<resource  external="0">  </resource>
+				<vector2> 466.414, 44.708 </vector2>
+				<vector2> 2, 2 </vector2>
+				<resource  external="1">  </resource>
 				<resource name=""></resource>				<bool> False </bool>
 				<string> "" </string>
 				<int> 0 </int>
-				<vector2> 304.381, 174.849 </vector2>
-				<resource  external="1">  </resource>
-				<vector2> 399.353, 327.73 </vector2>
+				<vector2> 82.2839, 5.75153 </vector2>
 				<resource  external="2">  </resource>
-				<vector2> 343.28, 318.022 </vector2>
+				<vector2> 271.301, 310.483 </vector2>
 				<resource  external="3">  </resource>
-				<vector2> 398.858, 387.474 </vector2>
+				<vector2> 160.183, 291.022 </vector2>
 				<resource  external="4">  </resource>
-				<vector2> 497.474, 367.442 </vector2>
+				<vector2> 269.858, 430.474 </vector2>
 				<resource  external="5">  </resource>
+				<vector2> 467.474, 389.442 </vector2>
+				<resource  external="6">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
