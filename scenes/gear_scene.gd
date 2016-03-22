@@ -13,8 +13,13 @@ func _process(delta):
 	pass
 
 func _on_collect_gear( body ):
+	var t = Timer.new()
+	t.set_wait_time(1)
+	add_child(t)
 	get_node("/root/data").engrenagemColetada += value
 	get_node("catch_coin").play("coin")
-	get_owner().get_node("HUD/points").set_text(str(get_node("/root/data").engrenagemColetada*100))
-	#queue_free()
 	self.hide()
+	get_owner().get_node("HUD/points").set_text(str(get_node("/root/data").engrenagemColetada*100))
+	t.start()
+	yield(t,"timeout")
+	queue_free()

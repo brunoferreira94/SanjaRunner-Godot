@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="10" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
-	<ext_resource path="res://scenes/personagens/personagem_menino_negro.xml" type="PackedScene" index="1"></ext_resource>
-	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="2"></ext_resource>
-	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="3"></ext_resource>
+<resource_file type="PackedScene" subresource_count="15" version="2.0" version_name="Godot Engine v2.0.stable.official">
+	<ext_resource path="res://sprites/textBox.tex" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://scripts/selectPlayer.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://sprites/textBox.tex" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://sprites/selectpersonagem.tex" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="9"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_menino_negro.xml" type="PackedScene" index="7"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="8"></ext_resource>
+	<ext_resource path="res://scenes/button_back.xml" type="PackedScene" index="10"></ext_resource>
+	<ext_resource path="res://sprites/selectpersonagem.tex" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://img/seleção personagem/select_negro.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/splashscreen/bluegredient_new.jpg" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/seleção personagem/select_branca.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/seleção personagem/select_cadeirante.png" type="Texture" index="4"></ext_resource>
 	<resource type="StyleBoxEmpty" path="local://2">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
@@ -34,8 +39,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "editable_instances" </string>
-			<array  len="1" shared="false">
-				<node_path> "DKbutton/personagem" </node_path>
+			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
 			<string_array  len="40">
@@ -43,101 +47,123 @@
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Node2D" </string>
-				<string> "DKbutton" </string>
-				<string> "margin/left" </string>
-				<string> "margin/top" </string>
+				<string> "TextureFrame" </string>
 				<string> "margin/right" </string>
 				<string> "margin/bottom" </string>
 				<string> "focus/ignore_mouse" </string>
 				<string> "focus/stop_mouse" </string>
 				<string> "size_flags/horizontal" </string>
 				<string> "size_flags/vertical" </string>
+				<string> "texture" </string>
+				<string> "expand" </string>
+				<string> "textures seleção" </string>
+				<string> "transform/pos" </string>
+				<string> "negro" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "rect/scale" </string>
+				<string> "menina" </string>
+				<string> "cadeirante" </string>
+				<string> "DKbutton" </string>
 				<string> "custom_styles/hover" </string>
 				<string> "toggle_mode" </string>
 				<string> "flat" </string>
 				<string> "Button" </string>
-				<string> "personagem" </string>
-				<string> "transform/pos" </string>
+				<string> "Zebutton" </string>
+				<string> "Mariabutton" </string>
+				<string> "box" </string>
 				<string> "transform/scale" </string>
+				<string> "textBox" </string>
+				<string> "Sprite" </string>
+				<string> "selectperson" </string>
+				<string> "personagem" </string>
 				<string> "mode" </string>
 				<string> "mass" </string>
 				<string> "friction" </string>
-				<string> "RayCast2D" </string>
-				<string> "CollisionShape2D" </string>
-				<string> "AnimatedSprite" </string>
-				<string> "AnimationPlayer" </string>
-				<string> "playback/speed" </string>
-				<string> "RayCollision" </string>
-				<string> "somPersonagem" </string>
-				<string> "Particles2D" </string>
-				<string> "randomness/linear_velocity" </string>
-				<string> "Zebutton" </string>
-				<string> "rect/scale" </string>
-				<string> "Mariabutton" </string>
-				<string> "box" </string>
-				<string> "textBox" </string>
-				<string> "texture" </string>
-				<string> "Sprite" </string>
-				<string> "selectperson" </string>
+				<string> "personagem 2" </string>
+				<string> "personagem 3" </string>
+				<string> "button back" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 12 </int>
+			<int> 16 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="208"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 16, 4, -1, 11, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 8, 13, 9, 14, 6, 15, 7, 0, 1, 0, 2147483647, 17, 10, 5, 18, 11, 19, 12, 20, 13, 21, 14, 22, 15, 0, 2, -1, 2147483647, 26, -1, 1, 27, 16, 0, 2, -1, 2147483647, 30, -1, 1, 31, 17, 0, 0, 0, 16, 32, -1, 12, 5, 18, 6, 19, 7, 20, 8, 21, 33, 22, 9, 6, 10, 7, 11, 8, 12, 8, 13, 23, 14, 6, 15, 7, 0, 5, 0, 2147483647, 17, 24, 5, 18, 25, 19, 26, 20, 13, 21, 14, 22, 15, 0, 0, 0, 16, 34, -1, 11, 5, 27, 6, 28, 7, 29, 8, 30, 9, 6, 10, 7, 11, 8, 12, 8, 13, 31, 14, 6, 15, 7, 0, 7, 0, 2147483647, 17, 32, 5, 18, 33, 19, 12, 20, 13, 21, 14, 22, 15, 0, 0, 0, 3, 35, -1, 3, 18, 34, 19, 35, 2, 36, 0, 9, 0, 38, 36, -1, 3, 18, 37, 19, 38, 37, 39, 0, 9, 0, 38, 39, -1, 3, 18, 40, 19, 41, 37, 42, 0 </int_array>
+			<int_array  len="318"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 4, 4, -1, 8, 5, 2, 6, 3, 7, 4, 8, 4, 9, 5, 10, 5, 11, 6, 12, 4, 0, 0, 0, 3, 13, -1, 2, 14, 7, 2, 8, 0, 2, 0, 4, 15, -1, 10, 16, 9, 17, 10, 5, 11, 6, 12, 18, 13, 7, 4, 8, 4, 9, 5, 10, 5, 11, 14, 0, 2, 0, 4, 19, -1, 10, 16, 15, 17, 10, 5, 16, 6, 12, 18, 13, 7, 4, 8, 4, 9, 5, 10, 5, 11, 17, 0, 2, 0, 4, 20, -1, 10, 16, 18, 17, 10, 5, 19, 6, 12, 18, 13, 7, 4, 8, 4, 9, 5, 10, 5, 11, 20, 0, 0, 0, 25, 21, -1, 11, 16, 21, 17, 21, 5, 22, 6, 23, 7, 24, 8, 4, 9, 5, 10, 5, 22, 25, 23, 24, 24, 4, 0, 0, 0, 25, 26, -1, 12, 16, 26, 17, 27, 5, 28, 6, 29, 18, 30, 7, 24, 8, 4, 9, 5, 10, 5, 22, 31, 23, 24, 24, 4, 0, 0, 0, 25, 27, -1, 11, 16, 32, 17, 33, 5, 34, 6, 35, 7, 24, 8, 4, 9, 5, 10, 5, 22, 36, 23, 24, 24, 4, 0, 0, 0, 3, 28, -1, 3, 14, 37, 29, 38, 2, 39, 0, 9, 0, 31, 30, -1, 2, 14, 40, 11, 41, 0, 9, 0, 31, 32, -1, 3, 14, 42, 29, 43, 11, 44, 0, 0, 0, 2147483647, 33, 45, 5, 14, 46, 29, 47, 34, 48, 35, 49, 36, 50, 0, 0, 0, 2147483647, 37, 51, 5, 14, 52, 29, 53, 34, 48, 35, 49, 36, 50, 0, 0, 0, 2147483647, 38, 54, 5, 14, 55, 29, 56, 34, 48, 35, 49, 36, 50, 0, 0, 0, 2147483647, 39, 57, 4, 16, 58, 17, 59, 5, 60, 6, 61, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="43" shared="false">
+			<array  len="62" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
 				</dictionary>
-				<real> 159 </real>
-				<real> 144 </real>
-				<real> 329 </real>
-				<real> 387 </real>
-				<bool> False </bool>
+				<real> 1280 </real>
+				<real> 768 </real>
 				<bool> True </bool>
 				<int> 2 </int>
-				<resource  resource_type="StyleBox" path="local://2">  </resource>
 				<resource  external="1">  </resource>
-				<vector2> 80.28, 124.721 </vector2>
-				<vector2> 2.5, 2.5 </vector2>
-				<int> 1 </int>
-				<real> 0.510204 </real>
-				<real> 0.01 </real>
-				<real> 1.3 </real>
-				<real> 0.2 </real>
-				<real> 725 </real>
-				<real> 207 </real>
+				<vector2> 115.876, -6.81622 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 65 </real>
+				<real> 192 </real>
+				<real> 265 </real>
+				<real> 542 </real>
+				<vector2> 1.3, 1.3 </vector2>
+				<resource  external="2">  </resource>
+				<real> 385 </real>
+				<real> 585 </real>
+				<resource  external="3">  </resource>
+				<real> 705 </real>
 				<real> 905 </real>
-				<real> 445 </real>
+				<resource  external="4">  </resource>
+				<real> 184 </real>
+				<real> 436 </real>
+				<real> 636 </real>
+				<bool> False </bool>
+				<resource  resource_type="StyleBox" path="local://2">  </resource>
+				<real> 823 </real>
+				<real> 190 </real>
+				<real> 1245 </real>
+				<real> 931 </real>
 				<vector2> 0.6, 0.6 </vector2>
 				<resource  resource_type="StyleBox" path="local://3">  </resource>
-				<resource  external="2">  </resource>
-				<vector2> 80.9451, 83.3971 </vector2>
-				<vector2> 4.3, 4.3 </vector2>
-				<real> 448 </real>
-				<real> 163 </real>
-				<real> 611 </real>
-				<real> 396 </real>
+				<real> 503 </real>
+				<real> 186 </real>
+				<real> 760 </real>
+				<real> 642 </real>
 				<resource  resource_type="StyleBox" path="local://1">  </resource>
-				<resource  external="3">  </resource>
-				<vector2> 74.9784, 113.604 </vector2>
-				<vector2> 61.9734, 14.1051 </vector2>
+				<vector2> 171.033, -8.89489 </vector2>
 				<vector2> 0.9, 0.9 </vector2>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
-				<vector2> 508.979, 623.012 </vector2>
-				<vector2> 2, 1.5 </vector2>
-				<resource  external="4">  </resource>
-				<vector2> 509.436, 621.348 </vector2>
-				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 510.835, 112.678 </vector2>
 				<resource  external="5">  </resource>
+				<vector2> 511.292, 111.014 </vector2>
+				<vector2> 0.5, 0.5 </vector2>
+				<resource  external="6">  </resource>
+				<resource  external="7">  </resource>
+				<vector2> 291.857, 664.71 </vector2>
+				<vector2> 2.5, 2.5 </vector2>
+				<int> 1 </int>
+				<real> 0.510204 </real>
+				<real> 0.01 </real>
+				<resource  external="8">  </resource>
+				<vector2> 947.899, 662.038 </vector2>
+				<vector2> 2.58, 2.58 </vector2>
+				<resource  external="9">  </resource>
+				<vector2> 620.31, 673.604 </vector2>
+				<vector2> 2.5, 2.5 </vector2>
+				<resource  external="10">  </resource>
+				<real> 20 </real>
+				<real> 21 </real>
+				<real> 60 </real>
+				<real> 61 </real>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>

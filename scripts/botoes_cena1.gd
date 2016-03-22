@@ -29,6 +29,7 @@ func _process(delta):
 		if get_tree().is_paused():
 			get_tree().set_pause(false)
 			get_node("texto_papel").hide()
+			get_parent().get_node("HUD/pause").show()
 	
 	if pause.is_hovered() && clique_esquerdo.check() == 1:
 		if get_tree().is_paused():

@@ -27,3 +27,5 @@ func _process(delta):
 		get_tree().change_scene("res://scenes/main_scene.xml")
 		numPlayer = 2
 		get_node("/root/globals").setPlayerSelected(numPlayer)
+
+

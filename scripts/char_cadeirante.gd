@@ -83,7 +83,7 @@ func morreu():
 	var pause = get_parent().get_node("HUD/pause")
 	
 	#se o personagem sair dos limite lateral esquerdo ou inferior, ele perde
-	if (get_pos().x < pos_fantasma.x - 130 or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
+	if (get_pos().x < pos_fantasma.x - 250 or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
 		pause.hide()
 		voce_perdeu.show()
 		somPersonagem.play("lose")
