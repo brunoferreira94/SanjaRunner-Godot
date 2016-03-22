@@ -3,9 +3,8 @@ extends Node2D
 
 var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), preload("res://scenes/personagens/personagem_cadeirante.xml"), preload("res://scenes/personagens/personagem_menina_branca.xml")]
 var numPlayer
-var Questions = [["questao1","questao2","questao3","questao4","questao5"],[0,0,0,0,0]]
-
-
+var questions = ["questao1","questao2","questao3","questao4","questao5"]
+var respostas = ["resp1","resp2","resp3","resp4","resp5"]
 
 func _ready():
 	set_process(true)
@@ -15,6 +14,8 @@ func _ready():
 		numPlayer = randi() % 3
 	spawnPlayer(145,600)
 	
+	screen_question(2)
+		
 
 func spawnPlayer(posx, posy):
 	var spawnPlayer
@@ -34,9 +35,23 @@ func set_question(id):
 		if questoes.get_line() == str(id):
 			for j in range(5):
 				linha = questoes.get_line()
-				Questions[0][j] = linha
-				print(Questions[0][j],"\n")
+				questions[j] = linha
+				print(questions[j],"\n")
+
+
+func set_resposta(id):
+	var respostas = File.new()
+	var linha
+	respostas.open("res://respostas.txt",File.READ)
+	while(!respostas.eof_reached()):
+		
+
 
 #atribui o texto para à questao
 func set_texto_questao(id):
-	get_node("TextBaloon/Pergunta/questao").add_text(Questions[0][id-1])
+	get_node("TextBaloon/questao").add_text(questions[id])
+	
+func screen_question(id):
+	set_question(id)
+	set_texto_questao(id)
+	

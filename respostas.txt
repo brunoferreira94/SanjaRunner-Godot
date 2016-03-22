@@ -1,0 +1,5 @@
+errado,errado,certo,errado
+certo,errado,errado,errado
+errado,certo,errado,errado
+errado,errado,errado,certo
+errado,certo,errado,errado
