@@ -9,20 +9,27 @@ var respostas = [["resp11","resp12","resp13","resp14"],
 				["resp31","resp32","resp33","resp34"],
 				["resp41","resp42","resp43","resp44"],
 				["resp51","resp52","resp53","resp54"]]
+var respostabool = [ [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0] ]
 
 func _ready():
+	
 	set_process(true)
+	spawnPlayer(145,600)
+	screen_question(4)
+
+
+
+
+
+#dá spawn do ultimo personagem escolhido na posicao x,y do mapa
+func spawnPlayer(posx, posy):
+	var spawnPlayer
+	
 	if get_node("/root/globals").getPlayerSelected() != null:
 		numPlayer = get_node("/root/globals").getPlayerSelected()
 	else:
 		numPlayer = randi() % 3
-	spawnPlayer(145,600)
 	
-	screen_question(2)
-		
-
-func spawnPlayer(posx, posy):
-	var spawnPlayer
 	spawnPlayer = player[numPlayer].instance()
 	spawnPlayer.set_pos(Vector2(posx,posy))
 	add_child(spawnPlayer)
@@ -34,7 +41,7 @@ func spawnPlayer(posx, posy):
 func set_question(id):
 	var questoes = File.new()
 	var linha
-	questoes.open("res://questoes.txt", File.READ)
+	questoes.open("res://Quiz/quiz1/questoes.txt", File.READ)
 	while(!questoes.eof_reached()):
 		if questoes.get_line() == str(id):
 			for j in range(5):
@@ -44,19 +51,33 @@ func set_question(id):
 
 #pega o texto do arquivo e atribui para as respostas
 func set_resposta(id):
-	var respostas = File.new()
+	var respostasfile = File.new()
 	var linha
-	respostas.open("res://respostas.txt",File.READ)
-	while(!respostas.eof_reached()):
-		for i in range (5):
-			for j in range (4):
-				linha = respostas.get_line()
-				respostas[i][j] = linha
+	respostasfile.open("res://Quiz/quiz1/respostas.txt",File.READ)
+	#while(!respostasfile.eof_reached()):
+		#if respostasfile.get_line() == str(id):
+	for i in range (5):
+		for j in range (4):
+			linha = respostasfile.get_line()
+			respostas[i][j] = linha
+
+
+#pega o texto do arquivo e atribui para as respostabool
+func set_respostabool(id):
+	var boolfile = File.new()
+	var linha
+	boolfile.open("res://Quiz/quiz1/respostabool.txt",File.READ)
+	#while(!respostasfile.eof_reached()):
+		#if respostasfile.get_line() == str(id):
+	for i in range (5):
+		for j in range (4):
+			linha = boolfile.get_line()
+			respostabool[i][j] = linha
 
 
 #atribui o texto para o balão de questao
 func set_texto_questao(id):
-	get_node("TextBaloon/questao").add_text(questions[id])
+	get_node("TextBaloon/Pergunta/questao").add_text(questions[id])
 	
 
 #atribui o texto para os balões de resposta
@@ -66,7 +87,7 @@ func set_texto_resposta(id):
 	get_node("TextBaloon/c/respC").add_text(respostas[id][2])
 	get_node("TextBaloon/d/respD").add_text(respostas[id][3])
 
-	
+#função para apresentar todas as informações na tela
 func screen_question(id):
 	set_question(id)
 	set_texto_questao(id)
