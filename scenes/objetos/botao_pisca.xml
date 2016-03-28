@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="9" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha04.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha00.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha02.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha01.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha05.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Botão pisca pisca/botao-brilha03.png" type="Texture" index="3"></ext_resource>
+	<resource type="SpriteFrames" path="local://1">
+		<array name="frames" len="6" shared="false">
+			<resource  external="0">  </resource>
+			<resource  external="1">  </resource>
+			<resource  external="2">  </resource>
+			<resource  external="3">  </resource>
+			<resource  external="4">  </resource>
+			<resource  external="5">  </resource>
+		</array>
+
+	</resource>
+	<resource type="Animation" path="local://2">
+		<string name="resource/name"> "pisca" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.2 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="5"> 				0, 0.2, 0.4, 0.6, 0.8 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<int> 1 </int>
+				<int> 2 </int>
+				<int> 3 </int>
+				<int> 4 </int>
+				<int> 5 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="15">
+				<string> "botão" </string>
+				<string> "frames" </string>
+				<string> "frame" </string>
+				<string> "centered" </string>
+				<string> "__meta__" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/pisca" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 2 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="38"> 				-1, -1, 5, 0, -1, 4, 1, 0, 2, 1, 3, 2, 4, 3, 0, 0, 0, 6, 6, -1, 8, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 11, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="12" shared="false">
+				<resource  resource_type="SpriteFrames" path="local://1">  </resource>
+				<int> 2 </int>
+				<bool> False </bool>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<int> 1 </int>
+				<real> 0 </real>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://2">  </resource>
+				<bool> True </bool>
+				<real> 0.65 </real>
+				<array  len="0" shared="false">
+				</array>
+				<string> "pisca" </string>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
