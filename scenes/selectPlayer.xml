@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://sprites/textBox.tex" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://sprites/selectpersonagem.tex" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://scenes/personagens/personagem_menino_negro.xml" type="PackedScene" index="1"></ext_resource>
 	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="2"></ext_resource>
 	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="3"></ext_resource>
 	<ext_resource path="res://scripts/selectPlayer.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://sprites/textBox.tex" type="Texture" index="4"></ext_resource>
-	<ext_resource path="res://sprites/selectpersonagem.tex" type="Texture" index="5"></ext_resource>
 	<resource type="StyleBoxEmpty" path="local://2">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>

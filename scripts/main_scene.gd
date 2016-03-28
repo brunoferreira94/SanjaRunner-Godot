@@ -21,6 +21,14 @@ func _ready():
 	#get_node("data").load_game(id)
 	get_node("data").set_texto_papel(id)
 	
+	var alturaTela =  get_viewport_rect().size.height
+	var larguraTela =  get_viewport_rect().size.width
+	var btnSize = get_node("HUD/TouchScreenButton").get_texture().get_height()
+	get_node("HUD/TouchScreenButton").set_pos(Vector2(0,alturaTela/2))
+	get_node("HUD/TouchScreenButton").set_opacity(0.0)
+	get_node("HUD/TouchScreenButton").set_scale(Vector2(larguraTela/btnSize,(alturaTela/btnSize)/2))
+	
+	
 func _process(delta):
 	pass
 	
