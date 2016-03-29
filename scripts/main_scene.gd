@@ -7,6 +7,26 @@ var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), p
 var script = load("res://scripts/char_cadeirante.gd")
 var papel = preload("res://scenes/paper.xml")
 
+var pombaCinza = preload("res://scenes/objetos/PombaCinza.xml").instance()
+var pardal = preload("res://scenes/objetos/Pardal.xml").instance()
+var pombaFeia = preload("res://scenes/objetos/PombaFeia.xml").instance()
+var gaviao = preload("res://scenes/objetos/Gaviao.xml").instance()
+
+export var enablePombaCinza = false
+export var enablePardal = false
+export var enablePombaFeia = false
+export var enableGaviao = false
+
+export var qntPombaCinza = 0
+export var qntPardal = 0
+export var qntPombaFeia = 0
+export var qntGaviao = 0
+
+var alturaTela
+var larguraTela
+
+
+
 func _ready():
 	set_process(true)
 	if get_node("/root/globals").getPlayerSelected() != null:
@@ -21,16 +41,21 @@ func _ready():
 	#get_node("data").load_game(id)
 	get_node("data").set_texto_papel(id)
 	
-	var alturaTela =  get_viewport_rect().size.height
-	var larguraTela =  get_viewport_rect().size.width
+	alturaTela =  get_viewport_rect().size.height
+	larguraTela =  get_viewport_rect().size.width
 	var btnSize = get_node("HUD/TouchScreenButton").get_texture().get_height()
 	get_node("HUD/TouchScreenButton").set_pos(Vector2(0,alturaTela/2))
 	get_node("HUD/TouchScreenButton").set_opacity(0.0)
 	get_node("HUD/TouchScreenButton").set_scale(Vector2(larguraTela/btnSize,(alturaTela/btnSize)/2))
-	
+	randSpawnPombaCinza()
+	randSpawnGaviao()
+	randSpawnPardal()
+	randSpawnPombaFeia()
 	
 func _process(delta):
 	pass
+	
+	
 	
 func spawnPlayer(posx, posy):
 	var spawnPlayer
@@ -50,3 +75,63 @@ func spawnPapel(posx, posy, id):
 		get_node("papel").add_child(spawnPapel)
 	else:
 		return str("\nPapel ", id, " já foi coletado.")
+		
+		
+
+func randSpawnPombaCinza():
+	randomize()
+	var v = randi()%2
+	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
+		pombaCinza.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pombaCinza.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaCinza.get_node("Sprite").set_flip_h(true)
+		add_child(pombaCinza)
+	else:
+		pombaCinza.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pombaCinza.set_linear_velocity(Vector2(-((randi()%200)+400),0))
+		get_node("HUD").add_child(pombaCinza)
+		
+
+
+func randSpawnPardal():
+	randomize()
+	var v = randi()%2
+	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
+		pardal.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pardal.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pardal.get_node("Sprite").set_flip_h(true)
+		add_child(pardal)
+	else:
+		pardal.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pardal.set_linear_velocity(Vector2(-((randi()%200)+400),0))
+		get_node("HUD").add_child(pardal)
+
+
+
+func randSpawnGaviao():
+	randomize()
+	var v = randi()%2
+	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
+		gaviao.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		gaviao.set_linear_velocity(Vector2((randi()%100)+100,0))
+		gaviao.get_node("Sprite").set_flip_h(true)
+		add_child(gaviao)
+	else:
+		gaviao.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		gaviao.set_linear_velocity(Vector2(-((randi()%200)+400),0))
+		get_node("HUD").add_child(gaviao)
+
+
+
+func randSpawnPombaFeia():
+	randomize()
+	var v = randi()%2
+	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
+		pombaFeia.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pombaFeia.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaFeia.get_node("Sprite").set_flip_h(true)
+		add_child(pombaFeia)
+	else:
+		pombaFeia.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
+		pombaFeia.set_linear_velocity(Vector2(-((randi()%200)+400),0))
+		get_node("HUD").add_child(pombaFeia)
