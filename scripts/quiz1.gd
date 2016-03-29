@@ -1,6 +1,7 @@
 
 extends Node2D
 
+
 var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), preload("res://scenes/personagens/personagem_cadeirante.xml"), preload("res://scenes/personagens/personagem_menina_branca.xml")]
 var numPlayer
 var questions = ["questao1","questao2","questao3","questao4","questao5"]
@@ -10,15 +11,24 @@ var respostas = [["resp11","resp12","resp13","resp14"],
 				["resp41","resp42","resp43","resp44"],
 				["resp51","resp52","resp53","resp54"]]
 var respostabool = [ [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0], [0,0,0,0] ]
-var pontuacao
+var pontuacao = 0
+var num = 0
 
 func _ready():
 	
 	set_process(true)
 	spawnPlayer(145,600)
 	pontuacao = 0
+	quizCompleto(num)
 	
-	quizCompleto(0)
+	
+func _process(delta):
+	if(Input.is_key_pressed(KEY_ESCAPE)):
+		get_tree().quit()
+	
+	if get_node("TextBaloon/a").is_pressed() or get_node("TextBaloon/b").is_pressed() or get_node("TextBaloon/c").is_pressed() or get_node("TextBaloon/d").is_pressed():
+		quizCompleto(num)
+		num += 1
 
 func quizCompleto(id):
 	
@@ -59,6 +69,7 @@ func quizCompleto(id):
 		else:
 			id = id + 1
 			reset_question(id)
+	
 
 
 #dá spawn do ultimo personagem escolhido na posicao x,y do mapa
@@ -131,7 +142,7 @@ func reset_question(id):
 	get_node("TextBaloon/a/respA").clear()
 	get_node("TextBaloon/b/respB").clear()
 	get_node("TextBaloon/c/respC").clear()
-	get_node("TextBaloon/c/respC").clear()
+	get_node("TextBaloon/d/respD").clear()
 	get_node("TextBaloon/Pergunta/questao").clear()
 	set_texto_questao(id)
 	set_texto_resposta(id)
