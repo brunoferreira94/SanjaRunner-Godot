@@ -22,6 +22,7 @@ func _ready():
 	quizCompleto(num)
 	
 	
+	
 func _process(delta):
 	if(Input.is_key_pressed(KEY_ESCAPE)):
 		get_tree().quit()
@@ -29,45 +30,46 @@ func _process(delta):
 	if get_node("TextBaloon/a").is_pressed() or get_node("TextBaloon/b").is_pressed() or get_node("TextBaloon/c").is_pressed() or get_node("TextBaloon/d").is_pressed():
 		quizCompleto(num)
 		num += 1
+		print(pontuacao)
 
 func quizCompleto(id):
 	
 	screen_question(id)
 	
 	if get_node("TextBaloon/a").is_pressed():
-		if respostabool[id][0] == 1:
+		if respostabool[id][0] == "1":
 			pontuacao = pontuacao + 1
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		else: 
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		
 	elif get_node("TextBaloon/b").is_pressed():
-		if respostabool[id][1] == 1:
+		if respostabool[id][1] == "1":
 			pontuacao = pontuacao + 1
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		else:
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 	
 	elif get_node("TextBaloon/c").is_pressed():
-		if respostabool[id][2] == 1:
+		if respostabool[id][2] == "1":
 			pontuacao = pontuacao + 1
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		else:
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		
 	elif get_node("TextBaloon/d").is_pressed():
-		if respostabool[id][3] == 1:
+		if respostabool[id][3] == "1":
 			pontuacao = pontuacao + 1
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 		else:
-			id = id + 1
+			#id = id + 1
 			reset_question(id)
 	
 
@@ -89,7 +91,7 @@ func spawnPlayer(posx, posy):
 	spawnPlayer.get_node("AnimatedSprite").set_scale(Vector2(1.4,1.4))
 
 #Pega o texto de um arquivo e atribui ao Questions
-func set_question(id):
+func set_question():
 	var questoes = File.new()
 	var linha
 	questoes.open("res://Quiz/quiz1/questoes.txt", File.READ)
@@ -101,7 +103,7 @@ func set_question(id):
 		print(questions[j],"\n")
 
 #pega o texto do arquivo e atribui para as respostas
-func set_resposta(id):
+func set_resposta():
 	var respostasfile = File.new()
 	var linha
 	respostasfile.open("res://Quiz/quiz1/respostas.txt",File.READ)
@@ -114,7 +116,7 @@ func set_resposta(id):
 
 
 #pega o texto do arquivo e atribui para as respostabool
-func set_respostabool(id):
+func set_respostabool():
 	var boolfile = File.new()
 	var linha
 	boolfile.open("res://Quiz/quiz1/respostabool.txt",File.READ)
@@ -149,8 +151,9 @@ func reset_question(id):
 
 #função para apresentar todas as informações na tela
 func screen_question(id):
-	set_question(id)
+	set_question()
 	set_texto_questao(id)
-	set_resposta(id)
+	set_resposta()
 	set_texto_resposta(id)
+	set_respostabool()
 	
