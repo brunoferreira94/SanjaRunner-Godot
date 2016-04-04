@@ -9,10 +9,6 @@ func _ready():
 	numPlayer = 0
 	
 func _process(delta):
-	var dkplayer = get_node("DKbutton")
-	var zeplayer = get_node("Zebutton")
-	var mariaplayer = get_node("Mariabutton")
-	
 	if get_node("Botão DK").is_pressed():
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
 		numPlayer = 0
