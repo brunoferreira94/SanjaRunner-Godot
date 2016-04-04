@@ -2,8 +2,22 @@
 extends Node2D
 
 var numPapel = [[0, 0, 0, 0, 0],["texto1", "texto2", "texto3", "texto4", "texto5"]]
+#variáveis para armazenar a pontuação durante a cena
 var papelColetado = 0
 var engrenagemColetada = 0
+#variáveis para armazenar a pontuação depois da cena terminar
+var papelColetadoGlobal = 0
+var engrenagemColetadaGlobal = 0
+
+#variável que guarda o id do personagem selecionado 
+var PlayerSelected
+#retorna a id do personagem
+func getPlayerSelected():
+	return PlayerSelected
+#atribui um id ao personagem
+func setPlayerSelected(var numPlayer):
+	PlayerSelected = numPlayer
+
 
 #Pega o texto de um arquivo e atribui ao numPapel
 func set_texto_papel(id):
@@ -19,7 +33,6 @@ func set_texto_papel(id):
 				for j in range(5):
 					linha = conteudo.get_line()
 					numPapel[1][j] = linha
-					print(numPapel[1][j],"\n")
 
 #atribui o texto para o papel coletado
 func set_texto_papel_coletado(id):
@@ -43,9 +56,9 @@ func save_game(id):
 	var pos
 	savegame.open("res://savegame.save", File.READ_WRITE)
 	
-	savegame.store_line(get_owner().papelColetado, ";", get_owner().engrenagemColetada)
+	savegame.store_line(get_node("/root/data").papelColetadoGlobal, ";", get_node("/root/data").engrenagemColetadaGlobal)
 	if savegame.file_exists("res://savegame.save"):
-		savegame.store_line(str(papelColetado, ";", engrenagemColetada))
+		savegame.store_line(str(papelColetadoGlobal, ";", engrenagemColetadaGlobal))
 		while(!savegame.eof_reached()):
 			if savegame.get_line() == str(id):
 				savegame.store_line(str(save()))
@@ -78,11 +91,12 @@ func load_game(id):
 					for j in range(5):
 						numPapel[i][j] = linha.split(", ")[cont]
 						if numPapel[i][j] == 1:
-							get_owner().papelColetado += 1
+							get_node("/root/data").papelColetadoGlobal += 1
 						print(numPapel[i][j],"\n")
 						cont+=1
 		savegame.close()
 
+#carrega as informações de pontuação total na tela inicial
 func load_pontuacao():
 	var savegame = File.new()
 	var linha = [2]
@@ -92,8 +106,8 @@ func load_pontuacao():
 	else:
 		savegame.open("res://savegame.save", File.READ)
 		linha = savegame.get_line().split(";")
-		papelColetado = int(linha[0])
-		engrenagemColetada = int(linha[1])
+		papelColetadoGlobal = int(linha[0])
+		engrenagemColetadaGlobal = int(linha[1])
 
 func _ready():
 	pass

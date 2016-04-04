@@ -16,5 +16,7 @@ func _collect_paper( body ):
 	get_tree().set_pause(true)
 	get_parent().get_parent().get_node("data").set_texto_papel_coletado(id)
 	get_parent().get_parent().get_node("HUD/texto_papel").show()
+	get_parent().get_parent().get_node("HUD/texto_papel/continue").show()
 	get_parent().get_parent().get_node("HUD/pause").hide()
+	get_parent().get_parent().get_node("HUD/Botão Pulo").hide()
 	queue_free()

@@ -73,6 +73,7 @@ func _fixed_process(delta):
 		
 	move(player_Speed,accel,delta)
 	morreu()
+	ganhou()
 	
 #função que analisa a posição do personagem para dar GAME OVER
 func morreu():
@@ -93,11 +94,8 @@ func morreu():
 		#retorna verdadeiro para indicar que o personagem morreu
 		return true
 
-#função responsavel pelo movimento do personagem
-func move(speed, accel, delta):
-	anim = "andando"
-	#lerp calcula a interpolação linear entre current_speed.x e speed
-	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
+#função que verifica se o personagem ganhou
+func ganhou():
 	if get_pos().x > pos_parada and get_pos().x < pos_parada+1000:
 		set_linear_velocity(Vector2(current_Speed.x-400, get_linear_velocity().y))
 	elif get_pos().x > pos_parada+1000:
@@ -106,11 +104,23 @@ func move(speed, accel, delta):
 			set_axis_velocity(Vector2(0, -jump_force))
 			somPersonagem.play("8-bit-jump")
 			jumping = 1
+			if !get_parent().get_node("HUD/voce_ganhou").is_visible():
+				get_parent().get_node("HUD/voce_ganhou").show()
+				get_node("/root/data").papelColetadoGlobal += get_node("/root/data").papelColetado
+				get_node("/root/data").engrenagemColetadaGlobal += get_node("/root/data").engrenagemColetada
+				#get_node("/root/data").save_game(get_owner().id)
 		else:
 			PLAYERSTATE_NEXT = "air"
 			
 	else:
 		set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
+
+#função responsavel pelo movimento do personagem
+func move(speed, accel, delta):
+	anim = "andando"
+	#lerp calcula a interpolação linear entre current_speed.x e speed
+	current_Speed.x = lerp(current_Speed.x, speed, accel * delta)
+	set_linear_velocity(Vector2(current_Speed.x, get_linear_velocity().y))
 
 #funcao que verifica a posição de ground do personagem e permite o salto
 

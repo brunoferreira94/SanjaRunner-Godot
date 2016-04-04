@@ -10,5 +10,3 @@ func _coletar_engrenagem( body ):
 		print("Quantidade de engrenagens: ", get_node("/root/data").papelColetado)
 		get_node("SamplePlayer2D").play("8-bit-coin")
 		hide()
-	if get_node("SamplePlayer2D").is_processing():
-		queue_free()

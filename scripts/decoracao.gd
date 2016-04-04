@@ -10,6 +10,9 @@ func _ready():
 	engrenagem = get_node("pontos engrenagem")
 	pergaminho.set_scale(Vector2(2.5,2.5))
 	engrenagem.set_scale(Vector2(2.5,2.5))
-	pergaminho.add_text(str(get_node("/root/data").papelColetado))
-	engrenagem.add_text(str(get_node("/root/data").engrenagemColetada))
-	
+	pergaminho.add_text(str(get_node("/root/data").papelColetadoGlobal))
+	engrenagem.add_text(str(get_node("/root/data").engrenagemColetadaGlobal*100))
+	if get_node("/root/data").engrenagemColetadaGlobal*100 > 9999 and get_node("/root/data").engrenagemColetadaGlobal*100 < 99999:
+		engrenagem.set_scale(Vector2(2,2))
+	elif get_node("/root/data").engrenagemColetadaGlobal*100 > 99999 and get_node("/root/data").engrenagemColetadaGlobal*100 < 999999:
+		engrenagem.set_scale(Vector2(1.65,1.65))

@@ -14,5 +14,7 @@ func _process(delta):
 	
 	if fechar1.is_pressed():
 		get_tree().quit()
-	if jogar1.is_pressed():
+	elif jogar1.is_pressed():
 		get_tree().change_scene("res://scenes/selectPlayer.xml")
+	elif continue1.is_pressed():
+		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
