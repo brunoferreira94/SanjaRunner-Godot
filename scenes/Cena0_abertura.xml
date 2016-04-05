@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="18" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
-	<ext_resource path="res://scripts/decoracao.gd" type="Script" index="11"></ext_resource>
-	<ext_resource path="res://scenes/personagens/personagem_menino_negro.xml" type="PackedScene" index="10"></ext_resource>
-	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="8"></ext_resource>
-	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="9"></ext_resource>
-	<ext_resource path="res://scripts/movimentoPersonagensAbertura.gd" type="Script" index="7"></ext_resource>
+<resource_file type="PackedScene" subresource_count="18" version="2.0" version_name="Godot Engine v2.0.stable.official">
 	<ext_resource path="res://fonte/fonte_padrao.fnt" type="Font" index="15"></ext_resource>
-	<ext_resource path="res://scenes/background/banhadoParallaxBackground.xml" type="PackedScene" index="16"></ext_resource>
 	<ext_resource path="res://img/botaoPlay.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://scripts/botoes_cena0.gd" type="Script" index="1"></ext_resource>
-	<ext_resource path="res://scripts/ScrollingCameraCena0.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://img/creditos.png" type="Texture" index="4"></ext_resource>
 	<ext_resource path="res://img/papelzinho.png" type="Texture" index="14"></ext_resource>
 	<ext_resource path="res://img/continue.png" type="Texture" index="2"></ext_resource>
@@ -17,6 +9,14 @@
 	<ext_resource path="res://img/placar.png" type="Texture" index="13"></ext_resource>
 	<ext_resource path="res://img/logo.png" type="Texture" index="12"></ext_resource>
 	<ext_resource path="res://img/pontuacao.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://scripts/decoracao.gd" type="Script" index="11"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="8"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_menino_negro.xml" type="PackedScene" index="10"></ext_resource>
+	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="9"></ext_resource>
+	<ext_resource path="res://scripts/botoes_cena0.gd" type="Script" index="1"></ext_resource>
+	<ext_resource path="res://scripts/ScrollingCameraCena0.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://scripts/movimentoPersonagensAbertura.gd" type="Script" index="7"></ext_resource>
+	<ext_resource path="res://scenes/background/banhadoParallaxBackground.xml" type="PackedScene" index="16"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
