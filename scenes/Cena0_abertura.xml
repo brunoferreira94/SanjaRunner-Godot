@@ -5,18 +5,18 @@
 	<ext_resource path="res://scenes/personagens/personagem_cadeirante.xml" type="PackedScene" index="8"></ext_resource>
 	<ext_resource path="res://scenes/personagens/personagem_menina_branca.xml" type="PackedScene" index="9"></ext_resource>
 	<ext_resource path="res://scripts/movimentoPersonagensAbertura.gd" type="Script" index="7"></ext_resource>
+	<ext_resource path="res://img/botaoPlay.png" type="Texture" index="6"></ext_resource>
 	<ext_resource path="res://fonte/fonte_padrao.fnt" type="Font" index="15"></ext_resource>
 	<ext_resource path="res://scenes/background/banhadoParallaxBackground.xml" type="PackedScene" index="16"></ext_resource>
-	<ext_resource path="res://img/botaoPlay.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://scripts/botoes_cena0.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://scripts/ScrollingCameraCena0.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://scripts/botoes_cena0.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://img/creditos.png" type="Texture" index="4"></ext_resource>
 	<ext_resource path="res://img/papelzinho.png" type="Texture" index="14"></ext_resource>
-	<ext_resource path="res://img/continue.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://img/fechar.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/pontuacao.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://img/continue.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://img/placar.png" type="Texture" index="13"></ext_resource>
 	<ext_resource path="res://img/logo.png" type="Texture" index="12"></ext_resource>
-	<ext_resource path="res://img/pontuacao.png" type="Texture" index="3"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -24,13 +24,14 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "editable_instances" </string>
-			<array  len="3" shared="false">
+			<array  len="4" shared="false">
 				<node_path> "CanvasLayer/personagens/personagem" </node_path>
 				<node_path> "CanvasLayer/personagens/personagem 2" </node_path>
 				<node_path> "CanvasLayer/personagens/personagem 3" </node_path>
+				<node_path> "ParallaxBackground" </node_path>
 			</array>
 			<string> "names" </string>
-			<string_array  len="83">
+			<string_array  len="90">
 				<string> "Node2D" </string>
 				<string> "__meta__" </string>
 				<string> "Camera2D" </string>
@@ -114,6 +115,13 @@
 				<string> "pontos papel" </string>
 				<string> "objetos" </string>
 				<string> "ParallaxBackground" </string>
+				<string> "Montanhas" </string>
+				<string> "Nuvens" </string>
+				<string> "Predio2" </string>
+				<string> "Predio1" </string>
+				<string> "relevo banhado" </string>
+				<string> "banhado" </string>
+				<string> "grama chao" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 36 </int>
@@ -126,7 +134,7 @@
 			<array  len="87" shared="false">
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<vector2> 516.739, 387.05 </vector2>
 				<vector2> 16.0536, 11.9867 </vector2>
