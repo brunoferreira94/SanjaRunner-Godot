@@ -20,10 +20,10 @@ var enablePardal = false
 var enablePombaFeia = false
 var enableGaviao = false
 
-export var qntPombaCinza = 10
-export var qntPardal = 10
-export var qntPombaFeia = 10
-export var qntGaviao = 10
+export var intervaloPombaCinza = 10
+export var intervaloPardal = 10
+export var intervaloPombaFeia = 10
+export var intervaloGaviao = 10
 
 var c;
 
@@ -53,13 +53,13 @@ func _process(delta):
 
 	c += 1
 	
-	if c % qntPombaCinza == 0:
+	if c % intervaloPombaCinza == 0:
 		randSpawnPombaCinza()
-	if c % qntGaviao == 0:
+	if c % intervaloGaviao == 0:
 		randSpawnGaviao()
-	if c % qntPardal == 0:
+	if c % intervaloPardal == 0:
 		randSpawnPardal()
-	if c % qntPombaFeia == 0:
+	if c % intervaloPombaFeia == 0:
 		randSpawnPombaFeia()
 
 	
