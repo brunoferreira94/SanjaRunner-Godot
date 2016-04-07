@@ -26,6 +26,8 @@ export var qntPombaFeia = 0
 export var qntGaviao = 0
 
 func _ready():
+	#chama a cena do banhado para a main scene
+	add_child(preload("res://scenes/cena_banhado.xml").instance())
 	set_process(true)
 	get_node("/root/data").engrenagemColetada = 0
 	get_node("/root/data").papelColetado = 0
@@ -35,7 +37,7 @@ func _ready():
 	else:
 		randomize()
 		numPlayer = randi() % 3
-	spawnPlayer(108,461)
+	spawnPlayer(108,200)
 	spawnPapel(500,600, 1)
 	#spawnPapel(500, 500, 2)
 	#get_node("data").save_game(id)

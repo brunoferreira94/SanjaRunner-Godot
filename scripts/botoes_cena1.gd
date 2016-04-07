@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
-var reiniciar
+var reiniciarGanhou
 var reiniciarPerdeu
 var pause
 var continuar
@@ -14,8 +14,8 @@ func _ready():
 	#Criando as variáveis que receberão os botões da cena
 	#Como aproveitei o código do meu projeto antigo, 
 	#comentei as ações que precisam ser implementadas
-	reiniciar = get_node("voce_perdeu/reiniciar")
-	reiniciarPerdeu = get_node("voce_ganhou/reiniciar")
+	reiniciarPerdeu = get_node("voce_perdeu/reiniciar")
+	reiniciarGanhou = get_node("voce_ganhou/reiniciar")
 	
 	voltar = get_node("voce_ganhou/voltar")
 	pause = get_node("pause")
@@ -23,11 +23,12 @@ func _ready():
 	
 func _process(delta):
 	#Condições para que as ações dos botões aconteçam
-	if (reiniciar.is_hovered() || reiniciarPerdeu.is_pressed()) && clique_esquerdo.check() == 1:
+	if reiniciarGanhou.is_pressed() || reiniciarPerdeu.is_pressed():
 		get_tree().change_scene("res://scenes/main_scene.xml")
 	#botão para voltar para o mapa de seleção dentro da região
 	if voltar.is_pressed():
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
+		get_node("/root/data").save_game(get_owner().id)
 	#botão para tirar o pause do jogo
 	if continuar.is_pressed():
 		if get_tree().is_paused():

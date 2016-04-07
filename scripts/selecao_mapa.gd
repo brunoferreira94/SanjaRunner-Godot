@@ -27,26 +27,27 @@ func _ready():
 	
 func _fixed_process(delta):
 	if voltar.is_pressed():
-		#if status == "mapa":
-			#get_tree().change_scene("res://scenes/Cena0_abertura.xml")
+		if status == "mapa":
+			get_tree().change_scene("res://scenes/Cena0_abertura.xml")
 		if status == "leste":
 			get_node("AnimationPlayer").play("Leste Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
 		if status == "norte":
 			get_node("AnimationPlayer").play("Norte Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
 		if status == "centro":
 			get_node("AnimationPlayer").play("Centro Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
 		if status == "oeste":
 			get_node("AnimationPlayer").play("Oeste Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
 		if status == "sul":
 			get_node("AnimationPlayer").play("Sul Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
 		if status == "sudeste":
 			get_node("AnimationPlayer").play("Sudeste Reverso")
-			status = "mapa"
+			espera_para_mapa(0.5)
+
 		
 	elif leste.is_pressed():
 		status = "leste"
@@ -69,6 +70,14 @@ func _fixed_process(delta):
 	elif centroBanhado.is_pressed():
 		get_tree().change_scene("res://scenes/main_scene.xml")
 		
+func espera_para_mapa(tempo):
+	var timer = Timer.new()
+	timer.set_wait_time(tempo)
+	add_child(timer)
+	timer.start()
+	yield(timer, "timeout")
+	status = "mapa"
+			
 func animacao_mapa(nomeRegiao):
 		#Mostra os botões da região escolhida e o nome da zona
 		if(nomeRegiao == "Centro"):

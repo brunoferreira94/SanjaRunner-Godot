@@ -54,9 +54,12 @@ func save():
 func save_game(id):
 	var savegame = File.new()
 	var pos
+	
+	get_node("/root/data").papelColetadoGlobal += get_node("/root/data").papelColetado
+	get_node("/root/data").engrenagemColetadaGlobal += get_node("/root/data").engrenagemColetada
+	
 	savegame.open("res://savegame.save", File.READ_WRITE)
 	
-	savegame.store_line(get_node("/root/data").papelColetadoGlobal, ";", get_node("/root/data").engrenagemColetadaGlobal)
 	if savegame.file_exists("res://savegame.save"):
 		savegame.store_line(str(papelColetadoGlobal, ";", engrenagemColetadaGlobal))
 		while(!savegame.eof_reached()):

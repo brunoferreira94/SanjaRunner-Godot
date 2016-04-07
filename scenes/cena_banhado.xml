@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://scripts/cena_banhado.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://tileset/plataformas_calcada_tile.xml" type="TileSet" index="2"></ext_resource>
+	<ext_resource path="res://scenes/background/banhadoParallaxBackground.xml" type="PackedScene" index="1"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="23">
+				<string> "Banhado" </string>
+				<string> "transform/pos" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "Node2D" </string>
+				<string> "ParallaxBackground" </string>
+				<string> "TileMap" </string>
+				<string> "transform/scale" </string>
+				<string> "mode" </string>
+				<string> "tile_set" </string>
+				<string> "cell/size" </string>
+				<string> "cell/quadrant_size" </string>
+				<string> "cell/custom_transform" </string>
+				<string> "cell/half_offset" </string>
+				<string> "cell/tile_origin" </string>
+				<string> "cell/y_sort" </string>
+				<string> "collision/use_kinematic" </string>
+				<string> "collision/friction" </string>
+				<string> "collision/bounce" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
+				<string> "occluder/light_mask" </string>
+				<string> "tile_data" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 3 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="59"> 				-1, -1, 4, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 2147483647, 5, 3, 0, 0, 0, 0, 6, 6, -1, 16, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 10, 14, 5, 15, 11, 16, 11, 17, 12, 18, 13, 19, 14, 20, 14, 21, 14, 22, 15, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="16" shared="false">
+				<vector2> -28, 2 </vector2>
+				<resource  external="0">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<resource  external="1">  </resource>
+				<vector2> 0.8, 0.8 </vector2>
+				<int> 0 </int>
+				<resource  external="2">  </resource>
+				<vector2> 70, 70 </vector2>
+				<int> 16 </int>
+				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
+				<int> 2 </int>
+				<bool> False </bool>
+				<real> 1 </real>
+				<real> 0 </real>
+				<int> 1 </int>
+				<int_array  len="266"> 					327790, 0, 327791, 1, 327792, 1, 327793, 1, 327794, 1, 327795, 1, 327796, 1, 327797, 1, 327798, 1, 327799, 1, 327800, 1, 327801, 1, 327802, 1, 327803, 1, 327804, 1, 327805, 1, 327806, 2, 524338, 0, 524339, 1, 524340, 1, 524341, 1, 524342, 1, 524343, 1, 524344, 1, 524345, 1, 524346, 1, 524347, 1, 524348, 1, 524349, 1, 524350, 1, 524351, 2, 524377, 0, 524378, 1, 524379, 1, 524380, 1, 524381, 1, 524382, 1, 524383, 1, 524384, 1, 524385, 1, 524386, 1, 524387, 2, 524450, 0, 524451, 1, 524452, 1, 524453, 1, 524454, 1, 524455, 1, 524456, 1, 524457, 1, 524458, 1, 524459, 1, 524460, 1, 524461, 1, 524462, 1, 524463, 1, 524464, 1, 524465, 1, 524466, 2, 524481, 0, 524482, 1, 524483, 1, 524484, 1, 524485, 1, 524486, 1, 524487, 1, 524488, 1, 524489, 1, 524490, 1, 524491, 1, 524492, 1, 524493, 1, 524494, 1, 524495, 1, 524496, 1, 524497, 1, 524498, 1, 524499, 1, 524500, 1, 524501, 1, 524502, 1, 524503, 1, 524504, 1, 524505, 1, 524506, 1, 524507, 2, 655389, 0, 655390, 1, 655391, 1, 655392, 1, 655393, 1, 655394, 1, 655395, 1, 655396, 1, 655397, 1, 655398, 1, 655399, 1, 655400, 2, 720900, 0, 720901, 1, 720902, 1, 720903, 1, 720904, 1, 720905, 1, 720906, 1, 720907, 1, 720908, 1, 720909, 2, 720968, 0, 720969, 1, 720970, 1, 720971, 1, 720972, 1, 720973, 1, 720974, 1, 720975, 1, 720976, 1, 720977, 1, 720978, 2, 721038, 0, 721039, 1, 721040, 1, 721041, 1, 721042, 1, 721043, 1, 721044, 1, 721045, 1, 721046, 1, 721047, 1, 721048, 1, 721049, 1, 721050, 1, 721051, 2 </int_array>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

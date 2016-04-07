@@ -9,7 +9,7 @@ func _ready():
 func _on_collect_gear( body ):
 	get_node("/root/data").engrenagemColetada += value
 	get_node("catch_coin").play("coin")
-	get_owner().get_node("HUD/points").set_text(str(get_node("/root/data").engrenagemColetada*100))
+	get_owner().get_node("HUD/points").set_text(str(get_node("/root/data").engrenagemColetada*10))
 	self.hide()
 	var timer = Timer.new()
 	timer.set_one_shot(true)

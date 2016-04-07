@@ -78,17 +78,23 @@ func _fixed_process(delta):
 #função que analisa a posição do personagem para dar GAME OVER
 func morreu():
 	var timer = get_parent().get_node("Timer")
-	var pos_fantasma = get_parent().get_node("personagem_fantasma").get_pos()
-	var altura_tela = get_viewport_rect().size.height
+	var altura_tela = get_viewport_rect().size.y
+	var largura_tela = get_viewport_rect().pos.x
 	var voce_perdeu = get_parent().get_node("HUD/voce_perdeu")
 	var pause = get_parent().get_node("HUD/pause")
+	var pulo = get_parent().get_node("HUD/Botão Pulo")
 	
 	#se o personagem sair dos limite lateral esquerdo ou inferior, ele perde
-	if (get_pos().x < pos_fantasma.x - 130 or get_pos().y > pos_fantasma.y +altura_tela*2) && voce_perdeu.is_hidden():
+	if (get_pos().x < largura_tela or get_pos().y > altura_tela) && voce_perdeu.is_hidden():
+		print(get_pos().x,"\t", largura_tela, "\n")
+		print(get_pos().y,"\t", altura_tela, "\n")
 		pause.hide()
+		pulo.hide()
 		voce_perdeu.show()
 		somPersonagem.play("lose")
 		print("Tempo de jogo: ", 60 - timer.get_time_left())
+		get_node("/root/data").engrenagemColetada = 0
+		get_node("/root/data").papelColetado = 0
 		#para a musica quando personagem perder
 		get_parent().get_node("Musica").stop()
 		#retorna verdadeiro para indicar que o personagem morreu
@@ -106,9 +112,6 @@ func ganhou():
 			jumping = 1
 			if !get_parent().get_node("HUD/voce_ganhou").is_visible():
 				get_parent().get_node("HUD/voce_ganhou").show()
-				get_node("/root/data").papelColetadoGlobal += get_node("/root/data").papelColetado
-				get_node("/root/data").engrenagemColetadaGlobal += get_node("/root/data").engrenagemColetada
-				#get_node("/root/data").save_game(get_owner().id)
 		else:
 			PLAYERSTATE_NEXT = "air"
 			

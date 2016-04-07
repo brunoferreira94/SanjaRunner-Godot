@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
-	<ext_resource path="res://img/Texto/voce-perdeu.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://img/botaoReplay.png" type="Texture" index="0"></ext_resource>
+<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://img/botaoReplay.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://img/Texto/voce-perdeu.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://img/botaoHome.png" type="Texture" index="2"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -12,52 +13,46 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="20">
+			<string_array  len="16">
 				<string> "voce_perdeu" </string>
 				<string> "transform/scale" </string>
 				<string> "__meta__" </string>
 				<string> "Node2D" </string>
-				<string> "reiniciar" </string>
-				<string> "margin/left" </string>
-				<string> "margin/top" </string>
-				<string> "margin/right" </string>
-				<string> "margin/bottom" </string>
-				<string> "rect/scale" </string>
-				<string> "focus/ignore_mouse" </string>
-				<string> "focus/stop_mouse" </string>
-				<string> "size_flags/horizontal" </string>
-				<string> "size_flags/vertical" </string>
-				<string> "toggle_mode" </string>
-				<string> "icon" </string>
-				<string> "flat" </string>
-				<string> "Button" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
+				<string> "reiniciar" </string>
+				<string> "transform/pos" </string>
+				<string> "normal" </string>
+				<string> "pressed" </string>
+				<string> "bitmask" </string>
+				<string> "passby_press" </string>
+				<string> "action" </string>
+				<string> "visibility_mode" </string>
+				<string> "TouchScreenButton" </string>
+				<string> "voltar para o menu" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 4 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="51"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 17, 4, -1, 12, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 9, 14, 7, 15, 10, 16, 8, 0, 0, 0, 18, 18, -1, 1, 19, 11, 0 </int_array>
+			<int_array  len="62"> 				-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 4, 4, -1, 1, 5, 2, 0, 0, 0, 14, 6, -1, 7, 7, 3, 8, 4, 9, 5, 10, 5, 11, 6, 12, 7, 13, 8, 0, 0, 0, 14, 15, -1, 7, 7, 9, 8, 10, 9, 5, 10, 5, 11, 6, 12, 7, 13, 8, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="12" shared="false">
+			<array  len="11" shared="false">
 				<vector2> 1.2, 1.2 </vector2>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<real> -30 </real>
-				<real> 130 </real>
-				<real> 99 </real>
-				<real> 253 </real>
-				<vector2> 0.6, 0.6 </vector2>
-				<bool> False </bool>
-				<bool> True </bool>
-				<int> 2 </int>
 				<resource  external="0">  </resource>
+				<vector2> -125, 141.667 </vector2>
 				<resource  external="1">  </resource>
+				<resource name=""></resource>				<bool> False </bool>
+				<string> "" </string>
+				<int> 0 </int>
+				<vector2> 16.6667, 140.833 </vector2>
+				<resource  external="2">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
