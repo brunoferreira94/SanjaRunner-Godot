@@ -13,11 +13,14 @@ func _process(delta):
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
 		numPlayer = 0
 		get_node("/root/data").setPlayerSelected(numPlayer)
+		get_node("/root/data").save_game(-1)
 	if get_node("Botão Zézinho").is_pressed():
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
 		numPlayer = 1
 		get_node("/root/data").setPlayerSelected(numPlayer)
+		get_node("/root/data").save_game(-1);
 	if get_node("Botão Maria").is_pressed():
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")
 		numPlayer = 2
 		get_node("/root/data").setPlayerSelected(numPlayer)
+		get_node("/root/data").save_game(-1)

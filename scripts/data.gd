@@ -53,7 +53,6 @@ func save():
 #Grava as alterações feitas no vetor numPapel num arquivo
 func save_game(id):
 	var savegame = File.new()
-	var pos
 	
 	get_node("/root/data").papelColetadoGlobal += get_node("/root/data").papelColetado
 	get_node("/root/data").engrenagemColetadaGlobal += get_node("/root/data").engrenagemColetada
@@ -62,16 +61,20 @@ func save_game(id):
 	
 	if savegame.file_exists("res://savegame.save"):
 		savegame.store_line(str(papelColetadoGlobal, ";", engrenagemColetadaGlobal))
-		while(!savegame.eof_reached()):
-			if savegame.get_line() == str(id):
-				savegame.store_line(str(save()))
-				savegame.close()
-				break
-			elif savegame.eof_reached():
-				savegame.store_line(str(id))
-				savegame.store_line(str(save()))
-				savegame.close()
-				break
+		savegame.store_line(str("0",PlayerSelected))
+		if id != -1:
+			while(!savegame.eof_reached()):
+				if savegame.get_line() == str(id):
+					savegame.store_line(str(save()))
+					savegame.close()
+					break
+				elif savegame.eof_reached():
+					savegame.store_line(str(id))
+					savegame.store_line(str(save()))
+					savegame.close()
+					break
+		else:
+			savegame.close()
 	else:
 		savegame.store_line(str(id))
 		savegame.store_line(str(save()))
@@ -97,7 +100,7 @@ func load_game(id):
 							get_node("/root/data").papelColetadoGlobal += 1
 						print(numPapel[i][j],"\n")
 						cont+=1
-		savegame.close()
+	savegame.close()
 
 #carrega as informações de pontuação total na tela inicial
 func load_pontuacao():
@@ -109,6 +112,7 @@ func load_pontuacao():
 	else:
 		savegame.open("res://savegame.save", File.READ)
 		linha = savegame.get_line().split(";")
+		PlayerSelected = int(savegame.get_line())
 		papelColetadoGlobal = int(linha[0])
 		engrenagemColetadaGlobal = int(linha[1])
 

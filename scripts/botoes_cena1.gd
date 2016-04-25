@@ -4,6 +4,7 @@ var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
 var reiniciarGanhou
 var reiniciarPerdeu
+var voltarTelaInicialPerdeu
 var pause
 var continuar
 var voltar
@@ -14,6 +15,7 @@ func _ready():
 	#Criando as variáveis que receberão os botões da cena
 	#Como aproveitei o código do meu projeto antigo, 
 	#comentei as ações que precisam ser implementadas
+	voltarTelaInicialPerdeu = get_node("voce_perdeu/voltar para o menu")
 	reiniciarPerdeu = get_node("voce_perdeu/reiniciar")
 	reiniciarGanhou = get_node("voce_ganhou/reiniciar")
 	
@@ -22,6 +24,8 @@ func _ready():
 	continuar = get_node("texto_papel/continue")
 	
 func _process(delta):
+	if voltarTelaInicialPerdeu.is_pressed():
+		get_tree().change_scene("res://scenes/Cena0_abertura.xml")
 	#Condições para que as ações dos botões aconteçam
 	if reiniciarGanhou.is_pressed() || reiniciarPerdeu.is_pressed():
 		get_tree().change_scene("res://scenes/main_scene.xml")

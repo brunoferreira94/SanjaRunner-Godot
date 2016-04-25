@@ -2,11 +2,11 @@
 <resource_file type="PackedScene" subresource_count="8" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
 	<ext_resource path="res://img/Banhado-1280fundo.png" type="Texture" index="4"></ext_resource>
 	<ext_resource path="res://img/montanhas_completo.png" type="Texture" index="0"></ext_resource>
-	<ext_resource path="res://img/nuvemCompleto.png" type="Texture" index="1"></ext_resource>
 	<ext_resource path="res://img/predios.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://img/predios02.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://img/Banhado-1280.png" type="Texture" index="5"></ext_resource>
 	<ext_resource path="res://img/Banhado-1280grama.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://img/nuvem.png" type="Texture" index="1"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -74,7 +74,7 @@
 				<vector2> 0, 198 </vector2>
 				<vector2> 0.1, 1 </vector2>
 				<vector2> 1280, 0 </vector2>
-				<vector2> 0, -42 </vector2>
+				<vector2> 0, -88 </vector2>
 				<resource  external="1">  </resource>
 				<int> 2 </int>
 				<vector2> 55, 241 </vector2>
