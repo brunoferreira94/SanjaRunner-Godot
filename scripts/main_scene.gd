@@ -10,20 +10,23 @@ var papel = preload("res://scenes/paper.xml")
 onready var alturaTela =  get_viewport_rect().size.height
 onready var larguraTela =  get_viewport_rect().size.width
 
-var pombaCinza = preload("res://scenes/objetos/PombaCinza.xml").instance()
-var pardal = preload("res://scenes/objetos/Pardal.xml").instance()
-var pombaFeia = preload("res://scenes/objetos/PombaFeia.xml").instance()
-var gaviao = preload("res://scenes/objetos/Gaviao.xml").instance()
+
+
+
+
 
 var enablePombaCinza = false
 var enablePardal = false
 var enablePombaFeia = false
 var enableGaviao = false
 
-export var qntPombaCinza = 0
-export var qntPardal = 0
-export var qntPombaFeia = 0
-export var qntGaviao = 0
+export var intervaloPombaCinza = 10
+export var intervaloPardal = 10
+export var intervaloPombaFeia = 10
+export var intervaloGaviao = 10
+
+var c;
+
 
 func _ready():
 	#chama a cena do banhado para a main scene
@@ -43,14 +46,24 @@ func _ready():
 	#get_node("data").save_game(id)
 	#get_node("data").load_game(id)
 	get_node("data").set_texto_papel(id)
-	
-	randSpawnPombaCinza()
-	randSpawnGaviao()
-	randSpawnPardal()
-	randSpawnPombaFeia()
+
+	c = 1
 	
 func _process(delta):
-	pass
+	#Altere o intervalo dos pássaros nas variáveis do script, na main_scene.
+	
+
+	c += 1
+	
+	if c % intervaloPombaCinza == 0:
+		randSpawnPombaCinza()
+	if c % intervaloGaviao == 0:
+		randSpawnGaviao()
+	if c % intervaloPardal == 0:
+		randSpawnPardal()
+	if c % intervaloPombaFeia == 0:
+		randSpawnPombaFeia()
+
 	
 func spawnPlayer(posx, posy):
 	var spawnPlayer
@@ -72,59 +85,63 @@ func spawnPapel(posx, posy, id):
 		return str("\nPapel ", id, " já foi coletado.")
 		
 func randSpawnPombaCinza():
+	var pombaCinza = preload("res://scenes/objetos/PombaCinza.xml").instance()
 	randomize()
 	var v = randi()%2
 	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
-		pombaCinza.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pombaCinza.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaCinza.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pombaCinza.set_linear_velocity(Vector2(-((randi()%100))-100,0))
 		pombaCinza.get_node("Sprite").set_flip_h(true)
-		add_child(pombaCinza)
-	else:
-		pombaCinza.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pombaCinza.set_linear_velocity(Vector2(-((randi()%200)+400),0))
-		get_node("HUD").add_child(pombaCinza)
 		
+	else:
+		pombaCinza.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pombaCinza.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaCinza.get_node("Sprite").set_flip_h(false)
+	add_child(pombaCinza)
 
 
 func randSpawnPardal():
+	var pardal = preload("res://scenes/objetos/Pardal.xml").instance()
 	randomize()
 	var v = randi()%2
 	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
-		pardal.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pardal.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pardal.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pardal.set_linear_velocity(Vector2(-((randi()%100))-100,0))
 		pardal.get_node("Sprite").set_flip_h(true)
-		add_child(pardal)
+	
 	else:
-		pardal.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pardal.set_linear_velocity(Vector2(-((randi()%200)+400),0))
-		get_node("HUD").add_child(pardal)
-
+		pardal.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pardal.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pardal.get_node("Sprite").set_flip_h(false)
+	add_child(pardal)
 
 
 func randSpawnGaviao():
+	var gaviao = preload("res://scenes/objetos/Gaviao.xml").instance()
 	randomize()
 	var v = randi()%2
 	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
-		gaviao.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		gaviao.set_linear_velocity(Vector2((randi()%100)+100,0))
+		gaviao.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		gaviao.set_linear_velocity(Vector2(-((randi()%100))-100,0))
 		gaviao.get_node("Sprite").set_flip_h(true)
-		add_child(gaviao)
+		
 	else:
-		gaviao.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		gaviao.set_linear_velocity(Vector2(-((randi()%200)+400),0))
-		get_node("HUD").add_child(gaviao)
-
+		gaviao.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		gaviao.set_linear_velocity(Vector2((randi()%100)+100,0))
+		gaviao.get_node("Sprite").set_flip_h(false)
+	add_child(gaviao)
 
 
 func randSpawnPombaFeia():
+	var pombaFeia = preload("res://scenes/objetos/PombaFeia.xml").instance()
 	randomize()
 	var v = randi()%2
 	if v == 1: #Esse primeiro if sorteia pra que lado o passaro voa
-		pombaFeia.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pombaFeia.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaFeia.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pombaFeia.set_linear_velocity(Vector2(-((randi()%100))-100,0))
 		pombaFeia.get_node("Sprite").set_flip_h(true)
-		add_child(pombaFeia)
 	else:
-		pombaFeia.set_pos(Vector2(larguraTela+200,randi() % int((alturaTela/2))))
-		pombaFeia.set_linear_velocity(Vector2(-((randi()%200)+400),0))
-		get_node("HUD").add_child(pombaFeia)
+		pombaFeia.set_pos(Vector2((larguraTela+200)+get_node("personagem_fantasma").get_pos().x,randi() % int((alturaTela/3))))
+		pombaFeia.set_linear_velocity(Vector2((randi()%100)+100,0))
+		pombaFeia.get_node("Sprite").set_flip_h(false)
+	add_child(pombaFeia)
