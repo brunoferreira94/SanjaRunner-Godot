@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="22" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
-	<ext_resource path="res://scripts/data.gd" type="Script" index="16"></ext_resource>
-	<ext_resource path="res://scripts/botoes_cena1.gd" type="Script" index="2"></ext_resource>
+<resource_file type="PackedScene" subresource_count="20" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://scripts/data.gd" type="Script" index="14"></ext_resource>
+	<ext_resource path="res://scripts/botoes_cena1.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://scripts/main_scene.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://img/botaoPause.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://soundtrack/Intro SanjaRunner.ogg" type="AudioStream" index="13"></ext_resource>
-	<ext_resource path="res://img/3.png" type="Texture" index="7"></ext_resource>
-	<ext_resource path="res://PressStart.fnt" type="Font" index="9"></ext_resource>
-	<ext_resource path="res://scripts/ghostChar.gd" type="Script" index="1"></ext_resource>
-	<ext_resource path="res://img/1.png" type="Texture" index="5"></ext_resource>
-	<ext_resource path="res://img/camara.png" type="Texture" index="15"></ext_resource>
-	<ext_resource path="res://img/2.png" type="Texture" index="6"></ext_resource>
-	<ext_resource path="res://scripts/321Animacao.gd" type="Script" index="8"></ext_resource>
-	<ext_resource path="res://img/Mapa/botaozin.png" type="Texture" index="10"></ext_resource>
-	<ext_resource path="res://scenes/menu_voce_perdeu.xml" type="PackedScene" index="4"></ext_resource>
-	<ext_resource path="res://scenes/menu_voce_ganhou.xml" type="PackedScene" index="11"></ext_resource>
-	<ext_resource path="res://scenes/texto.xml" type="PackedScene" index="12"></ext_resource>
-	<ext_resource path="res://scenes/gear_scene.xml" type="PackedScene" index="14"></ext_resource>
+	<ext_resource path="res://img/botaoPause.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://soundtrack/Intro SanjaRunner.ogg" type="AudioStream" index="12"></ext_resource>
+	<ext_resource path="res://img/3.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://PressStart.fnt" type="Font" index="8"></ext_resource>
+	<ext_resource path="res://img/1.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://img/2.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://img/Mapa/botaozin.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://scripts/321Animacao.gd" type="Script" index="7"></ext_resource>
+	<ext_resource path="res://scenes/texto.xml" type="PackedScene" index="11"></ext_resource>
+	<ext_resource path="res://scenes/menu_voce_ganhou.xml" type="PackedScene" index="10"></ext_resource>
+	<ext_resource path="res://scenes/gear_scene.xml" type="PackedScene" index="13"></ext_resource>
+	<ext_resource path="res://scenes/menu_voce_perdeu.xml" type="PackedScene" index="3"></ext_resource>
 	<resource type="StyleBoxEmpty" path="local://2">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
@@ -33,9 +31,9 @@
 	</resource>
 	<resource type="SpriteFrames" path="local://6">
 		<array name="frames" len="3" shared="false">
+			<resource  external="4">  </resource>
 			<resource  external="5">  </resource>
 			<resource  external="6">  </resource>
-			<resource  external="7">  </resource>
 		</array>
 
 	</resource>
@@ -129,55 +127,15 @@
 				<node_path> "HUD/texto_papel" </node_path>
 			</array>
 			<string> "names" </string>
-			<string_array  len="177">
+			<string_array  len="138">
 				<string> "Game" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "qntPombaCinza" </string>
-				<string> "qntPardal" </string>
-				<string> "qntPombaFeia" </string>
-				<string> "qntGaviao" </string>
+				<string> "intervaloPombaCinza" </string>
+				<string> "intervaloPardal" </string>
+				<string> "intervaloPombaFeia" </string>
+				<string> "intervaloGaviao" </string>
 				<string> "Node2D" </string>
-				<string> "personagem_fantasma" </string>
-				<string> "input/pickable" </string>
-				<string> "collision/layers" </string>
-				<string> "collision/mask" </string>
-				<string> "mode" </string>
-				<string> "mass" </string>
-				<string> "friction" </string>
-				<string> "bounce" </string>
-				<string> "gravity_scale" </string>
-				<string> "custom_integrator" </string>
-				<string> "continuous_cd" </string>
-				<string> "contacts_reported" </string>
-				<string> "contact_monitor" </string>
-				<string> "sleeping" </string>
-				<string> "can_sleep" </string>
-				<string> "velocity/linear" </string>
-				<string> "velocity/angular" </string>
-				<string> "damp_override/linear" </string>
-				<string> "damp_override/angular" </string>
-				<string> "pos_parada" </string>
-				<string> "RigidBody2D" </string>
-				<string> "Camera2D" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/scale" </string>
-				<string> "anchor_mode" </string>
-				<string> "rotating" </string>
-				<string> "current" </string>
-				<string> "zoom" </string>
-				<string> "limit/left" </string>
-				<string> "limit/top" </string>
-				<string> "limit/right" </string>
-				<string> "limit/bottom" </string>
-				<string> "drag_margin/h_enabled" </string>
-				<string> "drag_margin/v_enabled" </string>
-				<string> "smoothing/enable" </string>
-				<string> "smoothing/speed" </string>
-				<string> "drag_margin/left" </string>
-				<string> "drag_margin/top" </string>
-				<string> "drag_margin/right" </string>
-				<string> "drag_margin/bottom" </string>
 				<string> "HUD" </string>
 				<string> "process/pause_mode" </string>
 				<string> "layer" </string>
@@ -205,10 +163,12 @@
 				<string> "Button" </string>
 				<string> "voce_perdeu" </string>
 				<string> "visibility/visible" </string>
+				<string> "transform/pos" </string>
 				<string> "Sprite" </string>
 				<string> "reiniciar" </string>
 				<string> "voltar para o menu" </string>
 				<string> "321" </string>
+				<string> "transform/scale" </string>
 				<string> "frames" </string>
 				<string> "frame" </string>
 				<string> "AnimatedSprite" </string>
@@ -304,60 +264,45 @@
 				<string> "gear41" </string>
 				<string> "gear42" </string>
 				<string> "gear43" </string>
-				<string> "texture" </string>
 				<string> "data" </string>
 				<string> "papel" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 62 </int>
+			<int> 59 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="780"> 				-1, -1, 7, 0, -1, 6, 1, 0, 2, 1, 3, 2, 4, 2, 5, 2, 6, 2, 0, 0, 0, 28, 8, -1, 21, 9, 3, 10, 4, 11, 4, 12, 2, 13, 5, 14, 5, 15, 6, 16, 6, 17, 3, 18, 2, 19, 2, 20, 3, 21, 3, 22, 7, 23, 8, 24, 6, 25, 9, 26, 9, 1, 10, 2, 11, 27, 12, 0, 1, 0, 29, 29, -1, 18, 30, 13, 31, 14, 32, 4, 33, 3, 34, 7, 35, 15, 36, 16, 37, 16, 38, 17, 39, 17, 40, 7, 41, 7, 42, 3, 43, 18, 44, 19, 45, 19, 46, 19, 47, 19, 0, 0, 0, 54, 48, -1, 6, 49, 20, 50, 4, 51, 8, 52, 6, 53, 15, 1, 21, 0, 3, 0, 72, 55, -1, 16, 56, 4, 57, 4, 58, 22, 59, 23, 60, 24, 61, 25, 62, 26, 63, 3, 64, 7, 65, 20, 66, 20, 67, 27, 68, 28, 69, 3, 70, 29, 71, 7, 0, 3, 0, 2147483647, 73, 30, 2, 74, 3, 30, 31, 0, 3, 0, 81, 78, -1, 7, 49, 20, 30, 31, 31, 32, 79, 33, 80, 4, 1, 34, 2, 35, 0, 6, 0, 82, 82, -1, 8, 83, 4, 84, 6, 85, 36, 86, 37, 87, 7, 88, 38, 89, 39, 90, 40, 0, 3, 0, 98, 91, -1, 13, 58, 23, 59, 23, 60, 41, 61, 42, 63, 7, 64, 7, 65, 20, 92, 43, 93, 44, 94, 45, 95, 5, 96, 2, 97, 46, 0, 3, 0, 108, 99, -1, 10, 100, 6, 101, 7, 30, 47, 31, 48, 102, 49, 103, 50, 104, 50, 105, 3, 106, 51, 107, 2, 0, 3, 0, 2147483647, 109, 52, 2, 74, 3, 30, 31, 0, 3, 0, 2147483647, 111, 53, 1, 74, 3, 0, 0, 0, 123, 114, -1, 8, 115, 54, 116, 3, 117, 7, 118, 23, 119, 3, 120, 3, 121, 6, 122, 55, 0, 0, 0, 124, 124, -1, 5, 49, 20, 125, 4, 126, 56, 127, 3, 128, 7, 0, 0, 0, 7, 129, -1, 2, 30, 57, 2, 58, 0, 14, 0, 2147483647, 130, 59, 1, 30, 60, 0, 14, 0, 2147483647, 131, 59, 1, 30, 61, 0, 14, 0, 2147483647, 132, 59, 1, 30, 62, 0, 14, 0, 2147483647, 133, 59, 1, 30, 63, 0, 14, 0, 2147483647, 134, 59, 1, 30, 64, 0, 14, 0, 2147483647, 135, 59, 1, 30, 65, 0, 14, 0, 2147483647, 136, 59, 1, 30, 66, 0, 14, 0, 2147483647, 137, 59, 1, 30, 67, 0, 14, 0, 2147483647, 138, 59, 1, 30, 68, 0, 14, 0, 2147483647, 139, 59, 1, 30, 69, 0, 14, 0, 2147483647, 140, 59, 1, 30, 70, 0, 14, 0, 2147483647, 141, 59, 1, 30, 71, 0, 14, 0, 2147483647, 142, 59, 1, 30, 72, 0, 14, 0, 2147483647, 143, 59, 1, 30, 73, 0, 14, 0, 2147483647, 144, 59, 1, 30, 74, 0, 14, 0, 2147483647, 145, 59, 1, 30, 75, 0, 14, 0, 2147483647, 146, 59, 1, 30, 76, 0, 14, 0, 2147483647, 147, 59, 1, 30, 77, 0, 14, 0, 2147483647, 148, 59, 1, 30, 78, 0, 14, 0, 2147483647, 149, 59, 1, 30, 79, 0, 14, 0, 2147483647, 150, 59, 1, 30, 80, 0, 14, 0, 2147483647, 151, 59, 1, 30, 81, 0, 14, 0, 2147483647, 152, 59, 1, 30, 82, 0, 14, 0, 2147483647, 153, 59, 1, 30, 83, 0, 14, 0, 2147483647, 154, 59, 1, 30, 84, 0, 14, 0, 2147483647, 155, 59, 1, 30, 85, 0, 14, 0, 2147483647, 156, 59, 1, 30, 86, 0, 14, 0, 2147483647, 157, 59, 1, 30, 87, 0, 14, 0, 2147483647, 158, 59, 1, 30, 88, 0, 14, 0, 2147483647, 159, 59, 1, 30, 89, 0, 14, 0, 2147483647, 160, 59, 1, 30, 90, 0, 14, 0, 2147483647, 161, 59, 1, 30, 91, 0, 14, 0, 2147483647, 162, 59, 1, 30, 92, 0, 14, 0, 2147483647, 163, 59, 1, 30, 93, 0, 14, 0, 2147483647, 164, 59, 1, 30, 94, 0, 14, 0, 2147483647, 165, 59, 1, 30, 95, 0, 14, 0, 2147483647, 166, 59, 1, 30, 96, 0, 14, 0, 2147483647, 167, 59, 1, 30, 97, 0, 14, 0, 2147483647, 168, 59, 1, 30, 98, 0, 14, 0, 2147483647, 169, 59, 1, 30, 99, 0, 14, 0, 2147483647, 170, 59, 1, 30, 100, 0, 14, 0, 2147483647, 171, 59, 1, 30, 101, 0, 14, 0, 2147483647, 172, 59, 1, 30, 102, 0, 14, 0, 2147483647, 173, 59, 1, 30, 103, 0, 0, 0, 75, 75, -1, 3, 30, 104, 31, 105, 174, 106, 0, 0, 0, 7, 175, -1, 1, 1, 107, 0, 0, 0, 7, 176, -1, 0, 0 </int_array>
+			<int_array  len="675"> 				-1, -1, 7, 0, -1, 6, 1, 0, 2, 1, 3, 2, 4, 2, 5, 2, 6, 2, 0, 0, 0, 14, 8, -1, 6, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 1, 8, 0, 1, 0, 32, 15, -1, 16, 16, 4, 17, 4, 18, 9, 19, 10, 20, 11, 21, 12, 22, 13, 23, 14, 24, 15, 25, 3, 26, 3, 27, 16, 28, 17, 29, 14, 30, 18, 31, 15, 0, 1, 0, 2147483647, 33, 19, 2, 34, 14, 35, 20, 0, 1, 0, 43, 39, -1, 7, 9, 3, 35, 20, 40, 21, 41, 22, 42, 4, 1, 23, 2, 24, 0, 4, 0, 44, 44, -1, 8, 45, 4, 46, 6, 47, 25, 48, 26, 49, 15, 50, 27, 51, 28, 52, 29, 0, 1, 0, 60, 53, -1, 13, 18, 10, 19, 10, 20, 30, 21, 31, 23, 15, 24, 15, 25, 3, 54, 32, 55, 33, 56, 34, 57, 35, 58, 36, 59, 37, 0, 1, 0, 70, 61, -1, 10, 62, 6, 63, 15, 35, 38, 40, 39, 64, 40, 65, 41, 66, 41, 67, 14, 68, 42, 69, 36, 0, 1, 0, 2147483647, 71, 43, 2, 34, 14, 35, 20, 0, 1, 0, 2147483647, 73, 44, 1, 34, 14, 0, 0, 0, 85, 76, -1, 8, 77, 45, 78, 14, 79, 15, 80, 10, 81, 14, 82, 14, 83, 6, 84, 46, 0, 0, 0, 86, 86, -1, 5, 9, 3, 87, 4, 88, 47, 89, 14, 90, 15, 0, 0, 0, 7, 91, -1, 2, 35, 48, 2, 49, 0, 12, 0, 2147483647, 92, 50, 1, 35, 51, 0, 12, 0, 2147483647, 93, 50, 1, 35, 52, 0, 12, 0, 2147483647, 94, 50, 1, 35, 53, 0, 12, 0, 2147483647, 95, 50, 1, 35, 54, 0, 12, 0, 2147483647, 96, 50, 1, 35, 55, 0, 12, 0, 2147483647, 97, 50, 1, 35, 56, 0, 12, 0, 2147483647, 98, 50, 1, 35, 57, 0, 12, 0, 2147483647, 99, 50, 1, 35, 58, 0, 12, 0, 2147483647, 100, 50, 1, 35, 59, 0, 12, 0, 2147483647, 101, 50, 1, 35, 60, 0, 12, 0, 2147483647, 102, 50, 1, 35, 61, 0, 12, 0, 2147483647, 103, 50, 1, 35, 62, 0, 12, 0, 2147483647, 104, 50, 1, 35, 63, 0, 12, 0, 2147483647, 105, 50, 1, 35, 64, 0, 12, 0, 2147483647, 106, 50, 1, 35, 65, 0, 12, 0, 2147483647, 107, 50, 1, 35, 66, 0, 12, 0, 2147483647, 108, 50, 1, 35, 67, 0, 12, 0, 2147483647, 109, 50, 1, 35, 68, 0, 12, 0, 2147483647, 110, 50, 1, 35, 69, 0, 12, 0, 2147483647, 111, 50, 1, 35, 70, 0, 12, 0, 2147483647, 112, 50, 1, 35, 71, 0, 12, 0, 2147483647, 113, 50, 1, 35, 72, 0, 12, 0, 2147483647, 114, 50, 1, 35, 73, 0, 12, 0, 2147483647, 115, 50, 1, 35, 74, 0, 12, 0, 2147483647, 116, 50, 1, 35, 75, 0, 12, 0, 2147483647, 117, 50, 1, 35, 76, 0, 12, 0, 2147483647, 118, 50, 1, 35, 77, 0, 12, 0, 2147483647, 119, 50, 1, 35, 78, 0, 12, 0, 2147483647, 120, 50, 1, 35, 79, 0, 12, 0, 2147483647, 121, 50, 1, 35, 80, 0, 12, 0, 2147483647, 122, 50, 1, 35, 81, 0, 12, 0, 2147483647, 123, 50, 1, 35, 82, 0, 12, 0, 2147483647, 124, 50, 1, 35, 83, 0, 12, 0, 2147483647, 125, 50, 1, 35, 84, 0, 12, 0, 2147483647, 126, 50, 1, 35, 85, 0, 12, 0, 2147483647, 127, 50, 1, 35, 86, 0, 12, 0, 2147483647, 128, 50, 1, 35, 87, 0, 12, 0, 2147483647, 129, 50, 1, 35, 88, 0, 12, 0, 2147483647, 130, 50, 1, 35, 89, 0, 12, 0, 2147483647, 131, 50, 1, 35, 90, 0, 12, 0, 2147483647, 132, 50, 1, 35, 91, 0, 12, 0, 2147483647, 133, 50, 1, 35, 92, 0, 12, 0, 2147483647, 134, 50, 1, 35, 93, 0, 12, 0, 2147483647, 135, 50, 1, 35, 94, 0, 0, 0, 7, 136, -1, 1, 1, 95, 0, 0, 0, 7, 137, -1, 0, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="108" shared="false">
+			<array  len="96" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
 				</dictionary>
-				<int> 0 </int>
-				<bool> False </bool>
-				<int> 1 </int>
-				<real> 1 </real>
-				<real> 0 </real>
-				<bool> True </bool>
-				<vector2> 0, 0 </vector2>
-				<real> -1 </real>
-				<resource  external="1">  </resource>
-				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
-				</dictionary>
-				<int> 11000 </int>
-				<vector2> 512, 385.998 </vector2>
-				<vector2> 16.0449, 9.9931 </vector2>
-				<vector2> 1, 1 </vector2>
-				<int> -10000000 </int>
-				<int> 10000000 </int>
-				<real> 5 </real>
-				<real> 0.2 </real>
+				<int> 10 </int>
 				<int> 2 </int>
-				<resource  external="2">  </resource>
+				<int> 1 </int>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
+				<resource  external="1">  </resource>
 				<real> 98 </real>
 				<real> 12 </real>
 				<real> -25 </real>
 				<real> 129 </real>
 				<vector2> 0.7, 0.7 </vector2>
+				<bool> False </bool>
+				<bool> True </bool>
 				<resource  resource_type="StyleBox" path="local://2">  </resource>
 				<resource  resource_type="StyleBox" path="local://3">  </resource>
+				<resource  external="2">  </resource>
 				<resource  external="3">  </resource>
-				<resource  external="4">  </resource>
 				<vector2> 640, 384 </vector2>
 				<vector2> 0.1, 0.1 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://6">  </resource>
-				<resource  external="8">  </resource>
+				<resource  external="7">  </resource>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
@@ -370,17 +315,19 @@
 				<string> "" </string>
 				<real> 66 </real>
 				<real> 38 </real>
-				<resource  external="9">  </resource>
+				<resource  external="8">  </resource>
 				<color> 0, 0, 0, 1 </color>
 				<string> "0" </string>
+				<real> 1 </real>
+				<int> 0 </int>
 				<int> -1 </int>
 				<vector2> 0, 96 </vector2>
 				<vector2> 5.01961, 2.63529 </vector2>
-				<resource  external="10">  </resource>
+				<resource  external="9">  </resource>
 				<resource name=""></resource>				<string> "cima" </string>
+				<resource  external="10">  </resource>
 				<resource  external="11">  </resource>
 				<resource  external="12">  </resource>
-				<resource  external="13">  </resource>
 				<int> 500 </int>
 				<real> 60 </real>
 				<vector2> -10.3246, 15.4868 </vector2>
@@ -388,7 +335,7 @@
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
-				<resource  external="14">  </resource>
+				<resource  external="13">  </resource>
 				<vector2> 825.999, 547.987 </vector2>
 				<vector2> 923.698, 500.273 </vector2>
 				<vector2> 1030.48, 475.281 </vector2>
@@ -433,10 +380,7 @@
 				<vector2> 10628.3, 288.715 </vector2>
 				<vector2> 10735.1, 318.251 </vector2>
 				<vector2> 10821.5, 375.053 </vector2>
-				<vector2> 12003.7, 295.219 </vector2>
-				<vector2> 0.663772, 0.694692 </vector2>
-				<resource  external="15">  </resource>
-				<resource  external="16">  </resource>
+				<resource  external="14">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>

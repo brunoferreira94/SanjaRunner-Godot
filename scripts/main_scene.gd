@@ -10,11 +10,6 @@ var papel = preload("res://scenes/paper.xml")
 onready var alturaTela =  get_viewport_rect().size.height
 onready var larguraTela =  get_viewport_rect().size.width
 
-
-
-
-
-
 var enablePombaCinza = false
 var enablePardal = false
 var enablePombaFeia = false
@@ -30,8 +25,7 @@ var c;
 
 func _ready():
 	#chama a cena do banhado para a main scene
-	add_child(preload("res://scenes/cena_banhado.xml").instance())
-	set_process(true)
+	add_child(load("res://scenes/cena_cidade.xml").instance())
 	get_node("/root/data").engrenagemColetada = 0
 	get_node("/root/data").papelColetado = 0
 	
@@ -40,14 +34,16 @@ func _ready():
 	else:
 		randomize()
 		numPlayer = randi() % 3
-	spawnPlayer(108,200)
 	spawnPapel(500,600, 1)
+	spawnPlayer(108,200)
 	#spawnPapel(500, 500, 2)
 	#get_node("data").save_game(id)
 	#get_node("data").load_game(id)
 	get_node("data").set_texto_papel(id)
 
 	c = 1
+	
+	set_process(true)
 	
 func _process(delta):
 	#Altere o intervalo dos pássaros nas variáveis do script, na main_scene.
@@ -67,10 +63,16 @@ func _process(delta):
 	
 func spawnPlayer(posx, posy):
 	var spawnPlayer
+	var ghostPlayer
+	
 	spawnPlayer = player[numPlayer].instance()
 	spawnPlayer.set_pos(Vector2(posx,posy))
 	spawnPlayer.set_script(script)
 	add_child(spawnPlayer)
+	
+	ghostPlayer = load("res://scenes/personagens/personagem_fantasma.xml").instance()
+	ghostPlayer.set_pos(Vector2(0,0))
+	add_child(ghostPlayer)
 
 #Chama o objeto papel para a cena na posição dada e atribui um id, se já não foi coletado
 func spawnPapel(posx, posy, id):

@@ -8,6 +8,7 @@ var engrenagemColetada = 0
 #variáveis para armazenar a pontuação depois da cena terminar
 var papelColetadoGlobal = 0
 var engrenagemColetadaGlobal = 0
+var pos_parada;
 
 #variável que guarda o id do personagem selecionado 
 var PlayerSelected

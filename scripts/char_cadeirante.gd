@@ -13,7 +13,7 @@ export var jump_force = 420
 var raycast_down = null
 var current_Speed = Vector2(0,0)
 var jumping = 0
-export var pos_parada = 11000
+var pos_parada
 
 #Variáveis de estado para saber se o personagem está no chão ou no ar
 var PLAYERSTATE_PREV = ""
@@ -52,6 +52,7 @@ func _ready():
 	anim_personagem = get_node("AnimationPlayer")
 	
 	somPersonagem = get_node("somPersonagem")
+	pos_parada = get_node("/root/data").pos_parada
 	
 func _fixed_process(delta):
 	
@@ -102,9 +103,9 @@ func morreu():
 
 #função que verifica se o personagem ganhou
 func ganhou():
-	if get_pos().x > pos_parada and get_pos().x < pos_parada+1000:
+	if get_pos().x > pos_parada[0] and get_pos().x < pos_parada[1]:
 		set_linear_velocity(Vector2(current_Speed.x-400, get_linear_velocity().y))
-	elif get_pos().x > pos_parada+1000:
+	elif get_pos().x > pos_parada[1]:
 		set_linear_velocity(Vector2(0, get_linear_velocity().y))
 		if is_on_ground():
 			set_axis_velocity(Vector2(0, -jump_force))
