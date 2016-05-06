@@ -2,6 +2,7 @@
 extends Node2D
 
 var status = "mapa"
+var caminho_cena_atual
 
 onready var leste = get_node("Leste/Botão Leste")
 onready var norte = get_node("Norte/Botão Norte")
@@ -68,7 +69,9 @@ func _fixed_process(delta):
 		status = "sudeste"
 		animacao_mapa("Sudeste")
 	elif centroBanhado.is_pressed():
-		get_tree().change_scene("res://scenes/main_scene.xml")
+		caminho_cena_atual = "res://scenes/cena_cidade.xml"
+		get_node("/root/data").caminho_cena_atual = caminho_cena_atual
+		get_tree().change_scene(caminho_cena_atual)
 		
 func espera_para_mapa(tempo):
 	var timer = Timer.new()

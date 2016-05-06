@@ -3,7 +3,7 @@ extends Node2D
 var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
 
-var mainscene = preload("res://scenes/main_scene.xml")
+var mainscene = preload("res://scenes/cena_cidade.xml")
 var numPlayer
 
 func _ready():

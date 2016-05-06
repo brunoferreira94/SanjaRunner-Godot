@@ -8,7 +8,9 @@ var engrenagemColetada = 0
 #variáveis para armazenar a pontuação depois da cena terminar
 var papelColetadoGlobal = 0
 var engrenagemColetadaGlobal = 0
-var pos_parada;
+var pontuacao = engrenagemColetada * 10
+var pos_parada
+var caminho_cena_atual
 
 #variável que guarda o id do personagem selecionado 
 var PlayerSelected
@@ -19,6 +21,8 @@ func getPlayerSelected():
 func setPlayerSelected(var numPlayer):
 	PlayerSelected = numPlayer
 
+func set_pontuacao():
+	get_parent().get_node("HUD/points").set_text(str(pontuacao))
 
 #Pega o texto de um arquivo e atribui ao numPapel
 func set_texto_papel(id):
@@ -45,11 +49,6 @@ func set_papel_coletado(umOuZero, id):
 #retorna a informação da posição do vetor definida
 func get_numPapel(i, j):
 	return numPapel[i][j]
-	
-#Retorna o vetor numPapel
-func save():
-	var vetorSave = numPapel
-	return vetorSave
 
 #Grava as alterações feitas no vetor numPapel num arquivo
 func save_game(id):
@@ -66,12 +65,12 @@ func save_game(id):
 		if id != -1:
 			while(!savegame.eof_reached()):
 				if savegame.get_line() == str(id):
-					savegame.store_line(str(save()))
+					savegame.store_line(str(numPapel))
 					savegame.close()
 					break
 				elif savegame.eof_reached():
 					savegame.store_line(str(id))
-					savegame.store_line(str(save()))
+					savegame.store_line(str(numPapel))
 					savegame.close()
 					break
 		else:
@@ -97,9 +96,6 @@ func load_game(id):
 				for i in range(2):
 					for j in range(5):
 						numPapel[i][j] = linha.split(", ")[cont]
-						if numPapel[i][j] == 1:
-							get_node("/root/data").papelColetadoGlobal += 1
-						print(numPapel[i][j],"\n")
 						cont+=1
 	savegame.close()
 
@@ -114,8 +110,8 @@ func load_pontuacao():
 		savegame.open("res://savegame.save", File.READ)
 		linha = savegame.get_line().split(";")
 		PlayerSelected = int(savegame.get_line())
-		papelColetadoGlobal = int(linha[0])
-		engrenagemColetadaGlobal = int(linha[1])
+		papelColetado = int(linha[0])
+		engrenagemColetada = int(linha[1])
 
 func _ready():
 	pass

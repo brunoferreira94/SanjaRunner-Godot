@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.stable.custom_build">
+	<ext_resource path="res://scripts/gear_scene.gd" type="Script" index="1"></ext_resource>
+	<ext_resource path="res://scenes/gear_scene.xml" type="PackedScene" index="0"></ext_resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="50">
+				<string> "engrenagem" </string>
+				<string> "transform/pos" </string>
+				<string> "Node2D" </string>
+				<string> "gear" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "value" </string>
+				<string> "gear1" </string>
+				<string> "gear2" </string>
+				<string> "gear3" </string>
+				<string> "gear4" </string>
+				<string> "gear5" </string>
+				<string> "gear6" </string>
+				<string> "gear7" </string>
+				<string> "gear8" </string>
+				<string> "gear9" </string>
+				<string> "gear10" </string>
+				<string> "gear11" </string>
+				<string> "gear12" </string>
+				<string> "gear13" </string>
+				<string> "gear14" </string>
+				<string> "gear15" </string>
+				<string> "gear16" </string>
+				<string> "gear17" </string>
+				<string> "gear18" </string>
+				<string> "gear19" </string>
+				<string> "gear20" </string>
+				<string> "gear21" </string>
+				<string> "gear22" </string>
+				<string> "gear23" </string>
+				<string> "gear24" </string>
+				<string> "gear25" </string>
+				<string> "gear26" </string>
+				<string> "gear27" </string>
+				<string> "gear28" </string>
+				<string> "gear29" </string>
+				<string> "gear30" </string>
+				<string> "gear31" </string>
+				<string> "gear32" </string>
+				<string> "gear33" </string>
+				<string> "gear34" </string>
+				<string> "gear35" </string>
+				<string> "gear36" </string>
+				<string> "gear37" </string>
+				<string> "gear38" </string>
+				<string> "gear39" </string>
+				<string> "gear40" </string>
+				<string> "gear41" </string>
+				<string> "gear42" </string>
+				<string> "gear43" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 45 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="669"> 				-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 2, 3, 1, 4, 1, 2, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 7, 1, 4, 1, 6, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 8, 1, 4, 1, 7, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 9, 1, 4, 1, 8, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 10, 1, 4, 1, 9, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 11, 1, 4, 1, 10, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 12, 1, 4, 1, 11, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 13, 1, 4, 1, 12, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 14, 1, 4, 1, 13, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 15, 1, 4, 1, 14, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 16, 1, 4, 1, 15, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 17, 1, 4, 1, 16, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 18, 1, 4, 1, 17, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 19, 1, 4, 1, 18, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 20, 1, 4, 1, 19, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 21, 1, 4, 1, 20, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 22, 1, 4, 1, 21, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 23, 1, 4, 1, 22, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 24, 1, 4, 1, 23, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 25, 1, 4, 1, 24, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 26, 1, 4, 1, 25, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 27, 1, 4, 1, 26, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 28, 1, 4, 1, 27, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 29, 1, 4, 1, 28, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 30, 1, 4, 1, 29, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 31, 1, 4, 1, 30, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 32, 1, 4, 1, 31, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 33, 1, 4, 1, 32, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 34, 1, 4, 1, 33, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 35, 1, 4, 1, 34, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 36, 1, 4, 1, 35, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 37, 1, 4, 1, 36, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 38, 1, 4, 1, 37, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 39, 1, 4, 1, 38, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 40, 1, 4, 1, 39, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 41, 1, 4, 1, 40, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 42, 1, 4, 1, 41, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 43, 1, 4, 1, 42, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 44, 1, 4, 1, 43, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 45, 1, 4, 1, 44, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 46, 1, 4, 1, 45, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 47, 1, 4, 1, 46, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 48, 1, 4, 1, 47, 4, 3, 5, 4, 6, 5, 0, 0, 0, 2, 49, 1, 4, 1, 48, 4, 3, 5, 4, 6, 5, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="49" shared="false">
+				<vector2> -10.3246, 15.4868 </vector2>
+				<resource  external="0">  </resource>
+				<vector2> 825.999, 547.987 </vector2>
+				<resource  external="1">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_screen__" </string>
+					<string> "Script" </string>
+				</dictionary>
+				<int> 1 </int>
+				<vector2> 923.698, 500.273 </vector2>
+				<vector2> 1030.48, 475.281 </vector2>
+				<vector2> 1137.27, 459.376 </vector2>
+				<vector2> 1246.33, 454.832 </vector2>
+				<vector2> 1355.39, 470.736 </vector2>
+				<vector2> 1464.45, 486.641 </vector2>
+				<vector2> 1573.51, 516.178 </vector2>
+				<vector2> 2327.83, 507.089 </vector2>
+				<vector2> 2425.53, 463.92 </vector2>
+				<vector2> 2527.78, 425.295 </vector2>
+				<vector2> 2645.92, 400.302 </vector2>
+				<vector2> 2757.25, 393.486 </vector2>
+				<vector2> 3613.83, 386.67 </vector2>
+				<vector2> 3706.98, 332.14 </vector2>
+				<vector2> 3843.31, 316.419 </vector2>
+				<vector2> 3977.36, 334.596 </vector2>
+				<vector2> 4102.32, 368.677 </vector2>
+				<vector2> 4211.38, 420.935 </vector2>
+				<vector2> 4304.54, 486.825 </vector2>
+				<vector2> 4375.18, 566.452 </vector2>
+				<vector2> 6442.76, 237.001 </vector2>
+				<vector2> 6513.76, 237.001 </vector2>
+				<vector2> 6585.76, 237.001 </vector2>
+				<vector2> 6647.76, 237.001 </vector2>
+				<vector2> 6712.76, 237.001 </vector2>
+				<vector2> 7114.92, 227.913 </vector2>
+				<vector2> 7219.44, 178.471 </vector2>
+				<vector2> 7337.58, 173.743 </vector2>
+				<vector2> 7462.55, 194.464 </vector2>
+				<vector2> 7593.96, 236.729 </vector2>
+				<vector2> 7716.65, 302.619 </vector2>
+				<vector2> 7830.26, 370.781 </vector2>
+				<vector2> 7934.77, 423.039 </vector2>
+				<vector2> 8037.01, 507.105 </vector2>
+				<vector2> 10047.8, 370.781 </vector2>
+				<vector2> 10134.1, 318.523 </vector2>
+				<vector2> 10232, 294.619 </vector2>
+				<vector2> 10329.5, 282.17 </vector2>
+				<vector2> 10429.5, 273.082 </vector2>
+				<vector2> 10534, 277.626 </vector2>
+				<vector2> 10628.3, 288.715 </vector2>
+				<vector2> 10735.1, 318.251 </vector2>
+				<vector2> 10821.5, 375.053 </vector2>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

@@ -11,7 +11,6 @@ func _ready():
 	#cria_plataforma(5,10,5)
 	#cria_plataforma(18,10,5)
 	get_node("/root/data").pos_parada = pos_parada
-	print("parada 1: ",pos_parada[0], "\n parada 2: ", pos_parada[1])
 	
 func _fixed_process(delta):
 	pass

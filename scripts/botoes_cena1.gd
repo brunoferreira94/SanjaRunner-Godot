@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+var caminho_cena_atual
 var input_states = preload("res://scripts/input_states.gd")
 var clique_esquerdo = input_states.new("clique_esquerdo")
 var reiniciarGanhou
@@ -11,7 +12,8 @@ var voltar
 
 func _ready():
 	set_process(true)
-	
+	caminho_cena_atual = get_node("/root/data").caminho_cena_atual
+			
 	#Criando as variáveis que receberão os botões da cena
 	#Como aproveitei o código do meu projeto antigo, 
 	#comentei as ações que precisam ser implementadas
@@ -28,7 +30,7 @@ func _process(delta):
 		get_tree().change_scene("res://scenes/Cena0_abertura.xml")
 	#Condições para que as ações dos botões aconteçam
 	if reiniciarGanhou.is_pressed() || reiniciarPerdeu.is_pressed():
-		get_tree().change_scene("res://scenes/main_scene.xml")
+		get_tree().change_scene(caminho_cena_atual)
 	#botão para voltar para o mapa de seleção dentro da região
 	if voltar.is_pressed():
 		get_tree().change_scene("res://scenes/Cena3_selecao_mapa.xml")

@@ -1,7 +1,9 @@
-
 extends Node2D
 
-var id = 1
+var plataforma
+var timer = Timer.new()
+export var pos_parada = [0, 0]
+export var id = 0
 var numPlayer
 var player = [preload("res://scenes/personagens/personagem_menino_negro.xml"), preload("res://scenes/personagens/personagem_cadeirante.xml"), preload("res://scenes/personagens/personagem_menina_branca.xml")]
 var script = load("res://scripts/char_cadeirante.gd")
@@ -22,10 +24,12 @@ export var intervaloGaviao = 10
 
 var c;
 
-
 func _ready():
-	#chama a cena do banhado para a main scene
-	add_child(load("res://scenes/cena_cidade.xml").instance())
+	#timer = Timer.new()
+	#plataforma = get_node("TileMap")
+	#cria_plataforma(5,10,5)
+	#cria_plataforma(18,10,5)
+	get_node("/root/data").pos_parada = pos_parada
 	get_node("/root/data").engrenagemColetada = 0
 	get_node("/root/data").papelColetado = 0
 	
@@ -47,8 +51,6 @@ func _ready():
 	
 func _process(delta):
 	#Altere o intervalo dos pássaros nas variáveis do script, na main_scene.
-	
-
 	c += 1
 	
 	if c % intervaloPombaCinza == 0:
@@ -59,7 +61,18 @@ func _process(delta):
 		randSpawnPardal()
 	if c % intervaloPombaFeia == 0:
 		randSpawnPombaFeia()
-
+	
+	
+#Limites de posição para plataforma
+#0 >= y <= 12
+#x >= 0
+func cria_plataforma(x,y,qtdTiles):
+	var i = x+1
+	plataforma.set_cell(x,y,0)
+	while(i < x+qtdTiles):
+		plataforma.set_cell(i,y,1)
+		i += 1
+	plataforma.set_cell(x+qtdTiles,y,2)
 	
 func spawnPlayer(posx, posy):
 	var spawnPlayer
